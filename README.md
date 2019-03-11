@@ -25,7 +25,16 @@ pip install butterMAS
 
 ### Coding style tests
 
+#### Linting
+
 Please use PyLint (Default linter on VS Code) to lint your code before submitting a PR.
+
+#### Tests
+
+Please test your code before submitting a PR.
+```
+python -m unittest tests.api_test.py
+```
 
 ## Contributing
 
