@@ -1,5 +1,5 @@
 import unittest
-from api.utils.packet import Packet
+from butter.mas.utils.packet import Packet
 
 class TestPacketMethods(unittest.TestCase):
 

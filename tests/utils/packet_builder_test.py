@@ -1,6 +1,6 @@
 import unittest
-from api.utils.packet_builder import PacketBuilder
-from api.utils.packet import Packet
+from butter.mas.utils.packet_builder import PacketBuilder
+from butter.mas.utils.packet import Packet
 
 class TestPacketBuilderMethods(unittest.TestCase):
 

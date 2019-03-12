@@ -8,13 +8,21 @@ with open('LICENSE') as f:
     license = f.read()
 
 setup(
-    name='MAS-API',
-    version='0.1.2',
+    name='butter.mas-api',
+    version='0.2.2',
     description='Python HTTP Client API for Butter MAS platform',
     long_description=readme,
     author='Benny Megidish',
     author_email='bennymegk@gmail.com',
-    url='https://github.com/benymeg/MAS-API',
+    url='https://github.com/benymeg/Butter.MAS.PythonAPI',
     license=license,
     packages=find_packages(exclude=('tests', 'docs'))
 )
+
+''' how to deploy '''
+# python setup.py sdist bdist_wheel
+# python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+# pip install --index-url https://test.pypi.org/simple/ --no-deps butter.mas-api
+
+# python -m twine upload dist/*
+# pip install butter.mas-api
