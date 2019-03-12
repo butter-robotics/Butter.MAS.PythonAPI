@@ -24,7 +24,7 @@ class TestClientApiMethods(unittest.TestCase):
         self.assertIsNotNone(self.client.getMotorRegister('base', 'goal_position'))
 
     def testSetMotorRegister(self):
-        self.assertIsNotNone(self.client.setMotorRegister('base', 'goal_position'))
+        self.assertIsNotNone(self.client.setMotorRegister('base', 'goal_position', '2048'))
 
     def testPlayAnimation(self):
         self.assertIsNotNone(self.client.playAnimation('welcome'))
@@ -52,10 +52,12 @@ class TestClientApiMethods(unittest.TestCase):
 
 def suite():
     suite = unittest.TestSuite()
+    loader = unittest.TestLoader()
+    testCases = (TestPacketBuilderMethods, TestPacketMethods, TestClientApiMethods)
 
-    suite.addTest(TestPacketMethods('test packet class methods'))
-    suite.addTest(TestPacketBuilderMethods('test packet builder class methods'))
-    suite.addTest(TestClientApiMethods('test client api class methods'))
+    for testClass in testCases:
+        tests = loader.loadTestsFromTestCase(testClass)
+        suite.addTests(tests)
 
     return suite
 
