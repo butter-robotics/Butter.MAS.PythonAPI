@@ -5,7 +5,7 @@ HTTP client python API for Butter MAS platform.
 [![](https://img.shields.io/pypi/v/butter.mas-api.svg)](https://pypi.org/project/butter.mas-api/)
 
 ___
-🚧**NOTE:** this repository is still a work in progress, it has not been deployed to PyPi yet (checkout PyPi test).
+🚧**NOTE:** this repository is still a work in progress.
 ___
 
 ## Getting Started
@@ -19,7 +19,7 @@ You will need to install python 3 in order to use this software
 ### Installing
 
 ```
-pip install --index-url https://test.pypi.org/simple/butter.mas-api
+pip install butter.mas-api
 ```
 <!-- NOTE: the PyPi module name is _different_ then the repository name -->
 
