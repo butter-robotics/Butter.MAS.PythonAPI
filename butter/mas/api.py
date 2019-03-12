@@ -1,4 +1,4 @@
-from utils.packet_builder import PacketBuilder
+from .utils.packet_builder import PacketBuilder
 
 class Client():
     ''' Butter MAS HTTP client API '''
@@ -32,8 +32,8 @@ class Client():
 
         return packet.send()
 
-    def setMotorRegister(self, motorName, registerName):
-        packet = PacketBuilder(self.ip, self.port).addCommand('set').addArguments(motorName, registerName).build()        
+    def setMotorRegister(self, motorName, registerName, value):
+        packet = PacketBuilder(self.ip, self.port).addCommand('set').addArguments(motorName, registerName, value).build()        
 
         return packet.send()
 
