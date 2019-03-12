@@ -1,6 +1,6 @@
 import unittest
 
-from api.api import Client
+from butter.mas.api import Client
 from tests.utils.packet_test import TestPacketMethods
 from tests.utils.packet_builder_test import TestPacketBuilderMethods
 
