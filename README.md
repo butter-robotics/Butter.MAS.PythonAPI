@@ -23,6 +23,16 @@ pip install --index-url https://test.pypi.org/simple/butter.mas-api
 ```
 <!-- NOTE: the PyPi module name is _different_ then the repository name -->
 
+### Usage
+
+```
+from butter.mas.api import Client
+
+butterHttpClient = Client('192.168.0.111', 5555)
+
+butterHttpClient.playAnimation('welcome')
+```
+
 ### Coding style tests
 
 #### Linting
