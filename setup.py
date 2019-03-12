@@ -9,7 +9,7 @@ with open('LICENSE') as f:
 
 setup(
     name='MAS-API',
-    version='0.1.0',
+    version='0.1.1',
     description='Python HTTP Client API for Butter MAS platform',
     long_description=readme,
     author='Benny Megidish',

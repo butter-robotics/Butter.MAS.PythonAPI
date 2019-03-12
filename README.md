@@ -19,7 +19,7 @@ You will need to install python 3 in order to use this software
 ### Installing
 
 ```
-pip install butterMAS
+pip install --index-url https://test.pypi.org/simple/butterMAS
 ```
 <!-- NOTE: the PyPi module name is _different_ then the repository name -->
 
