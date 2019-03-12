@@ -5,7 +5,9 @@ from tests.utils.packet_test import TestPacketMethods
 from tests.utils.packet_builder_test import TestPacketBuilderMethods
 
 class TestClientApiMethods(unittest.TestCase):
-    def testSetUp(self):
+
+    @classmethod
+    def setUpClass(self):
         self.client = Client('localhost')
 
     def testGetAvailableHandlers(self):

@@ -4,7 +4,8 @@ from butter.mas.utils.packet import Packet
 
 class TestPacketBuilderMethods(unittest.TestCase):
 
-    def setUp(self):
+    @classmethod
+    def setUpClass(self):
         self.builder = PacketBuilder('localhost', 5555)
 
     def testAddCommand(self):

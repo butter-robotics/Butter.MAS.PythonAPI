@@ -39,3 +39,6 @@ class Packet:
         response.status_code = 400
 
         return response
+
+    def __eq__(self, other):
+        return isinstance(other, Packet) and self.ip == other.ip and self.port == other.port and self.query == other.query

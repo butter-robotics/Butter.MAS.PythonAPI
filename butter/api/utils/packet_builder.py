@@ -29,14 +29,14 @@ class PacketBuilder():
         return self
 
     def addParameter(self, parameter):
-        self.params.append(parameter)
+        self.params.append(self._formatParameter(parameter))
 
         return self
 
     def addParameters(self, *parameters):
         if parameters:
             for parameter in parameters:
-                self.params.append(parameter)
+                self.params.append(self._formatParameter(parameter))
 
         return self
 
