@@ -6,6 +6,9 @@ class TestPacketBuilderMethods(unittest.TestCase):
 
     @classmethod
     def setUpClass(self):
+        self.builder = None
+
+    def setUp(self):
         self.builder = PacketBuilder('localhost', 5555)
 
     def testAddCommand(self):
