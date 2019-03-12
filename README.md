@@ -25,7 +25,7 @@ pip install butter.mas-api
 
 ### Usage
 
-```
+```python
 from butter.mas.api import Client
 
 butterHttpClient = Client('192.168.0.111', 5555)
