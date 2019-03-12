@@ -30,7 +30,8 @@ from butter.mas.api import Client
 
 butterHttpClient = Client('192.168.0.111', 5555)
 
-butterHttpClient.playAnimation('welcome')
+result = butterHttpClient.playAnimation('welcome')
+print(result.json())
 ```
 
 ### Coding style tests
