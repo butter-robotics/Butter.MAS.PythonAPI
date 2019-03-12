@@ -47,6 +47,11 @@ Please test your code before submitting a PR.
 python -m unittest tests.api_test.py
 ```
 
+## Documentation
+- 👨🏼‍💻 [API](https://github.com/bennymeg/Butter.MAS.PythonAPI/blob/master/docs/API.md),  
+- 🖋  [Licence](https://github.com/bennymeg/Butter.MAS.PythonAPI/blob/master/LICENSE)
+<!-- - 👩🏼‍🏫 [Examples](https://github.com/bennymeg/Butter.MAS.PythonAPI/blob/master/docs/examples),   -->
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://github.com/bennymeg/Butter.MAS.PythonAPI/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
