@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
 
-with open('README.md') as f:
+with open('README.md', encoding="utf8") as f:
     readme = f.read()
 
 with open('LICENSE') as f:
@@ -9,7 +9,7 @@ with open('LICENSE') as f:
 
 setup(
     name='butter.mas-api',
-    version='0.4.0',
+    version='0.4.1',
     description='Python HTTP Client API for Butter MAS platform',
     long_description=readme,
     author='Benny Megidish',
