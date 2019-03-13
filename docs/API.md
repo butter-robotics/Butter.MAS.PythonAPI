@@ -4,7 +4,7 @@
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | ip | <code>string</code> |  | robot server ip. |
-| port | <code>string</code> |  | robot server port. |
+| port | <code>integer</code> | <code>5555</code> | robot server port. |
 
 ###    getAvailableHandlers(): ⇒ <code>Response</code>
 Gets all the available handlers
@@ -25,6 +25,11 @@ Gets all the available audio playbacks
 
 ###    getAvailableMotorRegisters(motorName, writeableOnly=False): ⇒ <code>Response</code>
 Gets all the available motor registers
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| motorName | <code>string</code> |  | dof motor name. |
+| writeableOnly | <code>boolean</code> | <code>false</code> | get only writeable registers. |
 
 ###    getMotorRegister(motorName, registerName): ⇒ <code>Response</code>
 Gets motor register value
