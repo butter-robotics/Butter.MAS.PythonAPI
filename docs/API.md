@@ -23,13 +23,13 @@ Gets all the available audio playbacks
 | --- | --- | --- | --- |
 | reload | <code>boolean</code> | <code>false</code> | reload audio playbacks. |
 
-###    getAvailableMotorRegisters(motorName, writeableOnly=False): ⇒ <code>Response</code>
+###    getAvailableMotorRegisters(motorName, readableOnly=False): ⇒ <code>Response</code>
 Gets all the available motor registers
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | motorName | <code>string</code> |  | dof motor name. |
-| writeableOnly | <code>boolean</code> | <code>false</code> | get only writeable registers. |
+| readableOnly | <code>boolean</code> | <code>false</code> | get only readable registers (ignore R/W registers). |
 
 ###    getMotorRegister(motorName, registerName): ⇒ <code>Response</code>
 Gets motor register value

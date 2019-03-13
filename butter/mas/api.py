@@ -13,17 +13,28 @@ class Client():
         return packet.send()
 
     def getAvailableAnimations(self, reload=False):
-        packet = PacketBuilder(self.ip, self.port).addCommand('animate').addParameter('list').build()
+        builder = PacketBuilder(self.ip, self.port).addCommand('animate')
+
+        if reload:
+            builder.addParameter('reload')
+
+        packet = builder.addParameter('list').build()
 
         return packet.send()
 
     def getAvailableSounds(self, reload=False):
-        packet = PacketBuilder(self.ip, self.port).addCommand('audio').addParameter('list').build()
+        builder = PacketBuilder(self.ip, self.port).addCommand('audio')
+
+        if reload:
+            builder.addParameter('reload')
+
+        packet = builder.addParameter('list').build()
 
         return packet.send()
 
-    def getAvailableMotorRegisters(self, motorName, writeableOnly=False):
-        packet = PacketBuilder(self.ip, self.port).addCommand('get').addParameter('list').build()
+    def getAvailableMotorRegisters(self, motorName, readableOnly=False):
+        packet = PacketBuilder(self.ip, self.port).addCommand('get').addParameter('list') \
+                    .addKeyValuePair('readableOnly', readableOnly).build()
 
         return packet.send()
 
