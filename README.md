@@ -44,7 +44,7 @@ Please use PyLint (Default linter on VS Code) to lint your code before submittin
 
 Please test your code before submitting a PR.
 ```
-python -m unittest tests.api_test.py
+python -m unittest tests/api_test.py
 ```
 
 ## Documentation
