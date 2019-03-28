@@ -1,7 +1,7 @@
 import unittest
 from butter.mas.utils.packet_factory import PacketFactory
 
-class TestPacketMethods(unittest.TestCase):
+class TestHttpPacketMethods(unittest.TestCase):
 
     def testSend(self):
         packetFactory = PacketFactory()

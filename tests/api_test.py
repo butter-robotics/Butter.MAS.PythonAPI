@@ -1,7 +1,8 @@
 import unittest
 
 from butter.mas.api import Client
-from tests.utils.packet_test import TestPacketMethods
+from tests.utils.packet_http_test import TestHttpPacketMethods
+from tests.utils.packet_udp_test import TestUdpPacketMethods
 from tests.utils.packet_builder_test import TestPacketBuilderMethods
 
 class TestClientApiMethods(unittest.TestCase):
@@ -55,7 +56,7 @@ class TestClientApiMethods(unittest.TestCase):
 def suite():
     suite = unittest.TestSuite()
     loader = unittest.TestLoader()
-    testCases = (TestPacketBuilderMethods, TestPacketMethods, TestClientApiMethods)
+    testCases = (TestPacketBuilderMethods, TestHttpPacketMethods, TestUdpPacketMethods, TestClientApiMethods)
 
     for testClass in testCases:
         tests = loader.loadTestsFromTestCase(testClass)
