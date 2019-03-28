@@ -1,6 +1,6 @@
 # Butter MAS HTTP Python API
 
-## class Client(ip, port):
+## class *Client(ip, port): _[HttpClient, UdpClient]_
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | ip | <code>string</code> |  | robot server ip. |

@@ -26,9 +26,9 @@ pip install butter.mas-api
 ### Usage
 
 ```python
-from butter.mas.api import Client
+from butter.mas.api import HttpClient
 
-butterHttpClient = Client('192.168.0.111')  # use you robot ip here
+butterHttpClient = HttpClient('192.168.0.111')  # use you robot ip here
 
 result = butterHttpClient.playAnimation('welcome')
 print(result.json())
