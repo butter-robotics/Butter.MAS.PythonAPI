@@ -1,11 +1,15 @@
-from .packet import Packet
+from .packet_factory import PacketFactory
 
 class PacketBuilder():
     ''' Builds a command packet using the builder design pattern '''
 
-    def __init__(self, ip, port):
+    def __init__(self, ip, port, protocol="http"):
         self.ip = ip
         self.port = port
+
+        packetFactory = PacketFactory()
+        self.packet = packetFactory.getPacketClass(protocol)
+
         self.cmd = None
         self.args = list()
         self.params = list()
@@ -74,4 +78,4 @@ class PacketBuilder():
         uri = '/'.join(['cmd', 'json'])
         uri = "%s/%s" % (uri, query.strip('&'))
 
-        return Packet(self.ip, self.port, uri)
+        return self.packet(self.ip, self.port, uri)

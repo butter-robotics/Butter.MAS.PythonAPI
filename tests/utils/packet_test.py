@@ -1,10 +1,11 @@
 import unittest
-from butter.mas.utils.packet import Packet
+from butter.mas.utils.packet_factory import PacketFactory
 
 class TestPacketMethods(unittest.TestCase):
 
     def testSend(self):
-        packet = Packet('localhost', 5555, 'cmd/json/help')
+        packetFactory = PacketFactory()
+        packet = packetFactory.getPacket('localhost', 5555, 'cmd/json/help')
         self.assertIsNotNone(packet.send())
 
 if __name__ == '__main__':
