@@ -1,2 +1,6 @@
 Butter MAS HTTP Client Python API
 Copyright 2019 Benny Megidish.
+
+Additional requirements for Butter MAS Educational or Academic license users:
+In addition to Butter MAS HTTP Client Python API license,
+attribution required to any publication made related to Butter MAS.
