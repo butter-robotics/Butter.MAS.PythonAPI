@@ -7,15 +7,13 @@ class ClientFactory:
     def getClient(self, ip, port=None, protocol="http"):
         """Creates new client
         
-        Arguments:
-            ip {str} -- robot IP
-        
-        Keyword Arguments:
-            port {int} -- robot port (default: {None})
-            protocol {str} -- communication protocol (default: {"http"})
+        Args:
+            ip (str): robot IP
+            port (int, optional): robot port. Defaults to None.
+            protocol (str, optional): communication protocol. Defaults to "http".
         
         Returns:
-            Client -- requested client
+            Client: requested client
         """
         if (protocol == "http"):
             return HttpClient(ip) if port is None else HttpClient(ip, port)
@@ -27,11 +25,11 @@ class ClientFactory:
     def getClientClass(self, protocol="http"):
         """Get client class
         
-        Keyword Arguments:
-            protocol {str} -- communication protocol (default: {"http"})
+        Args:
+            protocol (str, optional): communication protocol. Defaults to "http".
         
         Returns:
-            Client -- client class
+            Client: client class
         """
         if (protocol == "http"):
             return HttpClient

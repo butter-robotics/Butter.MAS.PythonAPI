@@ -5,13 +5,11 @@ class HttpClient(Client):
 
     def __init__(self, ip, port=5555, protocol='http'):
         """Initialize Butter MAS HTTP client
-        
-        Arguments:
-            ip {str} -- robot IP
-        
-        Keyword Arguments:
-            port {int} -- robot port (default: {5555})
-            protocol {str} -- communication protocol (default: {'http'})
+                
+        Args:
+            ip (str): robot IP
+            port (int, optional): robot port. Defaults to 5555.
+            protocol (str, optional): communication protocol. Defaults to "http".
         """
         super().__init__(ip, port, protocol)
 

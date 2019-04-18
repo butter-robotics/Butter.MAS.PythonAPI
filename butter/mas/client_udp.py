@@ -5,13 +5,11 @@ class UdpClient(Client):
 
     def __init__(self, ip, port=5000, protocol='udp'):
         """Initialize Butter MAS UDP client
-        
-        Arguments:
-            ip {str} -- robot IP
-        
-        Keyword Arguments:
-            port {int} -- robot port (default: {5555})
-            protocol {str} -- communication protocol (default: {'udp'})
+                
+        Args:
+            ip (str): robot IP
+            port (int, optional): robot port. Defaults to 5000.
+            protocol (str, optional): communication protocol. Defaults to "udp".
         """
         super().__init__(ip, port, protocol)
 

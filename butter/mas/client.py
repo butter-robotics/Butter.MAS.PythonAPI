@@ -6,12 +6,10 @@ class Client():
     def __init__(self, ip, port=5555, protocol='http'):
         """Initialize client
         
-        Arguments:
-            ip {str} -- robot IP
-        
-        Keyword Arguments:
-            port {int} -- robot port (default: {5555})
-            protocol {str} -- communication protocol (default: {'http'})
+        Args:
+            ip (str): robot IP
+            port (int, optional): robot port. Defaults to 5555.
+            protocol (str, optional): communication protocol. Defaults to "http".
         """
         self.ip = ip
         self.port = port
@@ -21,7 +19,7 @@ class Client():
         """Get available robot handlers
         
         Returns:
-            Response -- response containing all the available robot handlers
+            Response: response containing all the available robot handlers
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('list').build()
 
@@ -30,11 +28,11 @@ class Client():
     def getAvailableAnimations(self, reload=False):
         """Get available (loaded) robot animations        
         
-        Keyword Arguments:
-            reload {bool} -- reload all animations (default: {False})
+        Args:
+            reload (bool, optional): reload all animations. Defaults to False.
         
         Returns:
-            Response -- response containing all the available (loaded) robot animations
+            Response: response containing all the available (loaded) robot animations
         """
         builder = PacketBuilder(self.ip, self.port, self.protocol).addCommand('animate')
 
@@ -48,11 +46,11 @@ class Client():
     def getAvailableSounds(self, reload=False):
         """Get available (loaded) robot sound assets        
         
-        Keyword Arguments:
-            reload {bool} -- reload all sound assets (default: {False})
+        Args:
+            reload (bool, optional): reload all sound assets. Defaults to False.
         
         Returns:
-            Response -- response containing all the available (loaded) robot sound assets
+            Response: response containing all the available (loaded) robot sound assets
         """
         builder = PacketBuilder(self.ip, self.port, self.protocol).addCommand('audio')
 
@@ -66,14 +64,12 @@ class Client():
     def getAvailableMotorRegisters(self, motorName, readableOnly=False):
         """Get all available motor registers
         
-        Arguments:
-            motorName {str} -- motor name (as configured on the configurator)
+        Args:
+            motorName (str): motor name (as configured on the configurator)
+            readableOnly (bool, optional): get readable registers only. Defaults to False.
         
-        Keyword Arguments:
-            readableOnly {bool} -- get readable registers only (default: {False})
-        
-        Return
-            Response -- response containing all the available motor registers
+        Returns:
+            Response: response containing all the available motor registers
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('get').addParameter('list') \
                     .addKeyValuePair('readableOnly', readableOnly).build()
@@ -83,12 +79,12 @@ class Client():
     def getMotorRegister(self, motorName, registerName):
         """Get motor register value
         
-        Arguments:
-            motorName {str} -- motor name (as configured on the configurator)
-            registerName {str} -- motor register name
+        Args:
+            motorName (str): motor name (as configured on the configurator)
+            registerName (str): motor register name
         
         Returns:
-            Response -- response containing register value
+            Response: response containing register value
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('get') \
                     .addArguments(motorName, registerName).build()
@@ -98,13 +94,13 @@ class Client():
     def setMotorRegister(self, motorName, registerName, value):
         """Get motor register value
         
-        Arguments:
-            motorName {str} -- motor name (as configured on the configurator)
-            registerName {str} -- motor register name
-            value {str} -- register value
+        Args:
+            motorName (str): motor name (as configured on the configurator)
+            registerName (str): motor register name
+            value (str): register value
         
         Returns:
-            Response -- response containing execution result
+            Response: response containing execution result
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('set') \
                     .addArguments(motorName, registerName, value).build()        
@@ -114,11 +110,11 @@ class Client():
     def playAnimation(self, animationName):
         """Play animation on the robot
         
-        Arguments:
-            animationName {str} -- animation name
+        Args:
+            animationName (str): animation name
         
         Returns:
-            Response -- response containing execution result
+            Response: response containing execution result
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('animate').addArgument(animationName).build()        
 
@@ -128,7 +124,7 @@ class Client():
         """Pause currently playing animation (if available) on the robot
         
         Returns:
-            Response -- response containing execution result
+            Response: response containing execution result
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('animate').addParameter('pause').build()        
 
@@ -138,7 +134,7 @@ class Client():
         """Resume currently paused animation (if available) on the robot
         
         Returns:
-            Response -- response containing execution result
+            Response: response containing execution result
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('animate').addParameter('resume').build()        
 
@@ -148,7 +144,7 @@ class Client():
         """Stop currently playing animation (if available) on the robot
         
         Returns:
-            Response -- response containing execution result
+            Response: response containing execution result
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('animate').addParameter('stop').build()        
 
@@ -157,11 +153,11 @@ class Client():
     def playAudio(self, fileName):
         """Play audio on the robot
         
-        Arguments:
-            fileName {str} -- audio asset name
+        Args:
+            fileName (str): audio asset name
         
         Returns:
-            Response -- response containing execution result
+            Response: response containing execution result
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('audio').addArgument(fileName).build()        
 
@@ -171,7 +167,7 @@ class Client():
         """Pause current audio playback (if available) on the robot
         
         Returns:
-            Response -- response containing execution result
+            Response: response containing execution result
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('audio').addParameter('pause').build()        
 
@@ -181,7 +177,7 @@ class Client():
         """Resume currently paused audio playback (if available) on the robot
         
         Returns:
-            Response -- response containing execution result
+            Response: response containing execution result
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('audio').addParameter('resume').build()        
 
@@ -191,7 +187,7 @@ class Client():
         """Stop current audio playback (if available) on the robot
         
         Returns:
-            Response -- response containing execution result
+            Response: response containing execution result
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('audio').addParameter('stop').build()        
 

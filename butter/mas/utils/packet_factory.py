@@ -8,15 +8,13 @@ class PacketFactory:
         """Creates new packet
         
         Arguments:
-            ip {str} -- robot IP
-            port {int} -- robot port
-            query {str} -- packet payload
-        
-        Keyword Arguments:
-            protocol {str} -- communication protocol (default: {"http"})
+            ip (str): robot IP
+            port (int): robot port
+            query (str): packet payload
+            protocol (str, optional): communication protocol. defaults to "http".
         
         Returns:
-            Packet -- data packet
+            Packet: data packet
         """
         if (protocol == "http"):
             return HttpPacket(ip, port, query)
@@ -28,11 +26,11 @@ class PacketFactory:
     def getPacketClass(self, protocol="http"):
         """Get packet class
         
-        Keyword Arguments:
-            protocol {str} -- communication protocol (default: {"http"})
+        Args:
+            protocol (str, optional): communication protocol. defaults to "http".
         
         Returns:
-            Packet -- data packet
+            Packet: data packet
         """
         if (protocol == "http"):
             return HttpPacket

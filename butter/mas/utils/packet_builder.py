@@ -6,12 +6,10 @@ class PacketBuilder():
     def __init__(self, ip, port, protocol="http"):
         """Initialize builder
         
-        Arguments:
-            ip {str} -- robot IP
-            port {int} -- robot port
-        
-        Keyword Arguments:
-            protocol {str} -- communication protocol (default: {"http"})
+        Args:
+            ip (str): robot IP
+            port (int): robot port
+            protocol (str, optional): communication protocol. defaults to "http".
         """
         self.ip = ip
         self.port = port
@@ -27,11 +25,11 @@ class PacketBuilder():
     def addCommand(self, command):
         """Add command
         
-        Arguments:
-            command {str} -- command
+        Args:
+            command (str): command
         
         Returns:
-            PacketBuilder -- self
+            PacketBuilder: self
         """
         self.cmd = command
 
@@ -40,11 +38,11 @@ class PacketBuilder():
     def addArgument(self, argument):
         """Add argument
         
-        Arguments:
-            argument {str} -- argument
+        Args:
+            argument (str): argument
         
         Returns:
-            PacketBuilder -- self
+            PacketBuilder: self
         """
         self.args.append(argument)
 
@@ -54,7 +52,7 @@ class PacketBuilder():
         """Add arguments
         
         Returns:
-            PacketBuilder -- self
+            PacketBuilder: self
         """
         if arguments:
             for argument in arguments:
@@ -65,11 +63,11 @@ class PacketBuilder():
     def addParameter(self, parameter):
         """Add parameter
         
-        Arguments:
-            parameter {str} -- parameter
+        Args:
+            parameter (str): parameter
         
         Returns:
-            PacketBuilder -- self
+            PacketBuilder: self
         """
         self.params.append(self._formatParameter(parameter))
 
@@ -79,7 +77,7 @@ class PacketBuilder():
         """Add parameters
         
         Returns:
-            PacketBuilder -- self
+            PacketBuilder: self
         """
         if parameters:
             for parameter in parameters:
@@ -90,12 +88,12 @@ class PacketBuilder():
     def addKeyValuePair(self, key, value):
         """Add key value pair
         
-        Arguments:
-            key {str} -- attribute key
-            value {str} -- attribute value
+        Args:
+            key (str): attribute key
+            value (str): attribute value
         
         Returns:
-            PacketBuilder -- self
+            PacketBuilder: self
         """
         self.keys[key] = value
 
@@ -104,11 +102,11 @@ class PacketBuilder():
     def _formatParameter(self, parameter):
         """Formats parameter properly
         
-        Arguments:
-            parameter {str} -- parameter
+        Args:
+            parameter (str): parameter
         
         Returns:
-            str -- formated parameter
+            str: formated parameter
         """
         if not parameter.startswith('--'):
             if  parameter.startswith('-'):
@@ -122,7 +120,7 @@ class PacketBuilder():
         """Builds the packet
         
         Returns:
-            Packet -- data packet
+            Packet: data packet
         """
         if self.cmd == None: 
             return None

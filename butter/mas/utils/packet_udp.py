@@ -8,10 +8,10 @@ class UdpPacket(Packet):
     def __init__(self, ip, port, query):
         """Initialize packet
         
-        Arguments:
-            ip {str} -- robot IP
-            port {int} -- robot port
-            query {str} -- packet payload
+        Args:
+            ip (str): robot IP
+            port (int): robot port
+            query (str): packet payload
         """
         super().__init__(ip, port, query)
         self.udpSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -20,11 +20,11 @@ class UdpPacket(Packet):
     def send(self, timeout=5):
         """Send packet
         
-        Keyword Arguments:
-            timeout {int} -- packet timeout (default: {5})
+        Args:
+            timeout (int, optional): packet timeout. defaults to 5.
         
         Returns:
-            Response -- response containing the response
+            Response: response containing the response
         """
         response = None
 
@@ -50,11 +50,11 @@ class UdpPacket(Packet):
     def _generateEmptyResponse(errorType=b'unknown'):
         """Generates empty response packet
         
-        Keyword Arguments:
-            errorType {bytes} -- error type (default: {b'unknown'})
+        Args:
+            errorType (bytes, optional): error type. defaults to b'unknown'.
         
         Returns:
-            Response -- error response
+            Response: error response
         """
         error = '{ "exception": "Request resolved with an %s error" }' % errorType
 

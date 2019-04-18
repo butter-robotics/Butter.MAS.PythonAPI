@@ -6,10 +6,10 @@ class Packet(ABC):
     def __init__(self, ip, port, query):
         """Initialize packet
         
-        Arguments:
-            ip {str} -- robot IP
-            port {int} -- robot port
-            query {str} -- packet payload
+        Args:
+            ip (str): robot IP
+            port (int, optional): robot port. Defaults to 5555.
+            query (str): packet payload
         """
         self.ip = ip
         self.port = port
@@ -19,8 +19,8 @@ class Packet(ABC):
     def send(self, timeout=None):
         """Send packet abstract methud
         
-        Keyword Arguments:
-            timeout {int} -- packet timeout (default: {None})
+        Args:
+            timeout (int, optional): packet timeout. defaults to None.
         """
         pass
 
