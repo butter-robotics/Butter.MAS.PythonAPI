@@ -4,6 +4,15 @@ class PacketBuilder():
     ''' Builds a command packet using the builder design pattern '''
 
     def __init__(self, ip, port, protocol="http"):
+        """Initialize builder
+        
+        Arguments:
+            ip {str} -- robot IP
+            port {int} -- robot port
+        
+        Keyword Arguments:
+            protocol {str} -- communication protocol (default: {"http"})
+        """
         self.ip = ip
         self.port = port
 
@@ -16,16 +25,37 @@ class PacketBuilder():
         self.keys = dict()
 
     def addCommand(self, command):
+        """Add command
+        
+        Arguments:
+            command {str} -- command
+        
+        Returns:
+            PacketBuilder -- self
+        """
         self.cmd = command
 
         return self
 
     def addArgument(self, argument):
+        """Add argument
+        
+        Arguments:
+            argument {str} -- argument
+        
+        Returns:
+            PacketBuilder -- self
+        """
         self.args.append(argument)
 
         return self
     
     def addArguments(self, *arguments):
+        """Add arguments
+        
+        Returns:
+            PacketBuilder -- self
+        """
         if arguments:
             for argument in arguments:
                 self.args.append(argument)
@@ -33,11 +63,24 @@ class PacketBuilder():
         return self
 
     def addParameter(self, parameter):
+        """Add parameter
+        
+        Arguments:
+            parameter {str} -- parameter
+        
+        Returns:
+            PacketBuilder -- self
+        """
         self.params.append(self._formatParameter(parameter))
 
         return self
 
     def addParameters(self, *parameters):
+        """Add parameters
+        
+        Returns:
+            PacketBuilder -- self
+        """
         if parameters:
             for parameter in parameters:
                 self.params.append(self._formatParameter(parameter))
@@ -45,20 +88,42 @@ class PacketBuilder():
         return self
 
     def addKeyValuePair(self, key, value):
+        """Add key value pair
+        
+        Arguments:
+            key {str} -- attribute key
+            value {str} -- attribute value
+        
+        Returns:
+            PacketBuilder -- self
+        """
         self.keys[key] = value
 
         return self
 
-    def _formatParameter(self, param):
-        if not param.startswith('--'):
-            if  param.startswith('-'):
-                param = '-' + param
+    def _formatParameter(self, parameter):
+        """Formats parameter properly
+        
+        Arguments:
+            parameter {str} -- parameter
+        
+        Returns:
+            str -- formated parameter
+        """
+        if not parameter.startswith('--'):
+            if  parameter.startswith('-'):
+                parameter = '-' + parameter
             else:
-                param = '--' + param
+                parameter = '--' + parameter
 
-        return param
+        return parameter
 
     def build(self):
+        """Builds the packet
+        
+        Returns:
+            Packet -- data packet
+        """
         if self.cmd == None: 
             return None
 

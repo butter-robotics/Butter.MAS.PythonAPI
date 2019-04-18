@@ -3,14 +3,29 @@ from .packet import Packet
 from .general_utils import print_error
 
 class UdpPacket(Packet):
-    ''' represents a udp data packet '''
+    ''' Represents a udp data packet '''
 
     def __init__(self, ip, port, query):
+        """Initialize packet
+        
+        Arguments:
+            ip {str} -- robot IP
+            port {int} -- robot port
+            query {str} -- packet payload
+        """
         super().__init__(ip, port, query)
         self.udpSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.bufferSize  = 1024
 
     def send(self, timeout=5):
+        """Send packet
+        
+        Keyword Arguments:
+            timeout {int} -- packet timeout (default: {5})
+        
+        Returns:
+            Response -- response containing the response
+        """
         response = None
 
         try:
@@ -33,6 +48,14 @@ class UdpPacket(Packet):
 
     @staticmethod
     def _generateEmptyResponse(errorType=b'unknown'):
+        """Generates empty response packet
+        
+        Keyword Arguments:
+            errorType {bytes} -- error type (default: {b'unknown'})
+        
+        Returns:
+            Response -- error response
+        """
         error = '{ "exception": "Request resolved with an %s error" }' % errorType
 
         return (error, None)
