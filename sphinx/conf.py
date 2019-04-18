@@ -15,18 +15,18 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('../'))
-
+sys.path.insert(0, os.path.abspath('../butter/mas'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'Butter MAS HTTP Client Python API'
+project = 'Butter MAS Python API'
 copyright = '2019, Benny Megidish'
 author = 'Benny Megidish'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.7.0'
+release = '0.8.2'
 
 
 # -- General configuration ---------------------------------------------------
@@ -40,6 +40,7 @@ release = '0.7.0'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.napoleon',
     'sphinx.ext.githubpages',
 ]
 
@@ -76,7 +77,8 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+#html_theme = 'alabaster'
+html_theme = 'press'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -103,7 +105,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'ButterMASHTTPClientPythonAPIdoc'
+htmlhelp_basename = 'ButterMASPythonAPIdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -130,7 +132,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'ButterMASHTTPClientPythonAPI.tex', 'Butter MAS HTTP Client Python API Documentation',
+    (master_doc, 'ButterMASPythonAPI.tex', 'Butter MAS Python API Documentation',
      'Benny Megidish', 'manual'),
 ]
 
@@ -140,7 +142,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'buttermashttpclientpythonapi', 'Butter MAS HTTP Client Python API Documentation',
+    (master_doc, 'buttermaspythonapi', 'Butter MAS Python API Documentation',
      [author], 1)
 ]
 
@@ -151,8 +153,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'ButterMASHTTPClientPythonAPI', 'Butter MAS HTTP Client Python API Documentation',
-     author, 'ButterMASHTTPClientPythonAPI', 'One line description of project.',
+    (master_doc, 'ButterMASPythonAPI', 'Butter MAS Python API Documentation',
+     author, 'ButterMASPythonAPI', 'One line description of project.',
      'Miscellaneous'),
 ]
 
