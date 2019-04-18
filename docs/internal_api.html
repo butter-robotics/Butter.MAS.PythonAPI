@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Internal API</title>
+    
+      <link rel="stylesheet" href="_static/pygments.css">
+      <link rel="stylesheet" href="_static/theme.css">
+      
+      <script src="_static/theme-vendors.js"></script>
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="prev" title="API" href="api.html" /> 
+  </head>
+
+  <body><div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    <span class="site-name">Butter MAS Python API</span>
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  <div class="nav-item">
+    <a href="installation.html"
+       class="nav-link  router-link-active">
+       Contents:
+    </a>
+  </div>
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  <div class="nav-item">
+    <a href="installation.html"
+       class="nav-link  router-link-active">
+       Contents:
+    </a>
+  </div>
+
+
+
+            
+          </navlinks><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+  <div class="sidebar-group">
+    <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="documentation.html">Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Internal API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-butter.mas.utils.packet_factory">Packet Factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-butter.mas.utils.packet_builder">Packet Builder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#http-packet">HTTP Packet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#udp-packet">UDP Packet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-butter.mas.utils.packet">Packet</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+        </sidebar>
+
+      <page>
+          <div class="content">
+            
+  <div class="section" id="internal-api">
+<h1>Internal API<a class="headerlink" href="#internal-api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-butter.mas.utils.packet_factory">
+<span id="packet-factory"></span><h2>Packet Factory<a class="headerlink" href="#module-butter.mas.utils.packet_factory" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="butter.mas.utils.packet_factory.PacketFactory">
+<em class="property">class </em><code class="descclassname">butter.mas.utils.packet_factory.</code><code class="descname">PacketFactory</code><a class="headerlink" href="#butter.mas.utils.packet_factory.PacketFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Packet factory for diffrent types of protocols</p>
+<dl class="method">
+<dt id="butter.mas.utils.packet_factory.PacketFactory.getPacket">
+<code class="descname">getPacket</code><span class="sig-paren">(</span><em>ip</em>, <em>port</em>, <em>query</em>, <em>protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_factory.PacketFactory.getPacket" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates new packet</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>ip</strong> (<em>str</em>) – robot IP</li>
+<li><strong>port</strong> (<em>int</em>) – robot port</li>
+<li><strong>query</strong> (<em>str</em>) – packet payload</li>
+<li><strong>protocol</strong> (<em>str</em><em>, </em><em>optional</em>) – communication protocol. defaults to “http”.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">data packet</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#butter.mas.utils.packet.Packet" title="butter.mas.utils.packet.Packet">Packet</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.utils.packet_factory.PacketFactory.getPacketClass">
+<code class="descname">getPacketClass</code><span class="sig-paren">(</span><em>protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_factory.PacketFactory.getPacketClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get packet class</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>protocol</strong> (<em>str</em><em>, </em><em>optional</em>) – communication protocol. defaults to “http”.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">data packet</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#butter.mas.utils.packet.Packet" title="butter.mas.utils.packet.Packet">Packet</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-butter.mas.utils.packet_builder">
+<span id="packet-builder"></span><h2>Packet Builder<a class="headerlink" href="#module-butter.mas.utils.packet_builder" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="butter.mas.utils.packet_builder.PacketBuilder">
+<em class="property">class </em><code class="descclassname">butter.mas.utils.packet_builder.</code><code class="descname">PacketBuilder</code><span class="sig-paren">(</span><em>ip</em>, <em>port</em>, <em>protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_builder.PacketBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a command packet using the builder design pattern</p>
+<dl class="method">
+<dt id="butter.mas.utils.packet_builder.PacketBuilder.addArgument">
+<code class="descname">addArgument</code><span class="sig-paren">(</span><em>argument</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_builder.PacketBuilder.addArgument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add argument</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>argument</strong> (<em>str</em>) – argument</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">self</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#butter.mas.utils.packet_builder.PacketBuilder" title="butter.mas.utils.packet_builder.PacketBuilder">PacketBuilder</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.utils.packet_builder.PacketBuilder.addArguments">
+<code class="descname">addArguments</code><span class="sig-paren">(</span><em>*arguments</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_builder.PacketBuilder.addArguments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add arguments</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">self</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#butter.mas.utils.packet_builder.PacketBuilder" title="butter.mas.utils.packet_builder.PacketBuilder">PacketBuilder</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.utils.packet_builder.PacketBuilder.addCommand">
+<code class="descname">addCommand</code><span class="sig-paren">(</span><em>command</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_builder.PacketBuilder.addCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add command</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>command</strong> (<em>str</em>) – command</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">self</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#butter.mas.utils.packet_builder.PacketBuilder" title="butter.mas.utils.packet_builder.PacketBuilder">PacketBuilder</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.utils.packet_builder.PacketBuilder.addKeyValuePair">
+<code class="descname">addKeyValuePair</code><span class="sig-paren">(</span><em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_builder.PacketBuilder.addKeyValuePair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add key value pair</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>key</strong> (<em>str</em>) – attribute key</li>
+<li><strong>value</strong> (<em>str</em>) – attribute value</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">self</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#butter.mas.utils.packet_builder.PacketBuilder" title="butter.mas.utils.packet_builder.PacketBuilder">PacketBuilder</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.utils.packet_builder.PacketBuilder.addParameter">
+<code class="descname">addParameter</code><span class="sig-paren">(</span><em>parameter</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_builder.PacketBuilder.addParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add parameter</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>parameter</strong> (<em>str</em>) – parameter</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">self</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#butter.mas.utils.packet_builder.PacketBuilder" title="butter.mas.utils.packet_builder.PacketBuilder">PacketBuilder</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.utils.packet_builder.PacketBuilder.addParameters">
+<code class="descname">addParameters</code><span class="sig-paren">(</span><em>*parameters</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_builder.PacketBuilder.addParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add parameters</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">self</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#butter.mas.utils.packet_builder.PacketBuilder" title="butter.mas.utils.packet_builder.PacketBuilder">PacketBuilder</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.utils.packet_builder.PacketBuilder.build">
+<code class="descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_builder.PacketBuilder.build" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds the packet</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">data packet</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#butter.mas.utils.packet.Packet" title="butter.mas.utils.packet.Packet">Packet</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="http-packet">
+<h2>HTTP Packet<a class="headerlink" href="#http-packet" title="Permalink to this headline">¶</a></h2>
+<p>HttpPacket extends Packet</p>
+<span class="target" id="module-butter.mas.utils.packet_http"></span><dl class="class">
+<dt id="butter.mas.utils.packet_http.HttpPacket">
+<em class="property">class </em><code class="descclassname">butter.mas.utils.packet_http.</code><code class="descname">HttpPacket</code><span class="sig-paren">(</span><em>ip</em>, <em>port</em>, <em>query</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_http.HttpPacket" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a http data packet</p>
+<dl class="method">
+<dt id="butter.mas.utils.packet_http.HttpPacket.send">
+<code class="descname">send</code><span class="sig-paren">(</span><em>timeout=5</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_http.HttpPacket.send" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send packet</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>timeout</strong> (<em>int</em><em>, </em><em>optional</em>) – packet timeout. defaults to 5.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">response containing the response</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Response</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="udp-packet">
+<h2>UDP Packet<a class="headerlink" href="#udp-packet" title="Permalink to this headline">¶</a></h2>
+<p>HttpPacket extends Packet</p>
+<span class="target" id="module-butter.mas.utils.packet_udp"></span><dl class="class">
+<dt id="butter.mas.utils.packet_udp.UdpPacket">
+<em class="property">class </em><code class="descclassname">butter.mas.utils.packet_udp.</code><code class="descname">UdpPacket</code><span class="sig-paren">(</span><em>ip</em>, <em>port</em>, <em>query</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_udp.UdpPacket" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a udp data packet</p>
+<dl class="method">
+<dt id="butter.mas.utils.packet_udp.UdpPacket.send">
+<code class="descname">send</code><span class="sig-paren">(</span><em>timeout=5</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_udp.UdpPacket.send" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send packet</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>timeout</strong> (<em>int</em><em>, </em><em>optional</em>) – packet timeout. defaults to 5.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">response containing the response</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Response</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-butter.mas.utils.packet">
+<span id="packet"></span><h2>Packet<a class="headerlink" href="#module-butter.mas.utils.packet" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="butter.mas.utils.packet.Packet">
+<em class="property">class </em><code class="descclassname">butter.mas.utils.packet.</code><code class="descname">Packet</code><span class="sig-paren">(</span><em>ip</em>, <em>port</em>, <em>query</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet.Packet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents an abstract data packet</p>
+<dl class="method">
+<dt id="butter.mas.utils.packet.Packet.send">
+<code class="descname">send</code><span class="sig-paren">(</span><em>timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet.Packet.send" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send packet abstract methud</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>timeout</strong> (<em>int</em><em>, </em><em>optional</em>) – packet timeout. defaults to None.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner">
+  <span class="prev">
+    <a href="api.html"
+       title="previous chapter">← API</a>
+  </span>
+<div class="footer" role="contentinfo">
+      &#169; Copyright 2019, Benny Megidish.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+</div>
+            </div>
+          </div>
+      </page>
+  </div></body>
+</html>

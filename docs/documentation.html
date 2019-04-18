@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Documentation</title>
+    
+      <link rel="stylesheet" href="_static/pygments.css">
+      <link rel="stylesheet" href="_static/theme.css">
+      
+      <script src="_static/theme-vendors.js"></script>
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="API" href="api.html" />
+  <link rel="prev" title="Installation" href="installation.html" /> 
+  </head>
+
+  <body><div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    <span class="site-name">Butter MAS Python API</span>
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  <div class="nav-item">
+    <a href="installation.html"
+       class="nav-link  router-link-active">
+       Contents:
+    </a>
+  </div>
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  <div class="nav-item">
+    <a href="installation.html"
+       class="nav-link  router-link-active">
+       Contents:
+    </a>
+  </div>
+
+
+
+            
+          </navlinks><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+  <div class="sidebar-group">
+    <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#importing-client-factory">Importing Client Factory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-new-client">Creating New Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interaction-with-the-robot">Interaction With the robot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#receiving-responses-from-the-robot">Receiving Responses from the robot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internal_api.html">Internal API</a></li>
+</ul>
+
+  </div>
+</div>
+        </sidebar>
+
+      <page>
+          <div class="content">
+            
+  <div class="section" id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="importing-client-factory">
+<h2>Importing Client Factory<a class="headerlink" href="#importing-client-factory" title="Permalink to this headline">¶</a></h2>
+<p>Client Factory is a factory class responsible for creating new clients.
+In order to use the factory, we will need to import it first:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">butter.mas.api</span> <span class="k">import</span> <span class="n">ClientFactory</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="creating-new-client">
+<h2>Creating New Client<a class="headerlink" href="#creating-new-client" title="Permalink to this headline">¶</a></h2>
+<p>In order to use communicate with the robot, we will need to create a client.
+There are to types of clients: HttpClient and UdpClient.
+Both clients extends the Client class.</p>
+<p>Creating new HTTP client:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">butterHttpClient</span> <span class="o">=</span> <span class="n">ClientFactory</span><span class="o">.</span><span class="n">getClient</span><span class="p">(</span><span class="s1">&#39;192.168.0.100&#39;</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="s1">&#39;http&#39;</span><span class="p">)</span>  <span class="c1"># use you robot ip here</span>
+</pre></div>
+</div>
+<p>Creating new UDP client:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">butterUdpClient</span> <span class="o">=</span> <span class="n">ClientFactory</span><span class="o">.</span><span class="n">getClient</span><span class="p">(</span><span class="s1">&#39;192.168.0.100&#39;</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="s1">&#39;udp&#39;</span><span class="p">)</span>    <span class="c1"># use you robot ip here</span>
+</pre></div>
+</div>
+<p>The IP address should be the same as the current IP address of the robot on your local network.</p>
+</div>
+<div class="section" id="interaction-with-the-robot">
+<h2>Interaction With the robot<a class="headerlink" href="#interaction-with-the-robot" title="Permalink to this headline">¶</a></h2>
+<p>We can send a command through one of the available functions of the client.</p>
+<p>I.e., we can play animation with the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">butterHttpClient</span><span class="o">.</span><span class="n">playAnimation</span><span class="p">(</span><span class="s1">&#39;welcome&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="receiving-responses-from-the-robot">
+<h2>Receiving Responses from the robot<a class="headerlink" href="#receiving-responses-from-the-robot" title="Permalink to this headline">¶</a></h2>
+<p>Each command we send will return (no matter what protocol we use) an Response object.
+We can parse the response using the built in json method like that:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner">
+  <span class="prev">
+    <a href="installation.html"
+       title="previous chapter">← Installation</a>
+  </span>
+  <span class="next">
+    <a href="api.html"
+       title="next chapter">API →</a>
+  </span>
+<div class="footer" role="contentinfo">
+      &#169; Copyright 2019, Benny Megidish.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+</div>
+            </div>
+          </div>
+      </page>
+  </div></body>
+</html>
