@@ -48,7 +48,8 @@ python -m unittest tests/api_test.py
 ```
 
 ## Documentation
-- 👨🏼‍💻 [API](https://github.com/bennymeg/Butter.MAS.PythonAPI/blob/master/docs/API.md),  
+- 👨🏼‍💻 [API](https://bennymeg.github.io/Butter.MAS.PythonAPI/),
+<!-- (https://github.com/bennymeg/Butter.MAS.PythonAPI/blob/master/docs/API.md), -->
 - 🖋  [Licence](https://github.com/bennymeg/Butter.MAS.PythonAPI/blob/master/LICENSE)
 <!-- - 👩🏼‍🏫 [Examples](https://github.com/bennymeg/Butter.MAS.PythonAPI/blob/master/docs/examples),   -->
 
