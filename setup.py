@@ -9,7 +9,7 @@ with open('LICENSE') as f:
 
 setup(
     name='butter.mas-api',
-    version='0.8.5',
+    version='0.8.6',
     description='Python HTTP Client API for Butter MAS platform',
     long_description=readme,
     author='Benny Megidish',
@@ -26,3 +26,8 @@ setup(
 
 # python -m twine upload dist/*
 # pip install butter.mas-api
+
+''' hot to generate documentation '''
+# cd sphinx
+# ./make html
+# XCOPY ./_build/html ../docs

@@ -18,11 +18,11 @@ Both clients extends the Client class.
 
 Creating new HTTP client::
 
-    butterHttpClient = ClientFactory.getClient('192.168.0.100', protocol='http')  # use you robot ip here
+    butterHttpClient = ClientFactory().getClient('192.168.0.100', protocol='http')  # use you robot ip here
 
 Creating new UDP client::
 
-    butterUdpClient = ClientFactory.getClient('192.168.0.100', protocol='udp')    # use you robot ip here
+    butterUdpClient = ClientFactory().getClient('192.168.0.100', protocol='udp')    # use you robot ip here
 
 The IP address should be the same as the current IP address of the robot on your local network.
 
