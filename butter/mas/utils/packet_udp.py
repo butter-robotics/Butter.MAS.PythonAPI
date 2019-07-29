@@ -42,7 +42,7 @@ class UdpPacket(Packet):
         except socket.timeout as timeout_error:
             print_error('Warning: request timeout have been reached.\n%s\n' % timeout_error)
             response = self._generateEmptyResponse('timeout')
-        except (OSError | InterruptedError) as error:
+        except (OSError, InterruptedError) as error:
             print_error('Warning: request failed.\n%s\n' % error)
             response = self._generateEmptyResponse()
         finally:
