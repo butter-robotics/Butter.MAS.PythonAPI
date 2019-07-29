@@ -15,7 +15,8 @@ class UdpPacket(Packet):
         """
         super().__init__(ip, port, query)
         self.udpSocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        self.bufferSize  = 1024
+        self.udpSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        self.bufferSize  = 2048
 
     def send(self, timeout=5):
         """Send packet
@@ -29,8 +30,9 @@ class UdpPacket(Packet):
         response = None
 
         try:
+            self.udpSocket.settimeout(timeout)
             self.udpSocket.sendto(bytes(self.query, "utf-8"), (self.ip, self.port))
-            # response = self.udpSocket.recvfrom(self.bufferSize)
+            response, _ = self.udpSocket.recvfrom(self.bufferSize)
         except socket.herror as host_error:
             print_error('Warning: we have encountered in a host error.\n%s\n' % host_error)
             response = self._generateEmptyResponse('host')
@@ -43,6 +45,8 @@ class UdpPacket(Packet):
         except (OSError | InterruptedError) as error:
             print_error('Warning: request failed.\n%s\n' % error)
             response = self._generateEmptyResponse()
+        finally:
+            self.udpSocket.close()
 
         return response
 
