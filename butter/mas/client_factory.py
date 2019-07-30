@@ -1,4 +1,5 @@
 from .client_http import HttpClient
+from .client_tcp import TcpClient
 from .client_udp import UdpClient
 
 class ClientFactory:
@@ -17,6 +18,8 @@ class ClientFactory:
         """
         if (protocol == "http"):
             return HttpClient(ip) if port is None else HttpClient(ip, port)
+        elif (protocol == "tcp"):
+            return TcpClient(ip) if port is None else TcpClient(ip, port)
         elif (protocol == "udp"):
             return UdpClient(ip) if port is None else UdpClient(ip, port)
         else:
@@ -33,6 +36,8 @@ class ClientFactory:
         """
         if (protocol == "http"):
             return HttpClient
+        elif (protocol == "tcp"):
+            return TcpClient
         elif (protocol == "udp"):
             return UdpClient
         else:

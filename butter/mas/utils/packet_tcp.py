@@ -2,8 +2,8 @@ import socket
 from .packet import Packet
 from .general_utils import print_error
 
-class UdpPacket(Packet):
-    ''' Represents a udp data packet '''
+class TcpPacket(Packet):
+    ''' Represents a tcp data packet '''
 
     def __init__(self, ip, port, query):
         """Initialize packet
@@ -26,13 +26,13 @@ class UdpPacket(Packet):
             Response: response containing the response
         """
         response = None
-
         try:
-            with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as udpSocket:
-                udpSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-                udpSocket.settimeout(timeout)
-                udpSocket.sendto(bytes(self.query, "utf-8"), (self.ip, self.port))
-                response, _ = udpSocket.recvfrom(self.bufferSize)
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as tcpSocket:
+                tcpSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+                tcpSocket.settimeout(timeout)
+                tcpSocket.connect((self.ip, self.port))
+                tcpSocket.send(bytes(self.query + '\n', "utf-8"))
+                response = tcpSocket.recv(self.bufferSize)
         except socket.herror as host_error:
             print_error('Warning: we have encountered in a host error.\n%s\n' % host_error)
             response = self._generateEmptyResponse('host')
@@ -63,4 +63,4 @@ class UdpPacket(Packet):
         return (error, None)
 
     def __eq__(self, other):
-        return isinstance(other, UdpPacket) and self.ip == other.ip and self.port == other.port and self.query == other.query
+        return isinstance(other, TcpPacket) and self.ip == other.ip and self.port == other.port and self.query == other.query

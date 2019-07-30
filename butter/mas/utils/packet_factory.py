@@ -1,4 +1,5 @@
 from .packet_http import HttpPacket
+from .packet_tcp import TcpPacket
 from .packet_udp import UdpPacket
 
 class PacketFactory:
@@ -18,6 +19,8 @@ class PacketFactory:
         """
         if (protocol == "http"):
             return HttpPacket(ip, port, query)
+        elif (protocol == "tcp"):
+            return TcpPacket(ip, port, query)
         elif (protocol == "udp"):
             return UdpPacket(ip, port, query)
         else:
@@ -34,6 +37,8 @@ class PacketFactory:
         """
         if (protocol == "http"):
             return HttpPacket
+        elif (protocol == "tcp"):
+            return TcpPacket
         elif (protocol == "udp"):
             return UdpPacket
         else:
