@@ -20,6 +20,13 @@ HttpPacket extends Packet
 .. automodule:: butter.mas.utils.packet_http
    :members:
 
+TCP Packet
+-----------
+TcpPacket extends Packet
+
+.. automodule:: butter.mas.utils.packet_tcp
+   :members:
+
 UDP Packet
 ----------
 HttpPacket extends Packet

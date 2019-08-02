@@ -9,8 +9,8 @@ with open('LICENSE') as f:
 
 setup(
     name='butter.mas-api',
-    version='0.10.1',
-    description='Python HTTP Client API for Butter MAS platform',
+    version='0.10.2',
+    description='Python Client API for Butter MAS platform',
     long_description_content_type='text/markdown',
     long_description=readme,
     author='Benny Megidish',
@@ -33,4 +33,4 @@ setup(
 ''' how to generate documentation '''
 # cd sphinx
 # ./make html
-# XCOPY ./_build/html ../docs
+# XCOPY ".\_build\html" "..\docs"

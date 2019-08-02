@@ -14,6 +14,13 @@ HttpClient extends Client
 .. automodule:: butter.mas.client_http
    :members:
 
+TCP Client
+----------
+TcpClient extends Client
+
+.. automodule:: butter.mas.client_tcp
+   :members:
+
 UDP Client
 ----------
 UdpClient extends Client

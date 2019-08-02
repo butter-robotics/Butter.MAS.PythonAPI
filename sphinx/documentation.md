@@ -20,6 +20,10 @@ Creating new HTTP client::
 
     butterHttpClient = ClientFactory().getClient('192.168.0.100', protocol='http')  # use you robot ip here
 
+Creating new TCP client::
+
+    butterTcpClient = ClientFactory().getClient('192.168.0.100', protocol='tcp')  # use you robot ip here
+
 Creating new UDP client::
 
     butterUdpClient = ClientFactory().getClient('192.168.0.100', protocol='udp')    # use you robot ip here

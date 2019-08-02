@@ -66,6 +66,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#module-butter.mas.client_factory">Client Factory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#http-client">HTTP Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tcp-client">TCP Client</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#udp-client">UDP Client</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-butter.mas.client">Client</a></li>
 </ul>
@@ -144,6 +145,16 @@
 </dd></dl>
 
 </div>
+<div class="section" id="tcp-client">
+<h2>TCP Client<a class="headerlink" href="#tcp-client" title="Permalink to this headline">¶</a></h2>
+<p>TcpClient extends Client</p>
+<span class="target" id="module-butter.mas.client_tcp"></span><dl class="class">
+<dt id="butter.mas.client_tcp.TcpClient">
+<em class="property">class </em><code class="descclassname">butter.mas.client_tcp.</code><code class="descname">TcpClient</code><span class="sig-paren">(</span><em>ip</em>, <em>port=5050</em>, <em>protocol='tcp'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client_tcp.TcpClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Butter MAS TCP client API</p>
+</dd></dl>
+
+</div>
 <div class="section" id="udp-client">
 <h2>UDP Client<a class="headerlink" href="#udp-client" title="Permalink to this headline">¶</a></h2>
 <p>UdpClient extends Client</p>
@@ -197,7 +208,7 @@
 <dl class="method">
 <dt id="butter.mas.client.Client.getAvailableMotorRegisters">
 <code class="descname">getAvailableMotorRegisters</code><span class="sig-paren">(</span><em>motorName</em>, <em>readableOnly=False</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.getAvailableMotorRegisters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get all available motor registers</p>
+<dd><p>Get all available motor registers (for Dynamixel motors only)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -239,7 +250,7 @@
 <dl class="method">
 <dt id="butter.mas.client.Client.getMotorRegister">
 <code class="descname">getMotorRegister</code><span class="sig-paren">(</span><em>motorName</em>, <em>registerName</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.getMotorRegister" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get motor register value</p>
+<dd><p>Get motor register value (for Dynamixel motors only)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -251,6 +262,82 @@
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">response containing register value</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Response</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.client.Client.moveMotorInDirection">
+<code class="descname">moveMotorInDirection</code><span class="sig-paren">(</span><em>motorName</em>, <em>direction</em>, <em>velocity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.moveMotorInDirection" title="Permalink to this definition">¶</a></dt>
+<dd><p>move motor to a certian direction</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</li>
+<li><strong>direction</strong> (<em>str</em>) – motor movement direction (left, right, stop)</li>
+<li><strong>velocity</strong> (<em>float</em><em>, </em><em>optional</em>) – motor movement speed (in radians / sec). Defaults to None.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">response containing execution result</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Response</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.client.Client.moveMotorInTime">
+<code class="descname">moveMotorInTime</code><span class="sig-paren">(</span><em>motorName</em>, <em>position</em>, <em>duration</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.moveMotorInTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>move motor to a certian position</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</li>
+<li><strong>position</strong> (<em>float</em>) – motor final position (in radians)</li>
+<li><strong>duration</strong> (<em>int</em>) – motor movement duration (in milliseconds)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">response containing execution result</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Response</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.client.Client.moveMotorToPosition">
+<code class="descname">moveMotorToPosition</code><span class="sig-paren">(</span><em>motorName</em>, <em>position</em>, <em>velocity=None</em>, <em>acceleration=None</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.moveMotorToPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>move motor to a certian position</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</li>
+<li><strong>position</strong> (<em>float</em>) – motor final position (in radians)</li>
+<li><strong>velocity</strong> (<em>float</em><em>, </em><em>optional</em>) – motor movement speed (in radians / sec). Defaults to None.</li>
+<li><strong>acceleration</strong> (<em>float</em><em>, </em><em>optional</em>) – motor maximal acceleration (in radians / sec * sec). Defaults to None.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">response containing execution result</p>
 </td>
 </tr>
 <tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Response</p>
@@ -363,7 +450,7 @@
 <dl class="method">
 <dt id="butter.mas.client.Client.setMotorRegister">
 <code class="descname">setMotorRegister</code><span class="sig-paren">(</span><em>motorName</em>, <em>registerName</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.setMotorRegister" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get motor register value</p>
+<dd><p>Get motor register value (for Dynamixel motors only)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
