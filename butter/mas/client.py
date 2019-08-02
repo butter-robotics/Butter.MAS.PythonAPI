@@ -62,7 +62,7 @@ class Client():
         return packet.send()
 
     def getAvailableMotorRegisters(self, motorName, readableOnly=False):
-        """Get all available motor registers
+        """Get all available motor registers (for Dynamixel motors only)
         
         Args:
             motorName (str): motor name (as configured on the configurator)
@@ -71,13 +71,13 @@ class Client():
         Returns:
             Response: response containing all the available motor registers
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('get').addParameter('list') \
+        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('dxl').addArgument('get').addParameter('list') \
                     .addKeyValuePair('readableOnly', readableOnly).build()
 
         return packet.send()
 
     def getMotorRegister(self, motorName, registerName):
-        """Get motor register value
+        """Get motor register value (for Dynamixel motors only)
         
         Args:
             motorName (str): motor name (as configured on the configurator)
@@ -86,13 +86,13 @@ class Client():
         Returns:
             Response: response containing register value
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('get') \
-                    .addArguments(motorName, registerName).build()
+        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('dxl') \
+                    .addArguments('get', motorName, registerName).build()
 
         return packet.send()
 
     def setMotorRegister(self, motorName, registerName, value):
-        """Get motor register value
+        """Get motor register value (for Dynamixel motors only)
         
         Args:
             motorName (str): motor name (as configured on the configurator)
@@ -102,8 +102,8 @@ class Client():
         Returns:
             Response: response containing execution result
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('set') \
-                    .addArguments(motorName, registerName, value).build()        
+        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('dxl') \
+                    .addArguments('set', motorName, registerName, value).build()        
 
         return packet.send()
 
