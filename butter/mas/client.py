@@ -107,6 +107,75 @@ class Client():
 
         return packet.send()
 
+    def moveMotorToPosition(self, motorName, position, velocity=None, acceleration=None):
+        """move motor to a certian position
+        
+        Args:
+            motorName (str): motor name (as configured on the configurator)
+            position (float): motor final position (in radians)
+            velocity (float, optional): motor movement speed (in radians / sec). Defaults to None.
+            acceleration (float, optional): motor maximal acceleration (in radians / sec * sec). Defaults to None.
+        
+        Returns:
+            Response: response containing execution result
+        """
+        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('move').addArguments(motorName, position) \
+                    .addKeyValuePair('velocity', velocity).addKeyValuePair('acceleration', acceleration).build()        
+
+        return packet.send()
+
+    def moveMotorInTime(self, motorName, position, duration):
+        """move motor to a certian position
+        
+        Args:
+            motorName (str): motor name (as configured on the configurator)
+            position (float): motor final position (in radians)
+            duration (int): motor movement duration (in milliseconds)
+        
+        Returns:
+            Response: response containing execution result
+        """
+        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('move').addArguments(motorName, position).build()        
+
+        return packet.send()
+
+    def moveMotorInDirection(self, motorName, direction, velocity=None):
+        """move motor to a certian direction
+        
+        Args:
+            motorName (str): motor name (as configured on the configurator)
+            direction (str): motor movement direction (left, right, stop)
+            velocity (float, optional): motor movement speed (in radians / sec). Defaults to None.
+        
+        Returns:
+            Response: response containing execution result
+        """
+        direction_code = -1 if direction.lower() == 'left' else 1 if direction.lower() == 'right' else 0
+        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('move').addArguments(motorName, direction_code) \
+                    .addKeyValuePair('velocity', velocity).build()        
+
+        return packet.send()
+
+    # def moveMotorInSteps(self, motorName, direction, steps, velocity=None, interpolator=None):
+    #     """move motor a certian amount of steps
+        
+    #     Args:
+    #         motorName (str): motor name (as configured on the configurator)
+    #         direction (str): motor movement direction (left, right, stop)
+    #         steps (str): amount of steps to move
+    #         velocity (float, optional): motor movement speed (in radians / sec). Defaults to None.
+    #         interpolator (str, optional): interpolation function. Defaults to None.
+        
+    #     Returns:
+    #         Response: response containing execution result
+    #     """
+    #     direction_code = -1 if direction.lower() == 'left' else 1 if direction.lower() == 'right' else 0
+    #     packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('move').addArguments(motorName, direction_code) \
+    #                 .addKeyValuePair('steps', steps).addKeyValuePair('velocity', velocity) \
+    #                 .addKeyValuePair('interpolator', interpolator).build()        
+
+    #     return packet.send()
+
     def playAnimation(self, animationName):
         """Play animation on the robot
         
