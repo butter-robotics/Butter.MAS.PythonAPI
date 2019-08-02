@@ -9,13 +9,14 @@ with open('LICENSE') as f:
 
 setup(
     name='butter.mas-api',
-    version='0.10.0',
+    version='0.10.1',
     description='Python HTTP Client API for Butter MAS platform',
     long_description_content_type='text/markdown',
     long_description=readme,
     author='Benny Megidish',
     author_email='bennymegk@gmail.com',
     url='https://github.com/benymeg/Butter.MAS.PythonAPI',
+    install_requires=['requests'],
     #license=license,
     license='Apache-2.0',
     packages=find_packages(exclude=('tests', 'docs'))
