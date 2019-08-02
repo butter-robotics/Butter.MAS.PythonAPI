@@ -95,7 +95,8 @@ class PacketBuilder():
         Returns:
             PacketBuilder: self
         """
-        self.keys[key] = value
+        if value:
+            self.keys[key] = str(value)
 
         return self
 
