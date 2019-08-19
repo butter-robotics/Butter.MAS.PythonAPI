@@ -14,7 +14,7 @@ class UdpPacket(Packet):
             query (str): packet payload
         """
         super().__init__(ip, port, query)
-        self.bufferSize  = 2048
+        self.bufferSize = 24576                 # fixme: shrink buffer after fw telemetry is redone (2048)
 
     def send(self, timeout=5):
         """Send packet
@@ -32,7 +32,8 @@ class UdpPacket(Packet):
                 udpSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
                 udpSocket.settimeout(timeout)
                 udpSocket.sendto(bytes(self.query, "utf-8"), (self.ip, self.port))
-                response, _ = udpSocket.recvfrom(self.bufferSize)
+                udpResponse, _ = udpSocket.recvfrom(self.bufferSize)
+                response = self._generateResponse(udpResponse)
         except socket.herror as host_error:
             print_error('Warning: we have encountered in a host error.\n%s\n' % host_error)
             response = self._generateEmptyResponse('host')
@@ -47,20 +48,6 @@ class UdpPacket(Packet):
             response = self._generateEmptyResponse()
 
         return response
-
-    @staticmethod
-    def _generateEmptyResponse(errorType=b'unknown'):
-        """Generates empty response packet
-        
-        Args:
-            errorType (bytes, optional): error type. defaults to b'unknown'.
-        
-        Returns:
-            Response: error response
-        """
-        error = '{ "exception": "Request resolved with an %s error" }' % errorType
-
-        return (error, None)
 
     def __eq__(self, other):
         return isinstance(other, UdpPacket) and self.ip == other.ip and self.port == other.port and self.query == other.query

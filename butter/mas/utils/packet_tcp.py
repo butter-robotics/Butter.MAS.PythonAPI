@@ -32,7 +32,8 @@ class TcpPacket(Packet):
                 tcpSocket.settimeout(timeout)
                 tcpSocket.connect((self.ip, self.port))
                 tcpSocket.send(bytes(self.query + '\n', "utf-8"))
-                response = tcpSocket.recv(self.bufferSize)
+                tcpResponse = tcpSocket.recv(self.bufferSize)
+                response = self._generateResponse(tcpResponse)
         except socket.herror as host_error:
             print_error('Warning: we have encountered in a host error.\n%s\n' % host_error)
             response = self._generateEmptyResponse('host')
@@ -47,20 +48,6 @@ class TcpPacket(Packet):
             response = self._generateEmptyResponse()
 
         return response
-
-    @staticmethod
-    def _generateEmptyResponse(errorType=b'unknown'):
-        """Generates empty response packet
-        
-        Args:
-            errorType (bytes, optional): error type. defaults to b'unknown'.
-        
-        Returns:
-            Response: error response
-        """
-        error = '{ "exception": "Request resolved with an %s error" }' % errorType
-
-        return (error, None)
 
     def __eq__(self, other):
         return isinstance(other, TcpPacket) and self.ip == other.ip and self.port == other.port and self.query == other.query

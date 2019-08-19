@@ -1,12 +1,12 @@
 import unittest
 
-from butter.mas.api import UdpClient
+from butter.mas.api import TcpClient
 
-class TestUdpClientApiMethods(unittest.TestCase):
+class TestTcpClientApiMethods(unittest.TestCase):
 
     @classmethod
     def setUpClass(self):
-        self.client = UdpClient('localhost')
+        self.client = TcpClient('localhost')
 
     def testGetAvailableHandlers(self):
         self.assertIsNotNone(self.client.getAvailableHandlers())

@@ -1,9 +1,6 @@
 import unittest
 
 from butter.mas.api import HttpClient
-from tests.utils.packet_http_test import TestHttpPacketMethods
-from tests.utils.packet_udp_test import TestUdpPacketMethods
-from tests.utils.packet_builder_test import TestPacketBuilderMethods
 
 class TestHttpClientApiMethods(unittest.TestCase):
 

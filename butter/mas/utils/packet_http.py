@@ -43,24 +43,5 @@ class HttpPacket(Packet):
 
         return response
 
-    @staticmethod
-    def _generateEmptyResponse(errorType=b'unknown'):
-        """Generates empty response packet
-        
-        Args:
-            errorType (bytes, optional): error type. defaults to b'unknown'.
-        
-        Returns:
-            Response: error response
-        """
-        response = requests.Response()
-
-        response._content = b'{ "exception": "Request resolved with an %s error" }' % errorType.encode("ascii")
-        response.code = "expired"
-        response.error_type = "expired"
-        response.status_code = 400
-
-        return response
-
     def __eq__(self, other):
         return isinstance(other, HttpPacket) and self.ip == other.ip and self.port == other.port and self.query == other.query
