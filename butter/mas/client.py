@@ -71,8 +71,8 @@ class Client():
         Returns:
             Response: response containing all the available motor registers
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('dxl').addArgument('get').addParameter('list') \
-                    .addKeyValuePair('readableOnly', readableOnly).build()
+        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('dxl').addArguments('get', motorName) \
+                    .addParameter('list').addKeyValuePair('readableOnly', readableOnly).build()
 
         return packet.send()
 
@@ -88,6 +88,21 @@ class Client():
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('dxl') \
                     .addArguments('get', motorName, registerName).build()
+
+        return packet.send()
+
+    def getMotorRegisterRange(self, motorName, registerName):
+        """Get motor register value range (for Dynamixel motors only)
+        
+        Args:
+            motorName (str): motor name (as configured on the configurator)
+            registerName (str): motor register name
+        
+        Returns:
+            Response: response containing register range value
+        """
+        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('dxl') \
+                    .addArguments('get', motorName, registerName).addParameter('range').build()
 
         return packet.send()
 
