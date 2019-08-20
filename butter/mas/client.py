@@ -140,7 +140,7 @@ class Client():
         return packet.send()
 
     def moveMotorInTime(self, motorName, position, duration):
-        """move motor to a certian position
+        """move motor to a certian position in fixed duration
         
         Args:
             motorName (str): motor name (as configured on the configurator)

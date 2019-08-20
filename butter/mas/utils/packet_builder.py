@@ -136,7 +136,7 @@ class PacketBuilder():
             query = "%s%s&" % (query, '&'.join(params))
 
         if self.keys:
-            keys = list(map(lambda x: "x=%s" % self.keys[x], self.keys))
+            keys = list(map(lambda x: "%s=%s" % self.keys[x], self.keys))
             query = "%s%s" % (query, '&'.join(keys))
 
         uri = '/'.join(['cmd', 'json'])
