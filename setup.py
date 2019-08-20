@@ -28,7 +28,7 @@ setup(
 # pip install --index-url https://test.pypi.org/simple/ --no-deps butter.mas-api
 
 # python -m twine upload dist/*
-# pip install butter.mas-api
+# pip install -U butter.mas-api
 
 ''' how to generate documentation '''
 # cd sphinx
