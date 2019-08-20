@@ -23,8 +23,23 @@ class TestClientApiMethods(unittest.TestCase):
     def testGetMotorRegister(self):
         self.assertIsNotNone(self.client.getMotorRegister('base', 'goal_position'))
 
+    def testGetMotorRegisterRange(self):
+        self.assertIsNotNone(self.client.getMotorRegisterRange('base', 'goal_position'))
+
     def testSetMotorRegister(self):
         self.assertIsNotNone(self.client.setMotorRegister('base', 'goal_position', '2048'))
+
+    def testMoveMotorToPosition(self):
+        self.assertIsNotNone(self.client.moveMotorToPosition('base', '2048', '2'))
+
+    def testMoveMotorInTime(self):
+        self.assertIsNotNone(self.client.moveMotorInTime('base', '2048', '12'))
+
+    def testMoveMotorInDirection(self):
+        self.assertIsNotNone(self.client.moveMotorToPosition('base', 'left', '2'))
+
+    # def testMoveMotorInSteps(self):
+    #     self.assertIsNotNone(self.client.moveMotorInSteps('base', '2048', '2'))
 
     def testPlayAnimation(self):
         self.assertIsNotNone(self.client.playAnimation('welcome'))
