@@ -14,7 +14,7 @@ class UdpPacket(Packet):
             query (str): packet payload
         """
         super().__init__(ip, port, query)
-        self.bufferSize = 24576                 # fixme: shrink buffer after fw telemetry is redone (2048)
+        self.bufferSize = 2048
 
     def send(self, timeout=5):
         """Send packet
