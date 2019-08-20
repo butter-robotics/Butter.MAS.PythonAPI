@@ -123,7 +123,7 @@ class Client():
         return packet.send()
 
     def moveMotorToPosition(self, motorName, position, velocity=None, acceleration=None):
-        """move motor to a certian position
+        """move motor to a certian position (relative to the motor's zero position)
         
         Args:
             motorName (str): motor name (as configured on the configurator)
@@ -140,7 +140,7 @@ class Client():
         return packet.send()
 
     def moveMotorInTime(self, motorName, position, duration):
-        """move motor to a certian position in fixed duration
+        """move motor to a certian position (relative to the motor's zero position) in fixed duration
         
         Args:
             motorName (str): motor name (as configured on the configurator)
@@ -155,7 +155,7 @@ class Client():
         return packet.send()
 
     def moveMotorInDirection(self, motorName, direction, velocity=None):
-        """move motor to a certian direction
+        """move motor to a certian direction (relative to the motor's current position)
         
         Args:
             motorName (str): motor name (as configured on the configurator)
@@ -172,7 +172,7 @@ class Client():
         return packet.send()
 
     # def moveMotorInSteps(self, motorName, direction, steps, velocity=None, interpolator=None):
-    #     """move motor a certian amount of steps
+    #     """move motor a certian amount of steps (relative to the motor's current position)
         
     #     Args:
     #         motorName (str): motor name (as configured on the configurator)
