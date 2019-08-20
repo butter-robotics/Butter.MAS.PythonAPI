@@ -272,6 +272,30 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="butter.mas.client.Client.getMotorRegisterRange">
+<code class="descname">getMotorRegisterRange</code><span class="sig-paren">(</span><em>motorName</em>, <em>registerName</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.getMotorRegisterRange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get motor register value range (for Dynamixel motors only)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</li>
+<li><strong>registerName</strong> (<em>str</em>) – motor register name</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">response containing register range value</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Response</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="butter.mas.client.Client.moveMotorInDirection">
 <code class="descname">moveMotorInDirection</code><span class="sig-paren">(</span><em>motorName</em>, <em>direction</em>, <em>velocity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.moveMotorInDirection" title="Permalink to this definition">¶</a></dt>
 <dd><p>move motor to a certian direction</p>
