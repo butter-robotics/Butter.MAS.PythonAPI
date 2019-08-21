@@ -19,7 +19,7 @@ You will need to install python 3 in order to use this software
 ### Installing
 
 ```
-pip install butter.mas-api
+pip install -U butter.mas-api
 ```
 <!-- NOTE: the PyPi module name is _different_ then the repository name -->
 

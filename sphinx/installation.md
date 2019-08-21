@@ -12,7 +12,7 @@ Installing
 ----------
 
 Open you Command Prompt (Windows) or Terminal (Mac / Linux) and execute the following command:
-``pip install butter.mas-api``
+``pip install -U butter.mas-api``
 
 
 Usage
