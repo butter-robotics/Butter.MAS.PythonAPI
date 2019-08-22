@@ -31,7 +31,7 @@ class PacketBuilder():
         Returns:
             PacketBuilder: self
         """
-        self.cmd = command
+        self.cmd = str(command)
 
         return self
 
@@ -44,7 +44,7 @@ class PacketBuilder():
         Returns:
             PacketBuilder: self
         """
-        self.args.append(argument)
+        self.args.append(str(argument))
 
         return self
     
@@ -56,7 +56,7 @@ class PacketBuilder():
         """
         if arguments:
             for argument in arguments:
-                self.args.append(argument)
+                self.args.append(str(argument))
 
         return self
 
@@ -69,7 +69,7 @@ class PacketBuilder():
         Returns:
             PacketBuilder: self
         """
-        self.params.append(self._formatParameter(parameter))
+        self.params.append(self._formatParameter(str(parameter)))
 
         return self
 
@@ -81,7 +81,7 @@ class PacketBuilder():
         """
         if parameters:
             for parameter in parameters:
-                self.params.append(self._formatParameter(parameter))
+                self.params.append(self._formatParameter(str(parameter)))
 
         return self
 
