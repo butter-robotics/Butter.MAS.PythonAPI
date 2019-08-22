@@ -150,7 +150,8 @@ class Client():
         Returns:
             Response: response containing execution result
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('move').addArguments(motorName, position).build()        
+        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('move').addArguments(motorName, position) \
+                    .addKeyValuePair('duration', duration).build()        
 
         return packet.send()
 
