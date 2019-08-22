@@ -168,7 +168,7 @@ class Client():
         """
         direction_code = -1 if direction.lower() == 'left' else 1 if direction.lower() == 'right' else 0
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('move').addArguments(motorName, direction_code) \
-                    .addKeyValuePair('velocity', velocity).build()        
+                    .addKeyValuePair('velocity', velocity).addParameter('continuously').build()        
 
         return packet.send()
 
