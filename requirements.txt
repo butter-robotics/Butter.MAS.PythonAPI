@@ -1,0 +1,3 @@
+Sphinx>=2.1.2
+sphinx-markdown-builder
+sphinx_press_theme
