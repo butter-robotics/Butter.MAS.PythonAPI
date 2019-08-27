@@ -14,7 +14,7 @@ with open('LICENSE') as f:
 
 setup(
     name='butter.mas-api',
-    version='0.11.12',
+    version='0.11.13',
     description='Python Client API for Butter MAS platform',
     long_description_content_type='text/markdown',
     long_description=readme,
@@ -46,7 +46,7 @@ setup(
 # python -m twine upload dist/*
 # pip install -U butter.mas-api
 
-''' how to generate documentation '''
+''' how to generate and serve documentation '''
 # cd sphinx
-# ./make html
-# XCOPY ".\_build\html" "..\docs"
+# ./serve
+# update tree.json file if a new file was added (the first file on the list is the default one)
