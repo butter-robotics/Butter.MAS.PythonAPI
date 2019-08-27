@@ -8,6 +8,15 @@
       <link rel="stylesheet" href="_static/pygments.css">
       <link rel="stylesheet" href="_static/theme.css">
       
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+
+      <!-- sphinx script_files -->
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+
+      
       <script src="_static/theme-vendors.js"></script>
       <script src="_static/theme.js" defer></script>
     
@@ -19,18 +28,13 @@
 
   <body><div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
   <router-link to="index.html" class="home-link">
-    <span class="site-name">Butter MAS Python API</span>
+    
+      <span class="site-name">Butter MAS Python API</span>
+    
   </router-link>
 
   <div class="links">
     <navlinks class="can-hide">
-
-  <div class="nav-item">
-    <a href="installation.html"
-       class="nav-link  router-link-active">
-       Contents:
-    </a>
-  </div>
 
 
 
@@ -46,39 +50,94 @@
           <navlinks>
             
 
-  <div class="nav-item">
-    <a href="installation.html"
-       class="nav-link  router-link-active">
-       Contents:
-    </a>
-  </div>
-
 
 
             
-          </navlinks><div class="sidebar-links" role="navigation" aria-label="main navigation">
-  
-  <div class="sidebar-group">
-    <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Documentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#importing-client-factory">Importing Client Factory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#creating-new-client">Creating New Client</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#interaction-with-the-robot">Interaction With the robot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#receiving-responses-from-the-robot">Receiving Responses from the robot</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="internal_api.html">Internal API</a></li>
-</ul>
-
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
   </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#butter-mas-python-api-s-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 "><a href="installation.html" class="reference internal ">Installation</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current"><a href="#" class="reference internal current">Documentation</a>
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#importing-client-factory" class="reference internal">Importing Client Factory</a></li>
+                
+                  <li class="toctree-l2"><a href="#creating-new-client" class="reference internal">Creating New Client</a></li>
+                
+                  <li class="toctree-l2"><a href="#interaction-with-the-robot" class="reference internal">Interaction With the robot</a></li>
+                
+                  <li class="toctree-l2"><a href="#receiving-responses-from-the-robot" class="reference internal">Receiving Responses from the robot</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="api.html" class="reference internal ">API</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="internal_api.html" class="reference internal ">Internal API</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
 </div>
         </sidebar>
 
       <page>
-          <div class="content">
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Documentation</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="installation.html"
+       title="previous chapter">← Installation</a>
+  </li>
+  <li class="next">
+    <a href="api.html"
+       title="next chapter">API →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main">
             
   <div class="section" id="documentation">
 <h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
@@ -130,19 +189,19 @@ We can parse the response using the built in json method like that:</p>
 
           </div>
           <div class="page-nav">
-            <div class="inner">
-  <span class="prev">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
     <a href="installation.html"
        title="previous chapter">← Installation</a>
-  </span>
-  <span class="next">
+  </li>
+  <li class="next">
     <a href="api.html"
        title="next chapter">API →</a>
-  </span>
-<div class="footer" role="contentinfo">
+  </li>
+</ul><div class="footer" role="contentinfo">
       &#169; Copyright 2019, Benny Megidish.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
 </div>
             </div>
           </div>

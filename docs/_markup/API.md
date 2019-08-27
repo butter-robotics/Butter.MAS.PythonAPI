@@ -1,81 +1,462 @@
-# Butter MAS HTTP Python API
+# API
 
-## class *Client(ip, port): _[HttpClient, UdpClient]_
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| ip | <code>string</code> |  | robot server ip. |
-| port | <code>integer</code> | <code>5555</code> | robot server port. |
+## Client Factory
 
-###    getAvailableHandlers(): ⇒ <code>Response</code>
-Gets all the available handlers
 
-###    getAvailableAnimations(reload=False): ⇒ <code>Response</code>
-Gets all the available animation gestures
+#### class butter.mas.client_factory.ClientFactory()
+Client factory for diffrent types of protocols
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| reload | <code>boolean</code> | <code>false</code> | reload animations. |
 
-###    getAvailableSounds(reload=False): ⇒ <code>Response</code>
-Gets all the available audio playbacks
+#### getClient(ip, port=None, protocol='http')
+Creates new client
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| reload | <code>boolean</code> | <code>false</code> | reload audio playbacks. |
 
-###    getAvailableMotorRegisters(motorName, readableOnly=False): ⇒ <code>Response</code>
-Gets all the available motor registers
+* **Parameters**
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| motorName | <code>string</code> |  | dof motor name. |
-| readableOnly | <code>boolean</code> | <code>false</code> | get only readable registers (ignore R/W registers). |
+    * **ip** (*str*) – robot IP
 
-###    getMotorRegister(motorName, registerName): ⇒ <code>Response</code>
-Gets motor register value
+    * **port** (*int**, **optional*) – robot port. Defaults to None.
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| motorName | <code>string</code> |  | dof motor name. |
-| registerName | <code>string</code> |  | dof register name. |
+    * **protocol** (*str**, **optional*) – communication protocol. Defaults to “http”.
 
-###    setMotorRegister(motorName, registerName, value): ⇒ <code>Response</code>
-Sets motor register value
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| motorName | <code>string</code> |  | dof motor name. |
-| registerName | <code>string</code> |  | dof register name. |
-| value | <code>integer</code> |  | dof register value. |
 
-###    playAnimation(animationName): ⇒ <code>Response</code>
-Plays animation gesture
+* **Returns**
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| fileName | <code>string</code> |  | animation name. |
+    requested client
 
-###    pauseAnimation(): ⇒ <code>Response</code>
-Pauses animation playback
 
-###    resumeAnimation(): ⇒ <code>Response</code>
-Resumes animation playback
 
-###    stopAnimation(): ⇒ <code>Response</code>
-Stops animation playback
+* **Return type**
 
-###    playAudio(fileName): ⇒ <code>Response</code>
-Plays audio file
+    Client
 
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| fileName | <code>string</code> |  | audio file name. |
 
-###    pauseAudio(): ⇒ <code>Response</code>
-Pauses audio playback
 
-###    resumeAudio(): ⇒ <code>Response</code>
-Resumes audio playback
+#### getClientClass(protocol='http')
+Get client class
 
-###    stopAudio(): ⇒ <code>Response</code>
-Stops audio playback
+
+* **Parameters**
+
+    **protocol** (*str**, **optional*) – communication protocol. Defaults to “http”.
+
+
+
+* **Returns**
+
+    client class
+
+
+
+* **Return type**
+
+    Client
+
+
+## HTTP Client
+
+HttpClient extends Client
+
+
+#### class butter.mas.client_http.HttpClient(ip, port=5555, protocol='http')
+Butter MAS HTTP client API
+
+## TCP Client
+
+TcpClient extends Client
+
+
+#### class butter.mas.client_tcp.TcpClient(ip, port=5050, protocol='tcp')
+Butter MAS TCP client API
+
+## UDP Client
+
+UdpClient extends Client
+
+
+#### class butter.mas.client_udp.UdpClient(ip, port=5000, protocol='udp')
+Butter MAS UDP client API
+
+## Client
+
+
+#### class butter.mas.client.Client(ip, port=5555, protocol='http')
+Butter MAS client API
+
+
+#### getAvailableAnimations(reload=False)
+Get available (loaded) robot animations
+
+
+* **Parameters**
+
+    **reload** (*bool**, **optional*) – reload all animations. Defaults to False.
+
+
+
+* **Returns**
+
+    response containing all the available (loaded) robot animations
+
+
+
+* **Return type**
+
+    Response
+
+
+
+#### getAvailableHandlers()
+Get available robot handlers
+
+
+* **Returns**
+
+    response containing all the available robot handlers
+
+
+
+* **Return type**
+
+    Response
+
+
+
+#### getAvailableMotorRegisters(motorName, readableOnly=False)
+Get all available motor registers (for Dynamixel motors only)
+
+
+* **Parameters**
+
+    * **motorName** (*str*) – motor name (as configured on the configurator)
+
+    * **readableOnly** (*bool**, **optional*) – get readable registers only. Defaults to False.
+
+
+
+* **Returns**
+
+    response containing all the available motor registers
+
+
+
+* **Return type**
+
+    Response
+
+
+
+#### getAvailableSounds(reload=False)
+Get available (loaded) robot sound assets
+
+
+* **Parameters**
+
+    **reload** (*bool**, **optional*) – reload all sound assets. Defaults to False.
+
+
+
+* **Returns**
+
+    response containing all the available (loaded) robot sound assets
+
+
+
+* **Return type**
+
+    Response
+
+
+
+#### getMotorRegister(motorName, registerName)
+Get motor register value (for Dynamixel motors only)
+
+
+* **Parameters**
+
+    * **motorName** (*str*) – motor name (as configured on the configurator)
+
+    * **registerName** (*str*) – motor register name
+
+
+
+* **Returns**
+
+    response containing register value
+
+
+
+* **Return type**
+
+    Response
+
+
+
+#### getMotorRegisterRange(motorName, registerName)
+Get motor register value range (for Dynamixel motors only)
+
+
+* **Parameters**
+
+    * **motorName** (*str*) – motor name (as configured on the configurator)
+
+    * **registerName** (*str*) – motor register name
+
+
+
+* **Returns**
+
+    response containing register range value
+
+
+
+* **Return type**
+
+    Response
+
+
+
+#### moveMotorInDirection(motorName, direction, velocity=None)
+move motor to a certian direction (relative to the motor’s current position)
+
+
+* **Parameters**
+
+    * **motorName** (*str*) – motor name (as configured on the configurator)
+
+    * **direction** (*str*) – motor movement direction (left, right, stop)
+
+    * **velocity** (*float**, **optional*) – motor movement speed (in radians / sec). Defaults to None.
+
+
+
+* **Returns**
+
+    response containing execution result
+
+
+
+* **Return type**
+
+    Response
+
+
+
+#### moveMotorInTime(motorName, position, duration)
+move motor to a certian position (relative to the motor’s zero position) in fixed duration
+
+
+* **Parameters**
+
+    * **motorName** (*str*) – motor name (as configured on the configurator)
+
+    * **position** (*float*) – motor final position (in radians)
+
+    * **duration** (*int*) – motor movement duration (in milliseconds)
+
+
+
+* **Returns**
+
+    response containing execution result
+
+
+
+* **Return type**
+
+    Response
+
+
+
+#### moveMotorToPosition(motorName, position, velocity=None, acceleration=None)
+move motor to a certian position (relative to the motor’s zero position)
+
+
+* **Parameters**
+
+    * **motorName** (*str*) – motor name (as configured on the configurator)
+
+    * **position** (*float*) – motor final position (in radians)
+
+    * **velocity** (*float**, **optional*) – motor movement speed (in radians / sec). Defaults to None.
+
+    * **acceleration** (*float**, **optional*) – motor maximal acceleration (in radians / sec \* sec). Defaults to None.
+
+
+
+* **Returns**
+
+    response containing execution result
+
+
+
+* **Return type**
+
+    Response
+
+
+
+#### pauseAnimation()
+Pause currently playing animation (if available) on the robot
+
+
+* **Returns**
+
+    response containing execution result
+
+
+
+* **Return type**
+
+    Response
+
+
+
+#### pauseAudio()
+Pause current audio playback (if available) on the robot
+
+
+* **Returns**
+
+    response containing execution result
+
+
+
+* **Return type**
+
+    Response
+
+
+
+#### playAnimation(animationName)
+Play animation on the robot
+
+
+* **Parameters**
+
+    **animationName** (*str*) – animation name
+
+
+
+* **Returns**
+
+    response containing execution result
+
+
+
+* **Return type**
+
+    Response
+
+
+
+#### playAudio(fileName)
+Play audio on the robot
+
+
+* **Parameters**
+
+    **fileName** (*str*) – audio asset name
+
+
+
+* **Returns**
+
+    response containing execution result
+
+
+
+* **Return type**
+
+    Response
+
+
+
+#### resumeAnimation()
+Resume currently paused animation (if available) on the robot
+
+
+* **Returns**
+
+    response containing execution result
+
+
+
+* **Return type**
+
+    Response
+
+
+
+#### resumeAudio()
+Resume currently paused audio playback (if available) on the robot
+
+
+* **Returns**
+
+    response containing execution result
+
+
+
+* **Return type**
+
+    Response
+
+
+
+#### setMotorRegister(motorName, registerName, value)
+Get motor register value (for Dynamixel motors only)
+
+
+* **Parameters**
+
+    * **motorName** (*str*) – motor name (as configured on the configurator)
+
+    * **registerName** (*str*) – motor register name
+
+    * **value** (*str*) – register value
+
+
+
+* **Returns**
+
+    response containing execution result
+
+
+
+* **Return type**
+
+    Response
+
+
+
+#### stopAnimation()
+Stop currently playing animation (if available) on the robot
+
+
+* **Returns**
+
+    response containing execution result
+
+
+
+* **Return type**
+
+    Response
+
+
+
+#### stopAudio()
+Stop current audio playback (if available) on the robot
+
+
+* **Returns**
+
+    response containing execution result
+
+
+
+* **Return type**
+
+    Response

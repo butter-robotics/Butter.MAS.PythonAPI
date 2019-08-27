@@ -8,6 +8,15 @@
       <link rel="stylesheet" href="_static/pygments.css">
       <link rel="stylesheet" href="_static/theme.css">
       
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+
+      <!-- sphinx script_files -->
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+
+      
       <script src="_static/theme-vendors.js"></script>
       <script src="_static/theme.js" defer></script>
     
@@ -19,18 +28,13 @@
 
   <body><div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
   <router-link to="index.html" class="home-link">
-    <span class="site-name">Butter MAS Python API</span>
+    
+      <span class="site-name">Butter MAS Python API</span>
+    
   </router-link>
 
   <div class="links">
     <navlinks class="can-hide">
-
-  <div class="nav-item">
-    <a href="installation.html"
-       class="nav-link  router-link-active">
-       Contents:
-    </a>
-  </div>
 
 
 
@@ -46,40 +50,96 @@
           <navlinks>
             
 
-  <div class="nav-item">
-    <a href="installation.html"
-       class="nav-link  router-link-active">
-       Contents:
-    </a>
-  </div>
-
 
 
             
-          </navlinks><div class="sidebar-links" role="navigation" aria-label="main navigation">
-  
-  <div class="sidebar-group">
-    <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="documentation.html">Documentation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-butter.mas.client_factory">Client Factory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#http-client">HTTP Client</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tcp-client">TCP Client</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#udp-client">UDP Client</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-butter.mas.client">Client</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="internal_api.html">Internal API</a></li>
-</ul>
-
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
   </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#butter-mas-python-api-s-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 "><a href="installation.html" class="reference internal ">Installation</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="documentation.html" class="reference internal ">Documentation</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current"><a href="#" class="reference internal current">API</a>
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#module-butter.mas.client_factory" class="reference internal">Client Factory</a></li>
+                
+                  <li class="toctree-l2"><a href="#http-client" class="reference internal">HTTP Client</a></li>
+                
+                  <li class="toctree-l2"><a href="#tcp-client" class="reference internal">TCP Client</a></li>
+                
+                  <li class="toctree-l2"><a href="#udp-client" class="reference internal">UDP Client</a></li>
+                
+                  <li class="toctree-l2"><a href="#module-butter.mas.client" class="reference internal">Client</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="internal_api.html" class="reference internal ">Internal API</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
 </div>
         </sidebar>
 
       <page>
-          <div class="content">
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>API</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="documentation.html"
+       title="previous chapter">← Documentation</a>
+  </li>
+  <li class="next">
+    <a href="internal_api.html"
+       title="next chapter">Internal API →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main">
             
   <div class="section" id="api">
 <h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
@@ -87,49 +147,44 @@
 <span id="client-factory"></span><h2>Client Factory<a class="headerlink" href="#module-butter.mas.client_factory" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="butter.mas.client_factory.ClientFactory">
-<em class="property">class </em><code class="descclassname">butter.mas.client_factory.</code><code class="descname">ClientFactory</code><a class="headerlink" href="#butter.mas.client_factory.ClientFactory" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">butter.mas.client_factory.</code><code class="sig-name descname">ClientFactory</code><a class="headerlink" href="#butter.mas.client_factory.ClientFactory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Client factory for diffrent types of protocols</p>
 <dl class="method">
 <dt id="butter.mas.client_factory.ClientFactory.getClient">
-<code class="descname">getClient</code><span class="sig-paren">(</span><em>ip</em>, <em>port=None</em>, <em>protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client_factory.ClientFactory.getClient" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getClient</code><span class="sig-paren">(</span><em class="sig-param">ip</em>, <em class="sig-param">port=None</em>, <em class="sig-param">protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client_factory.ClientFactory.getClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates new client</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>ip</strong> (<em>str</em>) – robot IP</li>
-<li><strong>port</strong> (<em>int</em><em>, </em><em>optional</em>) – robot port. Defaults to None.</li>
-<li><strong>protocol</strong> (<em>str</em><em>, </em><em>optional</em>) – communication protocol. Defaults to “http”.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ip</strong> (<em>str</em>) – robot IP</p></li>
+<li><p><strong>port</strong> (<em>int</em><em>, </em><em>optional</em>) – robot port. Defaults to None.</p></li>
+<li><p><strong>protocol</strong> (<em>str</em><em>, </em><em>optional</em>) – communication protocol. Defaults to “http”.</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">requested client</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#butter.mas.client.Client" title="butter.mas.client.Client">Client</a></p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>requested client</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#butter.mas.client.Client" title="butter.mas.client.Client">Client</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="butter.mas.client_factory.ClientFactory.getClientClass">
-<code class="descname">getClientClass</code><span class="sig-paren">(</span><em>protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client_factory.ClientFactory.getClientClass" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getClientClass</code><span class="sig-paren">(</span><em class="sig-param">protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client_factory.ClientFactory.getClientClass" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get client class</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>protocol</strong> (<em>str</em><em>, </em><em>optional</em>) – communication protocol. Defaults to “http”.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">client class</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#butter.mas.client.Client" title="butter.mas.client.Client">Client</a></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>protocol</strong> (<em>str</em><em>, </em><em>optional</em>) – communication protocol. Defaults to “http”.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>client class</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#butter.mas.client.Client" title="butter.mas.client.Client">Client</a></p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -140,7 +195,7 @@
 <p>HttpClient extends Client</p>
 <span class="target" id="module-butter.mas.client_http"></span><dl class="class">
 <dt id="butter.mas.client_http.HttpClient">
-<em class="property">class </em><code class="descclassname">butter.mas.client_http.</code><code class="descname">HttpClient</code><span class="sig-paren">(</span><em>ip</em>, <em>port=5555</em>, <em>protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client_http.HttpClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">butter.mas.client_http.</code><code class="sig-name descname">HttpClient</code><span class="sig-paren">(</span><em class="sig-param">ip</em>, <em class="sig-param">port=5555</em>, <em class="sig-param">protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client_http.HttpClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Butter MAS HTTP client API</p>
 </dd></dl>
 
@@ -150,7 +205,7 @@
 <p>TcpClient extends Client</p>
 <span class="target" id="module-butter.mas.client_tcp"></span><dl class="class">
 <dt id="butter.mas.client_tcp.TcpClient">
-<em class="property">class </em><code class="descclassname">butter.mas.client_tcp.</code><code class="descname">TcpClient</code><span class="sig-paren">(</span><em>ip</em>, <em>port=5050</em>, <em>protocol='tcp'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client_tcp.TcpClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">butter.mas.client_tcp.</code><code class="sig-name descname">TcpClient</code><span class="sig-paren">(</span><em class="sig-param">ip</em>, <em class="sig-param">port=5050</em>, <em class="sig-param">protocol='tcp'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client_tcp.TcpClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Butter MAS TCP client API</p>
 </dd></dl>
 
@@ -160,7 +215,7 @@
 <p>UdpClient extends Client</p>
 <span class="target" id="module-butter.mas.client_udp"></span><dl class="class">
 <dt id="butter.mas.client_udp.UdpClient">
-<em class="property">class </em><code class="descclassname">butter.mas.client_udp.</code><code class="descname">UdpClient</code><span class="sig-paren">(</span><em>ip</em>, <em>port=5000</em>, <em>protocol='udp'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client_udp.UdpClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">butter.mas.client_udp.</code><code class="sig-name descname">UdpClient</code><span class="sig-paren">(</span><em class="sig-param">ip</em>, <em class="sig-param">port=5000</em>, <em class="sig-param">protocol='udp'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client_udp.UdpClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Butter MAS UDP client API</p>
 </dd></dl>
 
@@ -169,363 +224,317 @@
 <span id="client"></span><h2>Client<a class="headerlink" href="#module-butter.mas.client" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="butter.mas.client.Client">
-<em class="property">class </em><code class="descclassname">butter.mas.client.</code><code class="descname">Client</code><span class="sig-paren">(</span><em>ip</em>, <em>port=5555</em>, <em>protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">butter.mas.client.</code><code class="sig-name descname">Client</code><span class="sig-paren">(</span><em class="sig-param">ip</em>, <em class="sig-param">port=5555</em>, <em class="sig-param">protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client" title="Permalink to this definition">¶</a></dt>
 <dd><p>Butter MAS client API</p>
 <dl class="method">
 <dt id="butter.mas.client.Client.getAvailableAnimations">
-<code class="descname">getAvailableAnimations</code><span class="sig-paren">(</span><em>reload=False</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.getAvailableAnimations" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getAvailableAnimations</code><span class="sig-paren">(</span><em class="sig-param">reload=False</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.getAvailableAnimations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get available (loaded) robot animations</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>reload</strong> (<em>bool</em><em>, </em><em>optional</em>) – reload all animations. Defaults to False.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">response containing all the available (loaded) robot animations</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Response</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>reload</strong> (<em>bool</em><em>, </em><em>optional</em>) – reload all animations. Defaults to False.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response containing all the available (loaded) robot animations</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="butter.mas.client.Client.getAvailableHandlers">
-<code class="descname">getAvailableHandlers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.getAvailableHandlers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getAvailableHandlers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.getAvailableHandlers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get available robot handlers</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">response containing all the available robot handlers</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Response</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing all the available robot handlers</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="butter.mas.client.Client.getAvailableMotorRegisters">
-<code class="descname">getAvailableMotorRegisters</code><span class="sig-paren">(</span><em>motorName</em>, <em>readableOnly=False</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.getAvailableMotorRegisters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getAvailableMotorRegisters</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">readableOnly=False</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.getAvailableMotorRegisters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get all available motor registers (for Dynamixel motors only)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</li>
-<li><strong>readableOnly</strong> (<em>bool</em><em>, </em><em>optional</em>) – get readable registers only. Defaults to False.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</p></li>
+<li><p><strong>readableOnly</strong> (<em>bool</em><em>, </em><em>optional</em>) – get readable registers only. Defaults to False.</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">response containing all the available motor registers</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Response</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response containing all the available motor registers</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="butter.mas.client.Client.getAvailableSounds">
-<code class="descname">getAvailableSounds</code><span class="sig-paren">(</span><em>reload=False</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.getAvailableSounds" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getAvailableSounds</code><span class="sig-paren">(</span><em class="sig-param">reload=False</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.getAvailableSounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get available (loaded) robot sound assets</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>reload</strong> (<em>bool</em><em>, </em><em>optional</em>) – reload all sound assets. Defaults to False.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">response containing all the available (loaded) robot sound assets</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Response</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>reload</strong> (<em>bool</em><em>, </em><em>optional</em>) – reload all sound assets. Defaults to False.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response containing all the available (loaded) robot sound assets</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="butter.mas.client.Client.getMotorRegister">
-<code class="descname">getMotorRegister</code><span class="sig-paren">(</span><em>motorName</em>, <em>registerName</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.getMotorRegister" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getMotorRegister</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">registerName</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.getMotorRegister" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get motor register value (for Dynamixel motors only)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</li>
-<li><strong>registerName</strong> (<em>str</em>) – motor register name</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</p></li>
+<li><p><strong>registerName</strong> (<em>str</em>) – motor register name</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">response containing register value</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Response</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response containing register value</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="butter.mas.client.Client.getMotorRegisterRange">
-<code class="descname">getMotorRegisterRange</code><span class="sig-paren">(</span><em>motorName</em>, <em>registerName</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.getMotorRegisterRange" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getMotorRegisterRange</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">registerName</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.getMotorRegisterRange" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get motor register value range (for Dynamixel motors only)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</li>
-<li><strong>registerName</strong> (<em>str</em>) – motor register name</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</p></li>
+<li><p><strong>registerName</strong> (<em>str</em>) – motor register name</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">response containing register range value</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Response</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response containing register range value</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="butter.mas.client.Client.moveMotorInDirection">
-<code class="descname">moveMotorInDirection</code><span class="sig-paren">(</span><em>motorName</em>, <em>direction</em>, <em>velocity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.moveMotorInDirection" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">moveMotorInDirection</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">direction</em>, <em class="sig-param">velocity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.moveMotorInDirection" title="Permalink to this definition">¶</a></dt>
 <dd><p>move motor to a certian direction (relative to the motor’s current position)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</li>
-<li><strong>direction</strong> (<em>str</em>) – motor movement direction (left, right, stop)</li>
-<li><strong>velocity</strong> (<em>float</em><em>, </em><em>optional</em>) – motor movement speed (in radians / sec). Defaults to None.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</p></li>
+<li><p><strong>direction</strong> (<em>str</em>) – motor movement direction (left, right, stop)</p></li>
+<li><p><strong>velocity</strong> (<em>float</em><em>, </em><em>optional</em>) – motor movement speed (in radians / sec). Defaults to None.</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">response containing execution result</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Response</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response containing execution result</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="butter.mas.client.Client.moveMotorInTime">
-<code class="descname">moveMotorInTime</code><span class="sig-paren">(</span><em>motorName</em>, <em>position</em>, <em>duration</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.moveMotorInTime" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">moveMotorInTime</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">position</em>, <em class="sig-param">duration</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.moveMotorInTime" title="Permalink to this definition">¶</a></dt>
 <dd><p>move motor to a certian position (relative to the motor’s zero position) in fixed duration</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</li>
-<li><strong>position</strong> (<em>float</em>) – motor final position (in radians)</li>
-<li><strong>duration</strong> (<em>int</em>) – motor movement duration (in milliseconds)</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</p></li>
+<li><p><strong>position</strong> (<em>float</em>) – motor final position (in radians)</p></li>
+<li><p><strong>duration</strong> (<em>int</em>) – motor movement duration (in milliseconds)</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">response containing execution result</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Response</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response containing execution result</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="butter.mas.client.Client.moveMotorToPosition">
-<code class="descname">moveMotorToPosition</code><span class="sig-paren">(</span><em>motorName</em>, <em>position</em>, <em>velocity=None</em>, <em>acceleration=None</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.moveMotorToPosition" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">moveMotorToPosition</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">position</em>, <em class="sig-param">velocity=None</em>, <em class="sig-param">acceleration=None</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.moveMotorToPosition" title="Permalink to this definition">¶</a></dt>
 <dd><p>move motor to a certian position (relative to the motor’s zero position)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</li>
-<li><strong>position</strong> (<em>float</em>) – motor final position (in radians)</li>
-<li><strong>velocity</strong> (<em>float</em><em>, </em><em>optional</em>) – motor movement speed (in radians / sec). Defaults to None.</li>
-<li><strong>acceleration</strong> (<em>float</em><em>, </em><em>optional</em>) – motor maximal acceleration (in radians / sec * sec). Defaults to None.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</p></li>
+<li><p><strong>position</strong> (<em>float</em>) – motor final position (in radians)</p></li>
+<li><p><strong>velocity</strong> (<em>float</em><em>, </em><em>optional</em>) – motor movement speed (in radians / sec). Defaults to None.</p></li>
+<li><p><strong>acceleration</strong> (<em>float</em><em>, </em><em>optional</em>) – motor maximal acceleration (in radians / sec * sec). Defaults to None.</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">response containing execution result</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Response</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response containing execution result</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="butter.mas.client.Client.pauseAnimation">
-<code class="descname">pauseAnimation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.pauseAnimation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">pauseAnimation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.pauseAnimation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pause currently playing animation (if available) on the robot</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">response containing execution result</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Response</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing execution result</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="butter.mas.client.Client.pauseAudio">
-<code class="descname">pauseAudio</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.pauseAudio" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">pauseAudio</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.pauseAudio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pause current audio playback (if available) on the robot</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">response containing execution result</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Response</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing execution result</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="butter.mas.client.Client.playAnimation">
-<code class="descname">playAnimation</code><span class="sig-paren">(</span><em>animationName</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.playAnimation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">playAnimation</code><span class="sig-paren">(</span><em class="sig-param">animationName</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.playAnimation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Play animation on the robot</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>animationName</strong> (<em>str</em>) – animation name</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">response containing execution result</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Response</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>animationName</strong> (<em>str</em>) – animation name</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response containing execution result</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="butter.mas.client.Client.playAudio">
-<code class="descname">playAudio</code><span class="sig-paren">(</span><em>fileName</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.playAudio" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">playAudio</code><span class="sig-paren">(</span><em class="sig-param">fileName</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.playAudio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Play audio on the robot</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>fileName</strong> (<em>str</em>) – audio asset name</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">response containing execution result</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Response</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>fileName</strong> (<em>str</em>) – audio asset name</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response containing execution result</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="butter.mas.client.Client.resumeAnimation">
-<code class="descname">resumeAnimation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.resumeAnimation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resumeAnimation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.resumeAnimation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resume currently paused animation (if available) on the robot</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">response containing execution result</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Response</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing execution result</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="butter.mas.client.Client.resumeAudio">
-<code class="descname">resumeAudio</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.resumeAudio" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resumeAudio</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.resumeAudio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resume currently paused audio playback (if available) on the robot</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">response containing execution result</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Response</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing execution result</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="butter.mas.client.Client.setMotorRegister">
-<code class="descname">setMotorRegister</code><span class="sig-paren">(</span><em>motorName</em>, <em>registerName</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.setMotorRegister" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setMotorRegister</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">registerName</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.setMotorRegister" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get motor register value (for Dynamixel motors only)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</li>
-<li><strong>registerName</strong> (<em>str</em>) – motor register name</li>
-<li><strong>value</strong> (<em>str</em>) – register value</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</p></li>
+<li><p><strong>registerName</strong> (<em>str</em>) – motor register name</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – register value</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">response containing execution result</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Response</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response containing execution result</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Response</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="butter.mas.client.Client.stopAnimation">
-<code class="descname">stopAnimation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.stopAnimation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stopAnimation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.stopAnimation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop currently playing animation (if available) on the robot</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">response containing execution result</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Response</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing execution result</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="butter.mas.client.Client.stopAudio">
-<code class="descname">stopAudio</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.stopAudio" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stopAudio</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client.stopAudio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop current audio playback (if available) on the robot</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">response containing execution result</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Response</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing execution result</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -536,19 +545,19 @@
 
           </div>
           <div class="page-nav">
-            <div class="inner">
-  <span class="prev">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
     <a href="documentation.html"
        title="previous chapter">← Documentation</a>
-  </span>
-  <span class="next">
+  </li>
+  <li class="next">
     <a href="internal_api.html"
        title="next chapter">Internal API →</a>
-  </span>
-<div class="footer" role="contentinfo">
+  </li>
+</ul><div class="footer" role="contentinfo">
       &#169; Copyright 2019, Benny Megidish.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
 </div>
             </div>
           </div>
