@@ -27,7 +27,7 @@ author = 'Benny Megidish'
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.8.2'
+release = '0.11.14'
 
 
 # -- General configuration ---------------------------------------------------
@@ -43,6 +43,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
     'sphinx.ext.githubpages',
+    'recommonmark'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

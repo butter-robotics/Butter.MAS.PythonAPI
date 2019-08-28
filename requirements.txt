@@ -1,3 +1,4 @@
 Sphinx>=2.1.2
+recommonmark
 sphinx-markdown-builder
 sphinx_press_theme
