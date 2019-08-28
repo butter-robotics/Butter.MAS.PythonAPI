@@ -13,7 +13,7 @@ Open you Command Prompt (Windows) or Terminal (Mac / Linux) and execute the foll
 
 ## Usage
 
-```
+```python
 from butter.mas.api import HttpClient
 
 butterHttpClient = HttpClient('192.168.0.111')  # use you robot ip here

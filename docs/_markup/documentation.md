@@ -5,7 +5,7 @@
 Client Factory is a factory class responsible for creating new clients.
 In order to use the factory, we will need to import it first:
 
-```
+```python
 from butter.mas.api import ClientFactory
 ```
 
@@ -17,19 +17,19 @@ Both clients extends the Client class.
 
 Creating new HTTP client:
 
-```
+```python
 butterHttpClient = ClientFactory().getClient('192.168.0.100', protocol='http')  # use you robot ip here
 ```
 
 Creating new TCP client:
 
-```
+```python
 butterTcpClient = ClientFactory().getClient('192.168.0.100', protocol='tcp')  # use you robot ip here
 ```
 
 Creating new UDP client:
 
-```
+```python
 butterUdpClient = ClientFactory().getClient('192.168.0.100', protocol='udp')    # use you robot ip here
 ```
 
@@ -41,7 +41,7 @@ We can send a command through one of the available functions of the client.
 
 I.e., we can play animation with the following command:
 
-```
+```python
 result = butterHttpClient.playAnimation('welcome')
 ```
 
@@ -50,6 +50,6 @@ result = butterHttpClient.playAnimation('welcome')
 Each command we send will return (no matter what protocol we use) an Response object.
 We can parse the response using the built in json method like that:
 
-```
+```python
 print(result.json())
 ```
