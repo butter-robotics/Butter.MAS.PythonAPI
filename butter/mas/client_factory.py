@@ -3,7 +3,7 @@ from .client_tcp import TcpClient
 from .client_udp import UdpClient
 
 class ClientFactory:
-    ''' Client factory for diffrent types of protocols '''
+    ''' Client factory for different types of protocols '''
 
     def getClient(self, ip, port=None, protocol="http"):
         """Creates new client

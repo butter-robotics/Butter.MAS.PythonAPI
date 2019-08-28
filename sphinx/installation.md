@@ -18,7 +18,7 @@ Open you Command Prompt (Windows) or Terminal (Mac / Linux) and execute the foll
 Usage
 -----
 
-::
+.. code-block:: python
 
     from butter.mas.api import HttpClient
 

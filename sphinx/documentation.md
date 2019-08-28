@@ -16,15 +16,21 @@ In order to use communicate with the robot, we will need to create a client.
 There are to types of clients: HttpClient and UdpClient.
 Both clients extends the Client class.
 
-Creating new HTTP client::
+Creating new HTTP client:
+
+.. code-block:: python
 
     butterHttpClient = ClientFactory().getClient('192.168.0.100', protocol='http')  # use you robot ip here
 
-Creating new TCP client::
+Creating new TCP client:
+
+.. code-block:: python
 
     butterTcpClient = ClientFactory().getClient('192.168.0.100', protocol='tcp')  # use you robot ip here
 
-Creating new UDP client::
+Creating new UDP client:
+
+.. code-block:: python
 
     butterUdpClient = ClientFactory().getClient('192.168.0.100', protocol='udp')    # use you robot ip here
 
@@ -35,7 +41,9 @@ Interaction With the robot
 
 We can send a command through one of the available functions of the client.
 
-I.e., we can play animation with the following command::
+I.e., we can play animation with the following command:
+
+.. code-block:: python
 
     result = butterHttpClient.playAnimation('welcome')
 
@@ -43,6 +51,8 @@ Receiving Responses from the robot
 ----------------------------------
 
 Each command we send will return (no matter what protocol we use) an Response object.
-We can parse the response using the built in json method like that::
+We can parse the response using the built in json method like that:
+
+.. code-block:: python
 
     print(result.json())
