@@ -1,15 +1,15 @@
 [
     "installation",
     "documentation",
-    "api\\client_factory",
-    "api\\http_client",
-    "api\\tcp_client",
-    "api\\udp_client",
-    "api\\client",
-    "internal_api\\packet_builder",
-    "internal_api\\packet_factory",
-    "internal_api\\http_packet",
-    "internal_api\\tcp_packet",
-    "internal_api\\udp_packet",
-    "internal_api\\packet"
+    "api/client_factory",
+    "api/http_client",
+    "api/tcp_client",
+    "api/udp_client",
+    "api/client",
+    "internal_api/packet_builder",
+    "internal_api/packet_factory",
+    "internal_api/http_packet",
+    "internal_api/tcp_packet",
+    "internal_api/udp_packet",
+    "internal_api/packet"
 ]

@@ -1,6 +1,6 @@
 import glob
 import os
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import argparse
 import json
 
@@ -14,7 +14,7 @@ def init_parser():
     return parser
 
 def strip_path(file_path, base_path, ext):
-    return file_path.replace(base_path, '').strip('\\\\').replace(ext, '')
+    return str(PurePosixPath(Path(file_path.replace(base_path, '').strip('\\\\').replace(ext, ''))))
 
 def resolve_documentation_path(args):
     script_base_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), args.source)
