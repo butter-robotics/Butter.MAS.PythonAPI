@@ -15,8 +15,8 @@
 import os
 import sys
 from sphinx_markdown_builder.markdown_builder import MarkdownBuilder
-sys.path.insert(0, os.path.abspath('../'))
-sys.path.insert(0, os.path.abspath('../butter/mas'))
+sys.path.insert(0, os.path.abspath('../../'))
+sys.path.insert(0, os.path.abspath('../../butter/mas'))
 
 # -- Project information -----------------------------------------------------
 
@@ -87,6 +87,8 @@ html_theme = 'press'
 # documentation.
 #
 # html_theme_options = {}
+# html_logo = ''
+html_favicon = ''
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
