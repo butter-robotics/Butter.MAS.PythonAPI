@@ -6,7 +6,7 @@ echo.
 CALL make.bat html
 
 echo.
-echo.+++ Making HTML files...
+echo.+++ Making markdown files...
 echo.
 CALL make.bat markdown
 
