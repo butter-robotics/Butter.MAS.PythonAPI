@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Packet Builder</title>
+    
+      <link rel="stylesheet" href="../_static/pygments.css">
+      <link rel="stylesheet" href="../_static/theme.css">
+      
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+
+      <!-- sphinx script_files -->
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+
+      
+      <script src="../_static/theme-vendors.js"></script>
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="next" title="HTTP Packet" href="http_packet.html" />
+  <link rel="prev" title="Packet Factory" href="packet_factory.html" /> 
+  </head>
+
+  <body><div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../index.html" class="home-link">
+    
+      <span class="site-name">Butter MAS Python API</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#butter-mas-python-api-s-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 "><a href="../installation.html" class="reference internal ">Installation</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../documentation.html" class="reference internal ">Documentation</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../api/client_factory.html" class="reference internal ">Client Factory</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../api/http_client.html" class="reference internal ">HTTP Client</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../api/tcp_client.html" class="reference internal ">TCP Client</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../api/udp_client.html" class="reference internal ">UDP Client</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../api/client.html" class="reference internal ">Client</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="packet_factory.html" class="reference internal ">Packet Factory</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current"><a href="#" class="reference internal current">Packet Builder</a>
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#module-butter.mas.utils.packet_builder" class="reference internal">Packet Builder</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="http_packet.html" class="reference internal ">HTTP Packet</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="tcp_packet.html" class="reference internal ">TCP Packet</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="udp_packet.html" class="reference internal ">UDP Packet</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="packet.html" class="reference internal ">Packet</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li>Packet Builder</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="packet_factory.html"
+       title="previous chapter">← Packet Factory</a>
+  </li>
+  <li class="next">
+    <a href="http_packet.html"
+       title="next chapter">HTTP Packet →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main">
+            
+  <div class="section" id="module-butter.mas.utils.packet_builder">
+<span id="packet-builder"></span><h1>Packet Builder<a class="headerlink" href="#module-butter.mas.utils.packet_builder" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="butter.mas.utils.packet_builder.PacketBuilder">
+<em class="property">class </em><code class="sig-prename descclassname">butter.mas.utils.packet_builder.</code><code class="sig-name descname">PacketBuilder</code><span class="sig-paren">(</span><em class="sig-param">ip</em>, <em class="sig-param">port</em>, <em class="sig-param">protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_builder.PacketBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a command packet using the builder design pattern</p>
+<dl class="method">
+<dt id="butter.mas.utils.packet_builder.PacketBuilder.addArgument">
+<code class="sig-name descname">addArgument</code><span class="sig-paren">(</span><em class="sig-param">argument</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_builder.PacketBuilder.addArgument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add argument</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>argument</strong> (<em>str</em>) – argument</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#butter.mas.utils.packet_builder.PacketBuilder" title="butter.mas.utils.packet_builder.PacketBuilder">PacketBuilder</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.utils.packet_builder.PacketBuilder.addArguments">
+<code class="sig-name descname">addArguments</code><span class="sig-paren">(</span><em class="sig-param">*arguments</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_builder.PacketBuilder.addArguments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add arguments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>self</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#butter.mas.utils.packet_builder.PacketBuilder" title="butter.mas.utils.packet_builder.PacketBuilder">PacketBuilder</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.utils.packet_builder.PacketBuilder.addCommand">
+<code class="sig-name descname">addCommand</code><span class="sig-paren">(</span><em class="sig-param">command</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_builder.PacketBuilder.addCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add command</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>command</strong> (<em>str</em>) – command</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#butter.mas.utils.packet_builder.PacketBuilder" title="butter.mas.utils.packet_builder.PacketBuilder">PacketBuilder</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.utils.packet_builder.PacketBuilder.addKeyValuePair">
+<code class="sig-name descname">addKeyValuePair</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_builder.PacketBuilder.addKeyValuePair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add key value pair</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>str</em>) – attribute key</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – attribute value</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#butter.mas.utils.packet_builder.PacketBuilder" title="butter.mas.utils.packet_builder.PacketBuilder">PacketBuilder</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.utils.packet_builder.PacketBuilder.addParameter">
+<code class="sig-name descname">addParameter</code><span class="sig-paren">(</span><em class="sig-param">parameter</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_builder.PacketBuilder.addParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add parameter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>parameter</strong> (<em>str</em>) – parameter</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#butter.mas.utils.packet_builder.PacketBuilder" title="butter.mas.utils.packet_builder.PacketBuilder">PacketBuilder</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.utils.packet_builder.PacketBuilder.addParameters">
+<code class="sig-name descname">addParameters</code><span class="sig-paren">(</span><em class="sig-param">*parameters</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_builder.PacketBuilder.addParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>self</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#butter.mas.utils.packet_builder.PacketBuilder" title="butter.mas.utils.packet_builder.PacketBuilder">PacketBuilder</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.utils.packet_builder.PacketBuilder.build">
+<code class="sig-name descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.packet_builder.PacketBuilder.build" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds the packet</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>data packet</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="packet.html#butter.mas.utils.packet.Packet" title="butter.mas.utils.packet.Packet">Packet</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="packet_factory.html"
+       title="previous chapter">← Packet Factory</a>
+  </li>
+  <li class="next">
+    <a href="http_packet.html"
+       title="next chapter">HTTP Packet →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2019, Benny Megidish.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+</div>
+            </div>
+          </div>
+      </page>
+  </div></body>
+</html>

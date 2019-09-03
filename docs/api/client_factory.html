@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Client Factory</title>
+    
+      <link rel="stylesheet" href="../_static/pygments.css">
+      <link rel="stylesheet" href="../_static/theme.css">
+      
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+
+      <!-- sphinx script_files -->
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+
+      
+      <script src="../_static/theme-vendors.js"></script>
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="next" title="HTTP Client" href="http_client.html" />
+  <link rel="prev" title="Documentation" href="../documentation.html" /> 
+  </head>
+
+  <body><div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../index.html" class="home-link">
+    
+      <span class="site-name">Butter MAS Python API</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#butter-mas-python-api-s-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 "><a href="../installation.html" class="reference internal ">Installation</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../documentation.html" class="reference internal ">Documentation</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current"><a href="#" class="reference internal current">Client Factory</a>
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#module-butter.mas.client_factory" class="reference internal">Client Factory</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="http_client.html" class="reference internal ">HTTP Client</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="tcp_client.html" class="reference internal ">TCP Client</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="udp_client.html" class="reference internal ">UDP Client</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="client.html" class="reference internal ">Client</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../internal_api/packet_factory.html" class="reference internal ">Packet Factory</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../internal_api/packet_builder.html" class="reference internal ">Packet Builder</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../internal_api/http_packet.html" class="reference internal ">HTTP Packet</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../internal_api/tcp_packet.html" class="reference internal ">TCP Packet</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../internal_api/udp_packet.html" class="reference internal ">UDP Packet</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../internal_api/packet.html" class="reference internal ">Packet</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li>Client Factory</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="../documentation.html"
+       title="previous chapter">← Documentation</a>
+  </li>
+  <li class="next">
+    <a href="http_client.html"
+       title="next chapter">HTTP Client →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main">
+            
+  <div class="section" id="module-butter.mas.client_factory">
+<span id="client-factory"></span><h1>Client Factory<a class="headerlink" href="#module-butter.mas.client_factory" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="butter.mas.client_factory.ClientFactory">
+<em class="property">class </em><code class="sig-prename descclassname">butter.mas.client_factory.</code><code class="sig-name descname">ClientFactory</code><a class="headerlink" href="#butter.mas.client_factory.ClientFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Client factory for different types of protocols</p>
+<dl class="method">
+<dt id="butter.mas.client_factory.ClientFactory.getClient">
+<code class="sig-name descname">getClient</code><span class="sig-paren">(</span><em class="sig-param">ip</em>, <em class="sig-param">port=None</em>, <em class="sig-param">protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client_factory.ClientFactory.getClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates new client</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ip</strong> (<em>str</em>) – robot IP</p></li>
+<li><p><strong>port</strong> (<em>int</em><em>, </em><em>optional</em>) – robot port. Defaults to None.</p></li>
+<li><p><strong>protocol</strong> (<em>str</em><em>, </em><em>optional</em>) – communication protocol. Defaults to “http”.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>requested client</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="client.html#butter.mas.client.Client" title="butter.mas.client.Client">Client</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.client_factory.ClientFactory.getClientClass">
+<code class="sig-name descname">getClientClass</code><span class="sig-paren">(</span><em class="sig-param">protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client_factory.ClientFactory.getClientClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get client class</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>protocol</strong> (<em>str</em><em>, </em><em>optional</em>) – communication protocol. Defaults to “http”.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>client class</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="client.html#butter.mas.client.Client" title="butter.mas.client.Client">Client</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="../documentation.html"
+       title="previous chapter">← Documentation</a>
+  </li>
+  <li class="next">
+    <a href="http_client.html"
+       title="next chapter">HTTP Client →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2019, Benny Megidish.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+</div>
+            </div>
+          </div>
+      </page>
+  </div></body>
+</html>

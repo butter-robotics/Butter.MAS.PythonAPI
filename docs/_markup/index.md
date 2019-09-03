@@ -2,7 +2,7 @@
 sphinx-quickstart on Wed Apr 17 17:10:39 2019.
 You can adapt this file completely to your liking, but it should at least
 contain the root `toctree` directive. -->
-# Butter MAS Python API’s documentation!
+# Butter MAS Python API’s Documentation
 
 * Installation
 
@@ -22,31 +22,27 @@ contain the root `toctree` directive. -->
 
   * Receiving Responses from the robot
 
-* API
+* Client Factory
 
-  * Client Factory
+* HTTP Client
 
-  * HTTP Client
+* TCP Client
 
-  * TCP Client
+* UDP Client
 
-  * UDP Client
+* Client
 
-  * Client
+* Packet Factory
 
-* Internal API
+* Packet Builder
 
-  * Packet Factory
+* HTTP Packet
 
-  * Packet Builder
+* TCP Packet
 
-  * HTTP Packet
+* UDP Packet
 
-  * TCP Packet
-
-  * UDP Packet
-
-  * Packet
+* Packet
 
 
 # Indices and tables

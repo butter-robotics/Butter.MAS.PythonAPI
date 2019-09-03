@@ -3,31 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-      <title>API</title>
+      <title>Client</title>
     
-      <link rel="stylesheet" href="_static/pygments.css">
-      <link rel="stylesheet" href="_static/theme.css">
+      <link rel="stylesheet" href="../_static/pygments.css">
+      <link rel="stylesheet" href="../_static/theme.css">
       
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
 
       <!-- sphinx script_files -->
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
 
       
-      <script src="_static/theme-vendors.js"></script>
-      <script src="_static/theme.js" defer></script>
+      <script src="../_static/theme-vendors.js"></script>
+      <script src="../_static/theme.js" defer></script>
     
-  <link rel="index" title="Index" href="genindex.html" />
-  <link rel="search" title="Search" href="search.html" />
-  <link rel="next" title="Internal API" href="internal_api.html" />
-  <link rel="prev" title="Documentation" href="documentation.html" /> 
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="next" title="Packet Factory" href="../internal_api/packet_factory.html" />
+  <link rel="prev" title="UDP Client" href="udp_client.html" /> 
   </head>
 
   <body><div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
-  <router-link to="index.html" class="home-link">
+  <router-link to="../index.html" class="home-link">
     
       <span class="site-name">Butter MAS Python API</span>
     
@@ -56,7 +56,7 @@
           </navlinks><div id="searchbox" class="searchbox" role="search">
   <div class="caption"><span class="caption-text">Quick search</span>
     <div class="searchformwrapper">
-      <form class="search" action="search.html" method="get">
+      <form class="search" action="../search.html" method="get">
         <input type="text" name="q" />
         <input type="submit" value="Search" />
         <input type="hidden" name="check_keywords" value="yes" />
@@ -68,34 +68,50 @@
   
     <div class="sidebar-group">
       <p class="caption">
-        <span class="caption-text"><a href="index.html#butter-mas-python-api-s-documentation">Contents:</a></span>
+        <span class="caption-text"><a href="../index.html#butter-mas-python-api-s-documentation">Contents:</a></span>
       </p>
       <ul class="current">
         
-          <li class="toctree-l1 "><a href="installation.html" class="reference internal ">Installation</a>
+          <li class="toctree-l1 "><a href="../installation.html" class="reference internal ">Installation</a>
 
             
           </li>
 
         
-          <li class="toctree-l1 "><a href="documentation.html" class="reference internal ">Documentation</a>
+          <li class="toctree-l1 "><a href="../documentation.html" class="reference internal ">Documentation</a>
 
             
           </li>
 
         
-          <li class="toctree-l1 current"><a href="#" class="reference internal current">API</a>
+          <li class="toctree-l1 "><a href="client_factory.html" class="reference internal ">Client Factory</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="http_client.html" class="reference internal ">HTTP Client</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="tcp_client.html" class="reference internal ">TCP Client</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="udp_client.html" class="reference internal ">UDP Client</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current"><a href="#" class="reference internal current">Client</a>
 
             
               <ul>
-                
-                  <li class="toctree-l2"><a href="#module-butter.mas.client_factory" class="reference internal">Client Factory</a></li>
-                
-                  <li class="toctree-l2"><a href="#http-client" class="reference internal">HTTP Client</a></li>
-                
-                  <li class="toctree-l2"><a href="#tcp-client" class="reference internal">TCP Client</a></li>
-                
-                  <li class="toctree-l2"><a href="#udp-client" class="reference internal">UDP Client</a></li>
                 
                   <li class="toctree-l2"><a href="#module-butter.mas.client" class="reference internal">Client</a></li>
                 
@@ -104,7 +120,37 @@
           </li>
 
         
-          <li class="toctree-l1 "><a href="internal_api.html" class="reference internal ">Internal API</a>
+          <li class="toctree-l1 "><a href="../internal_api/packet_factory.html" class="reference internal ">Packet Factory</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../internal_api/packet_builder.html" class="reference internal ">Packet Builder</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../internal_api/http_packet.html" class="reference internal ">HTTP Packet</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../internal_api/tcp_packet.html" class="reference internal ">TCP Packet</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../internal_api/udp_packet.html" class="reference internal ">UDP Packet</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../internal_api/packet.html" class="reference internal ">Packet</a>
 
             
           </li>
@@ -120,20 +166,20 @@
           <div class="body-header" role="navigation" aria-label="navigation">
   
   <ul class="breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
+    <li><a href="../index.html">Docs</a> &raquo;</li>
     
-    <li>API</li>
+    <li>Client</li>
   </ul>
   
 
   <ul class="page-nav">
   <li class="prev">
-    <a href="documentation.html"
-       title="previous chapter">← Documentation</a>
+    <a href="udp_client.html"
+       title="previous chapter">← UDP Client</a>
   </li>
   <li class="next">
-    <a href="internal_api.html"
-       title="next chapter">Internal API →</a>
+    <a href="../internal_api/packet_factory.html"
+       title="next chapter">Packet Factory →</a>
   </li>
 </ul>
   
@@ -141,87 +187,8 @@
 <hr>
           <div class="content" role="main">
             
-  <div class="section" id="api">
-<h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="module-butter.mas.client_factory">
-<span id="client-factory"></span><h2>Client Factory<a class="headerlink" href="#module-butter.mas.client_factory" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="butter.mas.client_factory.ClientFactory">
-<em class="property">class </em><code class="sig-prename descclassname">butter.mas.client_factory.</code><code class="sig-name descname">ClientFactory</code><a class="headerlink" href="#butter.mas.client_factory.ClientFactory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Client factory for different types of protocols</p>
-<dl class="method">
-<dt id="butter.mas.client_factory.ClientFactory.getClient">
-<code class="sig-name descname">getClient</code><span class="sig-paren">(</span><em class="sig-param">ip</em>, <em class="sig-param">port=None</em>, <em class="sig-param">protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client_factory.ClientFactory.getClient" title="Permalink to this definition">¶</a></dt>
-<dd><p>Creates new client</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>ip</strong> (<em>str</em>) – robot IP</p></li>
-<li><p><strong>port</strong> (<em>int</em><em>, </em><em>optional</em>) – robot port. Defaults to None.</p></li>
-<li><p><strong>protocol</strong> (<em>str</em><em>, </em><em>optional</em>) – communication protocol. Defaults to “http”.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>requested client</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#butter.mas.client.Client" title="butter.mas.client.Client">Client</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="butter.mas.client_factory.ClientFactory.getClientClass">
-<code class="sig-name descname">getClientClass</code><span class="sig-paren">(</span><em class="sig-param">protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client_factory.ClientFactory.getClientClass" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get client class</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>protocol</strong> (<em>str</em><em>, </em><em>optional</em>) – communication protocol. Defaults to “http”.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>client class</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#butter.mas.client.Client" title="butter.mas.client.Client">Client</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-</div>
-<div class="section" id="http-client">
-<h2>HTTP Client<a class="headerlink" href="#http-client" title="Permalink to this headline">¶</a></h2>
-<p>HttpClient extends Client</p>
-<span class="target" id="module-butter.mas.client_http"></span><dl class="class">
-<dt id="butter.mas.client_http.HttpClient">
-<em class="property">class </em><code class="sig-prename descclassname">butter.mas.client_http.</code><code class="sig-name descname">HttpClient</code><span class="sig-paren">(</span><em class="sig-param">ip</em>, <em class="sig-param">port=5555</em>, <em class="sig-param">protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client_http.HttpClient" title="Permalink to this definition">¶</a></dt>
-<dd><p>Butter MAS HTTP client API</p>
-</dd></dl>
-
-</div>
-<div class="section" id="tcp-client">
-<h2>TCP Client<a class="headerlink" href="#tcp-client" title="Permalink to this headline">¶</a></h2>
-<p>TcpClient extends Client</p>
-<span class="target" id="module-butter.mas.client_tcp"></span><dl class="class">
-<dt id="butter.mas.client_tcp.TcpClient">
-<em class="property">class </em><code class="sig-prename descclassname">butter.mas.client_tcp.</code><code class="sig-name descname">TcpClient</code><span class="sig-paren">(</span><em class="sig-param">ip</em>, <em class="sig-param">port=5050</em>, <em class="sig-param">protocol='tcp'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client_tcp.TcpClient" title="Permalink to this definition">¶</a></dt>
-<dd><p>Butter MAS TCP client API</p>
-</dd></dl>
-
-</div>
-<div class="section" id="udp-client">
-<h2>UDP Client<a class="headerlink" href="#udp-client" title="Permalink to this headline">¶</a></h2>
-<p>UdpClient extends Client</p>
-<span class="target" id="module-butter.mas.client_udp"></span><dl class="class">
-<dt id="butter.mas.client_udp.UdpClient">
-<em class="property">class </em><code class="sig-prename descclassname">butter.mas.client_udp.</code><code class="sig-name descname">UdpClient</code><span class="sig-paren">(</span><em class="sig-param">ip</em>, <em class="sig-param">port=5000</em>, <em class="sig-param">protocol='udp'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client_udp.UdpClient" title="Permalink to this definition">¶</a></dt>
-<dd><p>Butter MAS UDP client API</p>
-</dd></dl>
-
-</div>
-<div class="section" id="module-butter.mas.client">
-<span id="client"></span><h2>Client<a class="headerlink" href="#module-butter.mas.client" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="module-butter.mas.client">
+<span id="client"></span><h1>Client<a class="headerlink" href="#module-butter.mas.client" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="butter.mas.client.Client">
 <em class="property">class </em><code class="sig-prename descclassname">butter.mas.client.</code><code class="sig-name descname">Client</code><span class="sig-paren">(</span><em class="sig-param">ip</em>, <em class="sig-param">port=5555</em>, <em class="sig-param">protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.client.Client" title="Permalink to this definition">¶</a></dt>
@@ -540,19 +507,18 @@
 </dd></dl>
 
 </div>
-</div>
 
 
           </div>
           <div class="page-nav">
             <div class="inner"><ul class="page-nav">
   <li class="prev">
-    <a href="documentation.html"
-       title="previous chapter">← Documentation</a>
+    <a href="udp_client.html"
+       title="previous chapter">← UDP Client</a>
   </li>
   <li class="next">
-    <a href="internal_api.html"
-       title="next chapter">Internal API →</a>
+    <a href="../internal_api/packet_factory.html"
+       title="next chapter">Packet Factory →</a>
   </li>
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2019, Benny Megidish.
