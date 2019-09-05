@@ -18,9 +18,9 @@ contain the root `toctree` directive. -->
 
   * Creating New Client
 
-  * Interaction With the robot
+  * Interacting with the Robot
 
-  * Receiving Responses from the robot
+  * Receiving Responses from the Robot
 
 * Client Factory
 

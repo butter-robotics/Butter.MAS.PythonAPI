@@ -35,7 +35,7 @@ butterUdpClient = ClientFactory().getClient('192.168.0.100', protocol='udp')    
 
 The IP address should be the same as the current IP address of the robot on your local network.
 
-## Interaction With the robot
+## Interacting with the Robot
 
 We can send a command through one of the available functions of the client.
 
@@ -45,7 +45,7 @@ I.e., we can play animation with the following command:
 result = butterHttpClient.playAnimation('welcome')
 ```
 
-## Receiving Responses from the robot
+## Receiving Responses from the Robot
 
 Each command we send will return (no matter what protocol we use) an Response object.
 We can parse the response using the built in json method like that:

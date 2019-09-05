@@ -87,9 +87,9 @@
                 
                   <li class="toctree-l2"><a href="#creating-new-client" class="reference internal">Creating New Client</a></li>
                 
-                  <li class="toctree-l2"><a href="#interaction-with-the-robot" class="reference internal">Interaction With the robot</a></li>
+                  <li class="toctree-l2"><a href="#interacting-with-the-robot" class="reference internal">Interacting with the Robot</a></li>
                 
-                  <li class="toctree-l2"><a href="#receiving-responses-from-the-robot" class="reference internal">Receiving Responses from the robot</a></li>
+                  <li class="toctree-l2"><a href="#receiving-responses-from-the-robot" class="reference internal">Receiving Responses from the Robot</a></li>
                 
               </ul>
             
@@ -222,8 +222,8 @@ Both clients extends the Client class.</p>
 </div>
 <p>The IP address should be the same as the current IP address of the robot on your local network.</p>
 </div>
-<div class="section" id="interaction-with-the-robot">
-<h2>Interaction With the robot<a class="headerlink" href="#interaction-with-the-robot" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="interacting-with-the-robot">
+<h2>Interacting with the Robot<a class="headerlink" href="#interacting-with-the-robot" title="Permalink to this headline">¶</a></h2>
 <p>We can send a command through one of the available functions of the client.</p>
 <p>I.e., we can play animation with the following command:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">butterHttpClient</span><span class="o">.</span><span class="n">playAnimation</span><span class="p">(</span><span class="s1">&#39;welcome&#39;</span><span class="p">)</span>
@@ -231,7 +231,7 @@ Both clients extends the Client class.</p>
 </div>
 </div>
 <div class="section" id="receiving-responses-from-the-robot">
-<h2>Receiving Responses from the robot<a class="headerlink" href="#receiving-responses-from-the-robot" title="Permalink to this headline">¶</a></h2>
+<h2>Receiving Responses from the Robot<a class="headerlink" href="#receiving-responses-from-the-robot" title="Permalink to this headline">¶</a></h2>
 <p>Each command we send will return (no matter what protocol we use) an Response object.
 We can parse the response using the built in json method like that:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
