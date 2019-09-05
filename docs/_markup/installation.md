@@ -8,7 +8,8 @@ You will need to install python 3 in order to use this software
 
 ## Installing
 
-Open you Command Prompt (Windows) or Terminal (Mac / Linux) and execute the following command:
+Open your Command Prompt (Windows) or Terminal (Mac / Linux) and execute the following command:
+
 `pip install -U butter.mas-api`
 
 ## Usage
