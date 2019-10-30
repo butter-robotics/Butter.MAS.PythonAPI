@@ -1,5 +1,6 @@
 import unittest
 
+from tests.version_validations_test import TestVersionValidationsMethods
 from tests.client_http_test import TestHttpClientApiMethods
 from tests.client_tcp_test import TestTcpClientApiMethods
 from tests.client_udp_test import TestUdpClientApiMethods
@@ -11,7 +12,8 @@ from tests.utils.packet_builder_test import TestPacketBuilderMethods
 def suite():
     suite = unittest.TestSuite()
     loader = unittest.TestLoader()
-    testCases = (TestPacketBuilderMethods, 
+    testCases = (TestVersionValidationsMethods,
+                TestPacketBuilderMethods, 
                 TestHttpPacketMethods, 
                 TestTcpPacketMethods,
                 TestUdpPacketMethods,

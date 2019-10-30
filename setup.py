@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 from setuptools import setup, find_packages
 
+environment = dict()
+with open("butter/mas/environment.py") as f:
+    exec(f.read(), environment)
+
 with open('README.md', encoding="utf8") as f:
     readme = f.read()
 
@@ -13,15 +17,15 @@ with open('LICENSE') as f:
 #         install_requires.append(line.split("=")[0].strip("<~>"))
 
 setup(
-    name='butter.mas-api',
-    version='0.11.15',
+    name=environment['app_name'],
+    version=environment['__version__'],
     description='Python Client API for Butter MAS platform',
     long_description_content_type='text/markdown',
     long_description=readme,
     author='Benny Megidish',
     author_email='bennymegk@gmail.com',
     url='https://github.com/bennymeg/Butter.MAS.PythonAPI',
-    install_requires=['requests'],
+    install_requires=['requests', 'packaging'],
     #license=license,
     license='Apache-2.0',
     packages=find_packages(exclude=('tests', 'docs')),

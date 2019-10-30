@@ -4,7 +4,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Prerequisites
 
-You will need to install python 3 in order to use this software
+You will need to install Python 3 in order to use this software
 
 ## Installing
 

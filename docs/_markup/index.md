@@ -22,6 +22,8 @@ contain the root `toctree` directive. -->
 
   * Receiving Responses from the Robot
 
+* Version Validations
+
 * Client Factory
 
 * HTTP Client

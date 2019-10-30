@@ -12,6 +12,7 @@ Butter MAS Python API's Documentation
 
    installation
    documentation
+   api/version_validations
    api/client_factory
    api/http_client
    api/tcp_client
