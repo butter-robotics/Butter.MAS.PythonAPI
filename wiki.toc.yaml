@@ -1,33 +1,33 @@
 ---
-- label: installation
-  link: wiki/installation.md
-- label: documentation
-  link: wiki/documentation.md
-- label: api
+- label: Installation
+  data: wiki/installation.md
+- label: Documentation
+  data: wiki/documentation.md
+- label: API
   items:
-  - label: version_validations
-    link: wiki/api/version_validations.md
-  - label: client_factory
-    link: wiki/api/client_factory.md
-  - label: http_client
-    link: wiki/api/http_client.md
-  - label: tcp_client
-    link: wiki/api/tcp_client.md
-  - label: udp_client
-    link: wiki/api/udp_client.md
-  - label: client
-    link: wiki/api/client.md
-- label: internal_api
+  - label: Version Validations
+    data: wiki/api/version_validations.md
+  - label: Client Factory
+    data: wiki/api/client_factory.md
+  - label: HTTP Client
+    data: wiki/api/http_client.md
+  - label: TCP Client
+    data: wiki/api/tcp_client.md
+  - label: UDP Client
+    data: wiki/api/udp_client.md
+  - label: Client
+    data: wiki/api/client.md
+- label: Internal API
   items:
-  - label: packet_builder
-    link: wiki/internal_api/packet_builder.md
-  - label: packet_factory
-    link: wiki/internal_api/packet_factory.md
-  - label: http_packet
-    link: wiki/internal_api/http_packet.md
-  - label: tcp_packet
-    link: wiki/nternal_api/tcp_packet.md
-  - label: udp_packet
-    link: wiki/internal_api/udp_packet.md
-  - label: packet
-    link: wiki/internal_api/packet.md
+  - label: Packet Builder
+    data: wiki/internal_api/packet_builder.md
+  - label: Packet Factory
+    data: wiki/internal_api/packet_factory.md
+  - label: HTTP Packet
+    data: wiki/internal_api/http_packet.md
+  - label: TCP Packet
+    data: wiki/nternal_api/tcp_packet.md
+  - label: UDP Packet
+    data: wiki/internal_api/udp_packet.md
+  - label: Packet
+    data: wiki/internal_api/packet.md
