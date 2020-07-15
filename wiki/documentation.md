@@ -12,8 +12,8 @@ from butter.mas.api import ClientFactory
 ## Creating New Client
 
 In order to use communicate with the robot, we will need to create a client.
-There are to types of clients: HttpClient and UdpClient.
-Both clients extends the Client class.
+There are three types of clients: HttpClient, TcpClient and UdpClient.
+All clients extends the Client class.
 
 Creating new HTTP client:
 
