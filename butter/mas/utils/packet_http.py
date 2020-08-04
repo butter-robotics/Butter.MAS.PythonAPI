@@ -2,8 +2,9 @@ import requests
 from .packet import Packet
 from .general_utils import print_error
 
+
 class HttpPacket(Packet):
-    ''' Represents a http data packet '''
+    """ Represents a http data packet """
 
     def __init__(self, ip, port, query):
         """Initialize packet
@@ -44,4 +45,5 @@ class HttpPacket(Packet):
         return response
 
     def __eq__(self, other):
-        return isinstance(other, HttpPacket) and self.ip == other.ip and self.port == other.port and self.query == other.query
+        return isinstance(other,
+                          HttpPacket) and self.ip == other.ip and self.port == other.port and self.query == other.query

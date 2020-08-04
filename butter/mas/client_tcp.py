@@ -1,7 +1,8 @@
 from .client import Client
 
+
 class TcpClient(Client):
-    ''' Butter MAS TCP client API '''
+    """ Butter MAS TCP client API """
 
     def __init__(self, ip, port=5050, protocol='tcp'):
         """Initialize Butter MAS TCP client
@@ -12,6 +13,7 @@ class TcpClient(Client):
             protocol (str, optional): communication protocol. Defaults to "tcp".
         """
         super().__init__(ip, port, protocol)
+
 
 if __name__ == "__main__":
     client = TcpClient('localhost')

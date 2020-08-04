@@ -1,8 +1,9 @@
 from abc import ABC, abstractmethod
 from requests import Response
 
+
 class Packet(ABC):
-    ''' Represents an abstract data packet '''
+    """ Represents an abstract data packet """
 
     def __init__(self, ip, port, query):
         """Initialize packet
@@ -62,4 +63,5 @@ class Packet(ABC):
         return response
 
     def __eq__(self, other):
-        return isinstance(other, Packet) and self.ip == other.ip and self.port == other.port and self.query == other.query
+        return isinstance(other,
+                          Packet) and self.ip == other.ip and self.port == other.port and self.query == other.query

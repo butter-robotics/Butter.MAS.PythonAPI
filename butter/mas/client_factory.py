@@ -2,8 +2,9 @@ from .client_http import HttpClient
 from .client_tcp import TcpClient
 from .client_udp import UdpClient
 
+
 class ClientFactory:
-    ''' Client factory for different types of protocols '''
+    """ Client factory for different types of protocols """
 
     def getClient(self, ip, port=None, protocol="http"):
         """Creates new client
@@ -16,11 +17,11 @@ class ClientFactory:
         Returns:
             Client: requested client
         """
-        if (protocol == "http"):
+        if protocol == "http":
             return HttpClient(ip) if port is None else HttpClient(ip, port)
-        elif (protocol == "tcp"):
+        elif protocol == "tcp":
             return TcpClient(ip) if port is None else TcpClient(ip, port)
-        elif (protocol == "udp"):
+        elif protocol == "udp":
             return UdpClient(ip) if port is None else UdpClient(ip, port)
         else:
             return None
@@ -34,11 +35,11 @@ class ClientFactory:
         Returns:
             Client: client class
         """
-        if (protocol == "http"):
+        if protocol == "http":
             return HttpClient
-        elif (protocol == "tcp"):
+        elif protocol == "tcp":
             return TcpClient
-        elif (protocol == "udp"):
+        elif protocol == "udp":
             return UdpClient
         else:
             return None

@@ -2,8 +2,9 @@ import socket
 from .packet import Packet
 from .general_utils import print_error
 
+
 class TcpPacket(Packet):
-    ''' Represents a tcp data packet '''
+    """ Represents a tcp data packet """
 
     def __init__(self, ip, port, query):
         """Initialize packet
@@ -14,7 +15,7 @@ class TcpPacket(Packet):
             query (str): packet payload
         """
         super().__init__(ip, port, query)
-        self.bufferSize  = 2048
+        self.bufferSize = 2048
 
     def send(self, timeout=5):
         """Send packet
@@ -50,4 +51,5 @@ class TcpPacket(Packet):
         return response
 
     def __eq__(self, other):
-        return isinstance(other, TcpPacket) and self.ip == other.ip and self.port == other.port and self.query == other.query
+        return isinstance(other,
+                          TcpPacket) and self.ip == other.ip and self.port == other.port and self.query == other.query

@@ -4,8 +4,9 @@ import sys
 import requests
 from requests.exceptions import HTTPError
 
-class VersionValidations():
-    ''' Version and compatibility validations '''
+
+class VersionValidations:
+    """ Version and compatibility validations """
 
     @staticmethod
     def _getLatestAppVersion():
@@ -16,7 +17,7 @@ class VersionValidations():
             app_info = response.json()
             if app_info and app_info['info'] and app_info['info']['version']:
                 version = app_info['info']['version']
-        
+
         return version
 
     @staticmethod
@@ -37,7 +38,7 @@ class VersionValidations():
             # print('Some error occurred while trying to fetch firmware version: {}'.format(error), file=sys.stderr)
         else:
             versions = response.json()
-        
+
         return versions
 
     @staticmethod
@@ -52,7 +53,7 @@ class VersionValidations():
 
         if latest_version is None:
             print('Update check failed!', file=sys.stderr)
-            print('Please check for updates menually at https://pypi.org/project/{}/'.format(app_name), file=sys.stderr)
+            print('Please check for updates manually at https://pypi.org/project/{}/'.format(app_name), file=sys.stderr)
         elif Version(__version__) < Version(latest_version):
             print('Update available! your version: {}, latest: {}'.format(__version__, latest_version))
             print('Execute `pip install -U {}` to update'.format(app_name))

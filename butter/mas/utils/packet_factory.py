@@ -2,8 +2,9 @@ from .packet_http import HttpPacket
 from .packet_tcp import TcpPacket
 from .packet_udp import UdpPacket
 
+
 class PacketFactory:
-    ''' Packet factory for diffrent types of protocols '''
+    """ Packet factory for different types of protocols """
 
     def getPacket(self, ip, port, query, protocol="http"):
         """Creates new packet
@@ -17,11 +18,11 @@ class PacketFactory:
         Returns:
             Packet: data packet
         """
-        if (protocol == "http"):
+        if protocol == "http":
             return HttpPacket(ip, port, query)
-        elif (protocol == "tcp"):
+        elif protocol == "tcp":
             return TcpPacket(ip, port, query)
-        elif (protocol == "udp"):
+        elif protocol == "udp":
             return UdpPacket(ip, port, query)
         else:
             return None
@@ -35,11 +36,11 @@ class PacketFactory:
         Returns:
             Packet: data packet
         """
-        if (protocol == "http"):
+        if protocol == "http":
             return HttpPacket
-        elif (protocol == "tcp"):
+        elif protocol == "tcp":
             return TcpPacket
-        elif (protocol == "udp"):
+        elif protocol == "udp":
             return UdpPacket
         else:
             return None

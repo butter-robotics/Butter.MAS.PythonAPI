@@ -1,7 +1,8 @@
 from .packet_factory import PacketFactory
 
-class PacketBuilder():
-    ''' Builds a command packet using the builder design pattern '''
+
+class PacketBuilder:
+    """ Builds a command packet using the builder design pattern """
 
     def __init__(self, ip, port, protocol="http"):
         """Initialize builder
@@ -47,7 +48,7 @@ class PacketBuilder():
         self.args.append(str(argument))
 
         return self
-    
+
     def addArguments(self, *arguments):
         """Add arguments
         
@@ -110,7 +111,7 @@ class PacketBuilder():
             str: formated parameter
         """
         if not parameter.startswith('--'):
-            if  parameter.startswith('-'):
+            if parameter.startswith('-'):
                 parameter = '-' + parameter
             else:
                 parameter = '--' + parameter
@@ -123,15 +124,15 @@ class PacketBuilder():
         Returns:
             Packet: data packet
         """
-        if self.cmd == None: 
+        if self.cmd == None:
             return None
 
         query = "%s?" % self.cmd
 
-        if self.args: 
+        if self.args:
             query = "%s%s&" % (query, '&'.join(self.args))
 
-        if self.params: 
+        if self.params:
             params = list(map(self._formatParameter, self.params))
             query = "%s%s&" % (query, '&'.join(params))
 
