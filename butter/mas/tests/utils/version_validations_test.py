@@ -2,6 +2,7 @@ import unittest
 
 from butter.mas.api import VersionValidations
 
+
 class TestVersionValidationsMethods(unittest.TestCase):
 
     def testGetLatestAppVersion(self):

@@ -1,4 +1,4 @@
-from .environment import app_name, __version__
+from butter.mas.environment import app_name, __version__
 from packaging.version import Version
 import sys
 import requests
@@ -13,7 +13,7 @@ class VersionValidations:
         version = None
         response = requests.get('https://pypi.org/pypi/{}/json'.format(app_name))
 
-        if (response):
+        if response:
             app_info = response.json()
             if app_info and app_info['info'] and app_info['info']['version']:
                 version = app_info['info']['version']

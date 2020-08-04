@@ -1,7 +1,6 @@
-import unittest
-
 from butter.mas.api import HttpClient
-from tests.client_test import TestClientApiMethods
+from butter.mas.tests.clients.client_test import TestClientApiMethods
+
 
 class TestHttpClientApiMethods(TestClientApiMethods):
 

@@ -1,6 +1,7 @@
 import unittest
-from butter.mas.utils.packet_builder import PacketBuilder
-from butter.mas.utils.packet_factory import PacketFactory
+from butter.mas.packets.packet_builder import PacketBuilder
+from butter.mas.packets.packet_factory import PacketFactory
+
 
 class TestPacketBuilderMethods(unittest.TestCase):
 
@@ -18,7 +19,7 @@ class TestPacketBuilderMethods(unittest.TestCase):
     def testAddArgument(self):
         self.builder.addArgument('base')
         self.assertEqual(self.builder.args, ['base'])
-    
+
     def testAddArguments(self):
         self.builder.addArguments('base', 'top')
         self.assertEqual(self.builder.args, ['base', 'top'])
@@ -41,6 +42,7 @@ class TestPacketBuilderMethods(unittest.TestCase):
         packet = self.builder.addCommand('get').addParameter('help').build()
         packetFactory = PacketFactory()
         self.assertEqual(packet, packetFactory.getPacket('localhost', 5555, 'cmd/json/get?--help'))
+
 
 if __name__ == '__main__':
     unittest.main()

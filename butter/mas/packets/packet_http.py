@@ -1,6 +1,6 @@
 import requests
 from .packet import Packet
-from .general_utils import print_error
+from butter.mas.utils.general_utils import print_error
 
 
 class HttpPacket(Packet):

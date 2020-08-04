@@ -2,8 +2,9 @@ import unittest
 
 from butter.mas.api import HttpClient
 
+
 class TestClientApiMethods(unittest.TestCase):
-    
+
     @classmethod
     def setUpClass(self):
         self.client = None

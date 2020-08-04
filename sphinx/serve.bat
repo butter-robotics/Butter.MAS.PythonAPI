@@ -11,6 +11,6 @@ echo.
 CALL make.bat markdown
 
 echo.
-echo.+++ Copying the output into the docs / wiki directorys...
+echo.+++ Copying the output into the docs / wiki directories...
 echo.
 CALL copy.bat

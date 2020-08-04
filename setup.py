@@ -26,7 +26,8 @@ setup(
     author_email='bennymegk@gmail.com',
     url='https://github.com/bennymeg/Butter.MAS.PythonAPI',
     install_requires=['requests', 'packaging'],
-    #license=license,
+    extras_requires={"dev": ['twine']},
+    # license=license,
     license='Apache-2.0',
     packages=find_packages(exclude=('tests', 'docs')),
     classifiers=[

@@ -57,6 +57,12 @@ python -m unittest tests/api_test.py
 
 Please read [CONTRIBUTING.md](https://github.com/butter-robotics/Butter.MAS.PythonAPI/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
+In order to install along with test tools you will need to run:
+
+```bash
+pip install -e .[dev]
+```
+
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/butter-robotics/Butter.MAS.PythonAPI/tags). 

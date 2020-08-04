@@ -1,5 +1,6 @@
 import unittest
-from butter.mas.utils.packet_factory import PacketFactory
+from butter.mas.packets.packet_factory import PacketFactory
+
 
 class TestUdpPacketMethods(unittest.TestCase):
 
@@ -7,6 +8,7 @@ class TestUdpPacketMethods(unittest.TestCase):
         packetFactory = PacketFactory()
         packet = packetFactory.getPacket('localhost', 5000, 'cmd/json/help', protocol='udp')
         self.assertIsNotNone(packet.send())
+
 
 if __name__ == '__main__':
     unittest.main()

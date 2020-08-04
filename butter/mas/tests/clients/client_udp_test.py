@@ -1,7 +1,6 @@
-import unittest
-
 from butter.mas.api import UdpClient
-from tests.client_test import TestClientApiMethods
+from butter.mas.tests.clients.client_test import TestClientApiMethods
+
 
 class TestUdpClientApiMethods(TestClientApiMethods):
 

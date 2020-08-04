@@ -1,4 +1,4 @@
-from .utils.packet_builder import PacketBuilder
+from butter.mas.packets.packet_builder import PacketBuilder
 
 
 class Client:
