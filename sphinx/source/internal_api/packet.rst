@@ -1,5 +1,5 @@
 Packet
 ------
 
-.. automodule:: butter.mas.utils.packet
+.. automodule:: butter.mas.packets.packet
    :members:
