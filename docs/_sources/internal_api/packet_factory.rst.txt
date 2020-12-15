@@ -1,5 +1,5 @@
 Packet Factory
 --------------
 
-.. automodule:: butter.mas.utils.packet_factory
+.. automodule:: butter.mas.packets.packet_factory
    :members:

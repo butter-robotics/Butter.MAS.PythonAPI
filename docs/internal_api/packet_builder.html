@@ -131,7 +131,7 @@
             
               <ul>
                 
-                  <li class="toctree-l2"><a href="#packet-builder" class="reference internal">Packet Builder</a></li>
+                  <li class="toctree-l2"><a href="#module-butter.mas.packets.packet_builder" class="reference internal">Packet Builder</a></li>
                 
               </ul>
             
@@ -193,8 +193,127 @@
 <hr>
           <div class="content" role="main">
             
-  <div class="section" id="packet-builder">
-<h1>Packet Builder<a class="headerlink" href="#packet-builder" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-butter.mas.packets.packet_builder">
+<span id="packet-builder"></span><h1>Packet Builder<a class="headerlink" href="#module-butter.mas.packets.packet_builder" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="butter.mas.packets.packet_builder.PacketBuilder">
+<em class="property">class </em><code class="sig-prename descclassname">butter.mas.packets.packet_builder.</code><code class="sig-name descname">PacketBuilder</code><span class="sig-paren">(</span><em class="sig-param">ip</em>, <em class="sig-param">port</em>, <em class="sig-param">protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.packets.packet_builder.PacketBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds a command packet using the builder design pattern</p>
+<dl class="method">
+<dt id="butter.mas.packets.packet_builder.PacketBuilder.addArgument">
+<code class="sig-name descname">addArgument</code><span class="sig-paren">(</span><em class="sig-param">argument</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.packets.packet_builder.PacketBuilder.addArgument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add argument</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>argument</strong> (<em>str</em>) – argument</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#butter.mas.packets.packet_builder.PacketBuilder" title="butter.mas.packets.packet_builder.PacketBuilder">PacketBuilder</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.packets.packet_builder.PacketBuilder.addArguments">
+<code class="sig-name descname">addArguments</code><span class="sig-paren">(</span><em class="sig-param">*arguments</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.packets.packet_builder.PacketBuilder.addArguments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add arguments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>self</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#butter.mas.packets.packet_builder.PacketBuilder" title="butter.mas.packets.packet_builder.PacketBuilder">PacketBuilder</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.packets.packet_builder.PacketBuilder.addCommand">
+<code class="sig-name descname">addCommand</code><span class="sig-paren">(</span><em class="sig-param">command</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.packets.packet_builder.PacketBuilder.addCommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add command</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>command</strong> (<em>str</em>) – command</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#butter.mas.packets.packet_builder.PacketBuilder" title="butter.mas.packets.packet_builder.PacketBuilder">PacketBuilder</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.packets.packet_builder.PacketBuilder.addKeyValuePair">
+<code class="sig-name descname">addKeyValuePair</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.packets.packet_builder.PacketBuilder.addKeyValuePair" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add key value pair</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>str</em>) – attribute key</p></li>
+<li><p><strong>value</strong> (<em>str</em>) – attribute value</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#butter.mas.packets.packet_builder.PacketBuilder" title="butter.mas.packets.packet_builder.PacketBuilder">PacketBuilder</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.packets.packet_builder.PacketBuilder.addParameter">
+<code class="sig-name descname">addParameter</code><span class="sig-paren">(</span><em class="sig-param">parameter</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.packets.packet_builder.PacketBuilder.addParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add parameter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>parameter</strong> (<em>str</em>) – parameter</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>self</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#butter.mas.packets.packet_builder.PacketBuilder" title="butter.mas.packets.packet_builder.PacketBuilder">PacketBuilder</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.packets.packet_builder.PacketBuilder.addParameters">
+<code class="sig-name descname">addParameters</code><span class="sig-paren">(</span><em class="sig-param">*parameters</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.packets.packet_builder.PacketBuilder.addParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>self</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#butter.mas.packets.packet_builder.PacketBuilder" title="butter.mas.packets.packet_builder.PacketBuilder">PacketBuilder</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.packets.packet_builder.PacketBuilder.build">
+<code class="sig-name descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.packets.packet_builder.PacketBuilder.build" title="Permalink to this definition">¶</a></dt>
+<dd><p>Builds the packet</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>data packet</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="packet.html#butter.mas.packets.packet.Packet" title="butter.mas.packets.packet.Packet">Packet</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 

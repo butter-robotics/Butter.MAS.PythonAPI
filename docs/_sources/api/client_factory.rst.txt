@@ -1,5 +1,5 @@
 Client Factory
 --------------
 
-.. automodule:: butter.mas.client_factory
+.. automodule:: butter.mas.clients.client_factory
    :members:

@@ -1,2 +1,2 @@
-__version__ = '0.12.3'
+__version__ = '0.12.4'
 app_name = 'butter.mas-api'

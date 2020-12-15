@@ -1,5 +1,5 @@
 Version Validations
 -------------------
 
-.. autoclass:: butter.mas.version.VersionValidations
+.. autoclass:: butter.mas.utils.version_utils
    :members:

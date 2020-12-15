@@ -1,5 +1,5 @@
 Packet Builder
 --------------
 
-.. automodule:: butter.mas.utils.packet_builder
+.. automodule:: butter.mas.packets.packet_builder
    :members:

@@ -1,5 +1,5 @@
 Client
 ------
 
-.. automodule:: butter.mas.client
+.. automodule:: butter.mas.clients.client
    :members:
