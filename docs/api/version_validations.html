@@ -89,7 +89,7 @@
             
               <ul>
                 
-                  <li class="toctree-l2"><a href="#version-validations" class="reference internal">Version Validations</a></li>
+                  <li class="toctree-l2"><a href="#module-butter.mas.utils.version_utils" class="reference internal">Version Validations</a></li>
                 
               </ul>
             
@@ -193,8 +193,45 @@
 <hr>
           <div class="content" role="main">
             
-  <div class="section" id="version-validations">
-<h1>Version Validations<a class="headerlink" href="#version-validations" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-butter.mas.utils.version_utils">
+<span id="version-validations"></span><h1>Version Validations<a class="headerlink" href="#module-butter.mas.utils.version_utils" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="butter.mas.utils.version_utils.VersionValidations">
+<em class="property">class </em><code class="sig-prename descclassname">butter.mas.utils.version_utils.</code><code class="sig-name descname">VersionValidations</code><a class="headerlink" href="#butter.mas.utils.version_utils.VersionValidations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Version and compatibility validations</p>
+<dl class="method">
+<dt id="butter.mas.utils.version_utils.VersionValidations.checkCompatibility">
+<em class="property">static </em><code class="sig-name descname">checkCompatibility</code><span class="sig-paren">(</span><em class="sig-param">ip</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.version_utils.VersionValidations.checkCompatibility" title="Permalink to this definition">¶</a></dt>
+<dd><p>checks that this package is compatible with the robot that listening on the given ip</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ip</strong> (<em>str</em>) – robot’s ip address</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>true, if this package and the robot firmware are compatible, otherwise, false</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.utils.version_utils.VersionValidations.checkForUpdates">
+<em class="property">static </em><code class="sig-name descname">checkForUpdates</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.version_utils.VersionValidations.checkForUpdates" title="Permalink to this definition">¶</a></dt>
+<dd><p>checks if this package is up to date</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>true, if this package is up to date, otherwise, false</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>boolean</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 
