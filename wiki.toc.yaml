@@ -26,7 +26,7 @@
   - label: HTTP Packet
     data: wiki/internal_api/http_packet.md
   - label: TCP Packet
-    data: wiki/nternal_api/tcp_packet.md
+    data: wiki/internal_api/tcp_packet.md
   - label: UDP Packet
     data: wiki/internal_api/udp_packet.md
   - label: Packet
