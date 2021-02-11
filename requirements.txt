@@ -2,3 +2,7 @@ Sphinx>=2.1.2
 recommonmark
 sphinx-markdown-builder
 sphinx_press_theme
+requests~=2.22.0
+packaging~=19.1
+typing~=3.7.4
+setuptools~=47.3.1
