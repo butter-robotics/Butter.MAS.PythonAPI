@@ -1,4 +1,5 @@
 from .packet_factory import PacketFactory
+from .packet import Packet
 
 
 class PacketBuilder:
@@ -118,7 +119,7 @@ class PacketBuilder:
 
         return parameter
 
-    def build(self):
+    def build(self) -> Packet:
         """Builds the packet
         
         Returns:

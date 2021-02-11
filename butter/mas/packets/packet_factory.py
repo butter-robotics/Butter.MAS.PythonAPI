@@ -1,12 +1,13 @@
 from .packet_http import HttpPacket
 from .packet_tcp import TcpPacket
 from .packet_udp import UdpPacket
+from .packet import Packet
 
 
 class PacketFactory:
     """ Packet factory for different types of protocols """
 
-    def getPacket(self, ip, port, query, protocol="http"):
+    def getPacket(self, ip, port, query, protocol="http") -> Packet:
         """Creates new packet
         
         Arguments:

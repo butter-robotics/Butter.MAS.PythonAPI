@@ -9,7 +9,7 @@ class VersionValidations:
     """ Version and compatibility validations """
 
     @staticmethod
-    def _getLatestAppVersion():
+    def _getLatestAppVersion() -> str:
         version = None
         response = requests.get('https://pypi.org/pypi/{}/json'.format(app_name))
 
@@ -21,7 +21,7 @@ class VersionValidations:
         return version
 
     @staticmethod
-    def _getFirmwareVersions(ip, port=3000):
+    def _getFirmwareVersions(ip, port=3000) -> dict:
         versions = None
         response = None
 
@@ -42,7 +42,7 @@ class VersionValidations:
         return versions
 
     @staticmethod
-    def checkForUpdates():
+    def checkForUpdates() -> bool:
         """checks if this package is up to date
         
         Returns:
@@ -64,7 +64,7 @@ class VersionValidations:
         return has_update
 
     @staticmethod
-    def checkCompatibility(ip):
+    def checkCompatibility(ip) -> bool:
         """checks that this package is compatible with the robot that listening on the given ip
         
         Args:

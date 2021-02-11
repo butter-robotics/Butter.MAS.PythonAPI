@@ -1,4 +1,5 @@
 import requests
+from requests import Response
 from .packet import Packet
 from butter.mas.utils.general_utils import print_error
 
@@ -16,7 +17,7 @@ class HttpPacket(Packet):
         """
         super().__init__(ip, port, query)
 
-    def send(self, timeout=5):
+    def send(self, timeout=5) -> Response:
         """Send packet
         
         Args:

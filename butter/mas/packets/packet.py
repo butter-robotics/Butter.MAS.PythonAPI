@@ -18,7 +18,7 @@ class Packet(ABC):
         self.query = query
 
     @abstractmethod
-    def send(self, timeout=None):
+    def send(self, timeout=None) -> Response:
         """Send packet abstract methud
         
         Args:
@@ -27,7 +27,7 @@ class Packet(ABC):
         pass
 
     @staticmethod
-    def _generateResponse(content):
+    def _generateResponse(content) -> Response:
         """Generates response from packet
         
         Args:
@@ -44,7 +44,7 @@ class Packet(ABC):
         return response
 
     @staticmethod
-    def _generateEmptyResponse(errorType='unknown'):
+    def _generateEmptyResponse(errorType='unknown') -> Response:
         """Generates empty response packet
         
         Args:
@@ -62,6 +62,6 @@ class Packet(ABC):
 
         return response
 
-    def __eq__(self, other):
+    def __eq__(self, other) -> bool:
         return isinstance(other,
                           Packet) and self.ip == other.ip and self.port == other.port and self.query == other.query

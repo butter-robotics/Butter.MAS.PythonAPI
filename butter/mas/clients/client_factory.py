@@ -1,12 +1,13 @@
 from .client_http import HttpClient
 from .client_tcp import TcpClient
 from .client_udp import UdpClient
+from .client import Client
 
 
 class ClientFactory:
     """ Client factory for different types of protocols """
 
-    def getClient(self, ip, port=None, protocol="http"):
+    def getClient(self, ip, port=None, protocol="http") -> Client:
         """Creates new client
         
         Args:

@@ -1,4 +1,5 @@
 from butter.mas.packets.packet_builder import PacketBuilder
+from requests import Response
 
 
 class Client:
@@ -16,7 +17,7 @@ class Client:
         self.port = port
         self.protocol = protocol
 
-    def getAvailableHandlers(self):
+    def getAvailableHandlers(self) -> Response:
         """Get available robot handlers
         
         Returns:
@@ -26,7 +27,7 @@ class Client:
 
         return packet.send()
 
-    def getAvailableAnimations(self, reload=False):
+    def getAvailableAnimations(self, reload=False) -> Response:
         """Get available (loaded) robot animations        
         
         Args:
@@ -44,7 +45,7 @@ class Client:
 
         return packet.send()
 
-    def getAvailableSounds(self, reload=False):
+    def getAvailableSounds(self, reload=False) -> Response:
         """Get available (loaded) robot sound assets        
         
         Args:
@@ -62,7 +63,7 @@ class Client:
 
         return packet.send()
 
-    def getAvailableMotorRegisters(self, motorName, readableOnly=False):
+    def getAvailableMotorRegisters(self, motorName, readableOnly=False) -> Response:
         """Get all available motor registers (for Dynamixel motors only)
         
         Args:
@@ -77,7 +78,7 @@ class Client:
 
         return packet.send()
 
-    def getMotorRegister(self, motorName, registerName):
+    def getMotorRegister(self, motorName, registerName) -> Response:
         """Get motor register value (for Dynamixel motors only)
         
         Args:
@@ -92,7 +93,7 @@ class Client:
 
         return packet.send()
 
-    def getMotorRegisterRange(self, motorName, registerName):
+    def getMotorRegisterRange(self, motorName, registerName) -> Response:
         """Get motor register value range (for Dynamixel motors only)
         
         Args:
@@ -107,7 +108,7 @@ class Client:
 
         return packet.send()
 
-    def setMotorRegister(self, motorName, registerName, value):
+    def setMotorRegister(self, motorName, registerName, value) -> Response:
         """Get motor register value (for Dynamixel motors only)
         
         Args:
@@ -123,7 +124,7 @@ class Client:
 
         return packet.send()
 
-    def moveMotorToPosition(self, motorName, position, velocity=None, acceleration=None):
+    def moveMotorToPosition(self, motorName, position, velocity=None, acceleration=None) -> Response:
         """move motor to a certian position (relative to the motor's zero position)
         
         Args:
@@ -140,7 +141,7 @@ class Client:
 
         return packet.send()
 
-    def moveMotorInTime(self, motorName, position, duration):
+    def moveMotorInTime(self, motorName, position, duration) -> Response:
         """move motor to a certian position (relative to the motor's zero position) in fixed duration
         
         Args:
@@ -156,7 +157,7 @@ class Client:
 
         return packet.send()
 
-    def moveMotorInDirection(self, motorName, direction, velocity=None):
+    def moveMotorInDirection(self, motorName, direction, velocity=None) -> Response:
         """move motor to a certian direction (relative to the motor's current position)
         
         Args:
@@ -174,7 +175,7 @@ class Client:
 
         return packet.send()
 
-    # def moveMotorInSteps(self, motorName, direction, steps, velocity=None, interpolator=None):
+    # def moveMotorInSteps(self, motorName, direction, steps, velocity=None, interpolator=None) -> Response:
     #     """move motor a certian amount of steps (relative to the motor's current position)
 
     #     Args:
@@ -194,7 +195,7 @@ class Client:
 
     #     return packet.send()
 
-    def playAnimation(self, animationName):
+    def playAnimation(self, animationName) -> Response:
         """Play animation on the robot
         
         Args:
@@ -208,7 +209,7 @@ class Client:
 
         return packet.send()
 
-    def pauseAnimation(self):
+    def pauseAnimation(self) -> Response:
         """Pause currently playing animation (if available) on the robot
         
         Returns:
@@ -218,7 +219,7 @@ class Client:
 
         return packet.send()
 
-    def resumeAnimation(self):
+    def resumeAnimation(self) -> Response:
         """Resume currently paused animation (if available) on the robot
         
         Returns:
@@ -228,7 +229,7 @@ class Client:
 
         return packet.send()
 
-    def stopAnimation(self):
+    def stopAnimation(self) -> Response:
         """Stop currently playing animation (if available) on the robot
         
         Returns:
@@ -238,7 +239,7 @@ class Client:
 
         return packet.send()
 
-    def playAudio(self, fileName):
+    def playAudio(self, fileName) -> Response:
         """Play audio on the robot
         
         Args:
@@ -251,7 +252,7 @@ class Client:
 
         return packet.send()
 
-    def pauseAudio(self):
+    def pauseAudio(self) -> Response:
         """Pause current audio playback (if available) on the robot
         
         Returns:
@@ -261,7 +262,7 @@ class Client:
 
         return packet.send()
 
-    def resumeAudio(self):
+    def resumeAudio(self) -> Response:
         """Resume currently paused audio playback (if available) on the robot
         
         Returns:
@@ -271,7 +272,7 @@ class Client:
 
         return packet.send()
 
-    def stopAudio(self):
+    def stopAudio(self) -> Response:
         """Stop current audio playback (if available) on the robot
         
         Returns:
