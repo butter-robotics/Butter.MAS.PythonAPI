@@ -5,5 +5,6 @@ from butter.mas.clients.client_udp import UdpClient
 
 from .environment import __version__
 from butter.mas.utils.version_utils import VersionValidations
+from butter.mas.utils.response_parser import ResponseParser
 
 """ Exposes Butter MAS Python API """
