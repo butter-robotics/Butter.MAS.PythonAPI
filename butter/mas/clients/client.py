@@ -13,9 +13,34 @@ class Client:
             port (int, optional): robot port. Defaults to 5555.
             protocol (str, optional): communication protocol. Defaults to "http".
         """
+        self._timeout = 40
         self.ip = ip
         self.port = port
         self.protocol = protocol
+
+    @property
+    def timeout(self):
+        """Get command execution timeout
+
+        Returns:
+            integer: command execution timeout in milliseconds
+        """
+        return self._timeout 
+       
+    @timeout.setter 
+    def timeout(self, timeout):
+        """Set time for the command execution
+
+        Args:
+            timeout (integer): command execution timeout in milliseconds
+
+        Raises:
+            ValueError: if timeout is not in the range [20, 120]
+        """
+        if (timeout < 20 or timeout > 120): 
+           raise ValueError("Timeout most be an integer number in the range [20, 120]")
+
+        self._timeout = timeout 
 
     def getAvailableHandlers(self) -> Response:
         """Get available robot handlers
@@ -25,7 +50,7 @@ class Client:
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('list').build()
 
-        return packet.send()
+        return packet.send(self._timeout)
 
     def getAvailableAnimations(self, reload=False) -> Response:
         """Get available (loaded) robot animations        
@@ -43,7 +68,7 @@ class Client:
 
         packet = builder.addParameter('list').build()
 
-        return packet.send()
+        return packet.send(self._timeout)
 
     def getAvailableSounds(self, reload=False) -> Response:
         """Get available (loaded) robot sound assets        
@@ -61,7 +86,7 @@ class Client:
 
         packet = builder.addParameter('list').build()
 
-        return packet.send()
+        return packet.send(self._timeout)
 
     def getAvailableMotorRegisters(self, motorName, readableOnly=False) -> Response:
         """Get all available motor registers (for Dynamixel motors only)
@@ -76,7 +101,7 @@ class Client:
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('dxl').addArguments('get', motorName) \
             .addParameter('list').addKeyValuePair('readableOnly', readableOnly).build()
 
-        return packet.send()
+        return packet.send(self._timeout)
 
     def getMotorRegister(self, motorName, registerName) -> Response:
         """Get motor register value (for Dynamixel motors only)
@@ -91,7 +116,7 @@ class Client:
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('dxl') \
             .addArguments('get', motorName, registerName).build()
 
-        return packet.send()
+        return packet.send(self._timeout)
 
     def getMotorRegisterRange(self, motorName, registerName) -> Response:
         """Get motor register value range (for Dynamixel motors only)
@@ -106,7 +131,7 @@ class Client:
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('dxl') \
             .addArguments('get', motorName, registerName).addParameter('range').build()
 
-        return packet.send()
+        return packet.send(self._timeout)
 
     def setMotorRegister(self, motorName, registerName, value) -> Response:
         """Get motor register value (for Dynamixel motors only)
@@ -122,7 +147,7 @@ class Client:
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('dxl') \
             .addArguments('set', motorName, registerName, value).build()
 
-        return packet.send()
+        return packet.send(self._timeout)
 
     def moveMotorToPosition(self, motorName, position, velocity=None, acceleration=None) -> Response:
         """move motor to a certian position (relative to the motor's zero position)
@@ -139,7 +164,7 @@ class Client:
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('move').addArguments(motorName, position) \
             .addKeyValuePair('velocity', velocity).addKeyValuePair('acceleration', acceleration).build()
 
-        return packet.send()
+        return packet.send(self._timeout)
 
     def moveMotorInTime(self, motorName, position, duration) -> Response:
         """move motor to a certian position (relative to the motor's zero position) in fixed duration
@@ -155,7 +180,7 @@ class Client:
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('move').addArguments(motorName, position) \
             .addKeyValuePair('duration', duration).build()
 
-        return packet.send()
+        return packet.send(self._timeout)
 
     def moveMotorInDirection(self, motorName, direction, velocity=None) -> Response:
         """move motor to a certian direction (relative to the motor's current position)
@@ -173,7 +198,7 @@ class Client:
                                                                                                   direction_code) \
             .addKeyValuePair('velocity', velocity).addParameter('continuously').build()
 
-        return packet.send()
+        return packet.send(self._timeout)
 
     # def moveMotorInSteps(self, motorName, direction, steps, velocity=None, interpolator=None) -> Response:
     #     """move motor a certian amount of steps (relative to the motor's current position)
@@ -193,7 +218,7 @@ class Client:
     #                 .addKeyValuePair('steps', steps).addKeyValuePair('velocity', velocity) \
     #                 .addKeyValuePair('interpolator', interpolator).build()        
 
-    #     return packet.send()
+    #     return packet.send(self._timeout)
 
     def playAnimation(self, animationName) -> Response:
         """Play animation on the robot
@@ -207,7 +232,7 @@ class Client:
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('animate').addArgument(
             animationName).build()
 
-        return packet.send()
+        return packet.send(self._timeout)
 
     def pauseAnimation(self) -> Response:
         """Pause currently playing animation (if available) on the robot
@@ -217,7 +242,7 @@ class Client:
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('animate').addParameter('pause').build()
 
-        return packet.send()
+        return packet.send(self._timeout)
 
     def resumeAnimation(self) -> Response:
         """Resume currently paused animation (if available) on the robot
@@ -227,7 +252,7 @@ class Client:
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('animate').addParameter('resume').build()
 
-        return packet.send()
+        return packet.send(self._timeout)
 
     def stopAnimation(self) -> Response:
         """Stop currently playing animation (if available) on the robot
@@ -237,7 +262,7 @@ class Client:
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('animate').addParameter('stop').build()
 
-        return packet.send()
+        return packet.send(self._timeout)
 
     def playAudio(self, fileName) -> Response:
         """Play audio on the robot
@@ -250,7 +275,7 @@ class Client:
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('audio').addArgument(fileName).build()
 
-        return packet.send()
+        return packet.send(self._timeout)
 
     def pauseAudio(self) -> Response:
         """Pause current audio playback (if available) on the robot
@@ -260,7 +285,7 @@ class Client:
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('audio').addParameter('pause').build()
 
-        return packet.send()
+        return packet.send(self._timeout)
 
     def resumeAudio(self) -> Response:
         """Resume currently paused audio playback (if available) on the robot
@@ -270,7 +295,7 @@ class Client:
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('audio').addParameter('resume').build()
 
-        return packet.send()
+        return packet.send(self._timeout)
 
     def stopAudio(self) -> Response:
         """Stop current audio playback (if available) on the robot
@@ -280,4 +305,4 @@ class Client:
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('audio').addParameter('stop').build()
 
-        return packet.send()
+        return packet.send(self._timeout)
