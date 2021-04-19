@@ -19,6 +19,5 @@ from butter.mas.api import HttpClient
 
 butterHttpClient = HttpClient('192.168.0.111')  # use you robot ip here
 
-result = butterHttpClient.playAnimation('welcome')
-print(result.json())
+result = butterHttpClient.playAnimation('welcome').json()
 ```
