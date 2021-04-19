@@ -202,7 +202,7 @@
 <dd><p>Butter MAS UDP client API</p>
 <dl class="method">
 <dt id="butter.mas.clients.client_udp.UdpClient.getAvailableAnimations">
-<code class="sig-name descname">getAvailableAnimations</code><span class="sig-paren">(</span><em class="sig-param">reload=False</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.getAvailableAnimations" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getAvailableAnimations</code><span class="sig-paren">(</span><em class="sig-param">reload=False</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.getAvailableAnimations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get available (loaded) robot animations</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -219,7 +219,7 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_udp.UdpClient.getAvailableHandlers">
-<code class="sig-name descname">getAvailableHandlers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.getAvailableHandlers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getAvailableHandlers</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.getAvailableHandlers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get available robot handlers</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -233,7 +233,7 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_udp.UdpClient.getAvailableMotorRegisters">
-<code class="sig-name descname">getAvailableMotorRegisters</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">readableOnly=False</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.getAvailableMotorRegisters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getAvailableMotorRegisters</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">readableOnly=False</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.getAvailableMotorRegisters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get all available motor registers (for Dynamixel motors only)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -253,7 +253,7 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_udp.UdpClient.getAvailableSounds">
-<code class="sig-name descname">getAvailableSounds</code><span class="sig-paren">(</span><em class="sig-param">reload=False</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.getAvailableSounds" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getAvailableSounds</code><span class="sig-paren">(</span><em class="sig-param">reload=False</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.getAvailableSounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get available (loaded) robot sound assets</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -270,7 +270,7 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_udp.UdpClient.getMotorRegister">
-<code class="sig-name descname">getMotorRegister</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">registerName</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.getMotorRegister" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getMotorRegister</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">registerName</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.getMotorRegister" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get motor register value (for Dynamixel motors only)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -290,7 +290,7 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_udp.UdpClient.getMotorRegisterRange">
-<code class="sig-name descname">getMotorRegisterRange</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">registerName</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.getMotorRegisterRange" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getMotorRegisterRange</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">registerName</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.getMotorRegisterRange" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get motor register value range (for Dynamixel motors only)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -310,7 +310,7 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_udp.UdpClient.moveMotorInDirection">
-<code class="sig-name descname">moveMotorInDirection</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">direction</em>, <em class="sig-param">velocity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.moveMotorInDirection" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">moveMotorInDirection</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">direction</em>, <em class="sig-param">velocity=None</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.moveMotorInDirection" title="Permalink to this definition">¶</a></dt>
 <dd><p>move motor to a certian direction (relative to the motor’s current position)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -331,7 +331,7 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_udp.UdpClient.moveMotorInTime">
-<code class="sig-name descname">moveMotorInTime</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">position</em>, <em class="sig-param">duration</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.moveMotorInTime" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">moveMotorInTime</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">position</em>, <em class="sig-param">duration</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.moveMotorInTime" title="Permalink to this definition">¶</a></dt>
 <dd><p>move motor to a certian position (relative to the motor’s zero position) in fixed duration</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -352,7 +352,7 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_udp.UdpClient.moveMotorToPosition">
-<code class="sig-name descname">moveMotorToPosition</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">position</em>, <em class="sig-param">velocity=None</em>, <em class="sig-param">acceleration=None</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.moveMotorToPosition" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">moveMotorToPosition</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">position</em>, <em class="sig-param">velocity=None</em>, <em class="sig-param">acceleration=None</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.moveMotorToPosition" title="Permalink to this definition">¶</a></dt>
 <dd><p>move motor to a certian position (relative to the motor’s zero position)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -374,7 +374,7 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_udp.UdpClient.pauseAnimation">
-<code class="sig-name descname">pauseAnimation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.pauseAnimation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">pauseAnimation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.pauseAnimation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pause currently playing animation (if available) on the robot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -388,7 +388,7 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_udp.UdpClient.pauseAudio">
-<code class="sig-name descname">pauseAudio</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.pauseAudio" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">pauseAudio</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.pauseAudio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pause current audio playback (if available) on the robot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -402,7 +402,7 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_udp.UdpClient.playAnimation">
-<code class="sig-name descname">playAnimation</code><span class="sig-paren">(</span><em class="sig-param">animationName</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.playAnimation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">playAnimation</code><span class="sig-paren">(</span><em class="sig-param">animationName</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.playAnimation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Play animation on the robot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -419,7 +419,7 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_udp.UdpClient.playAudio">
-<code class="sig-name descname">playAudio</code><span class="sig-paren">(</span><em class="sig-param">fileName</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.playAudio" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">playAudio</code><span class="sig-paren">(</span><em class="sig-param">fileName</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.playAudio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Play audio on the robot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -436,7 +436,7 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_udp.UdpClient.resumeAnimation">
-<code class="sig-name descname">resumeAnimation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.resumeAnimation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resumeAnimation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.resumeAnimation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resume currently paused animation (if available) on the robot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -450,7 +450,7 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_udp.UdpClient.resumeAudio">
-<code class="sig-name descname">resumeAudio</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.resumeAudio" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resumeAudio</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.resumeAudio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resume currently paused audio playback (if available) on the robot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -464,7 +464,7 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_udp.UdpClient.setMotorRegister">
-<code class="sig-name descname">setMotorRegister</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">registerName</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.setMotorRegister" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setMotorRegister</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">registerName</em>, <em class="sig-param">value</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.setMotorRegister" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get motor register value (for Dynamixel motors only)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -485,7 +485,7 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_udp.UdpClient.stopAnimation">
-<code class="sig-name descname">stopAnimation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.stopAnimation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stopAnimation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.stopAnimation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop currently playing animation (if available) on the robot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -499,7 +499,7 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_udp.UdpClient.stopAudio">
-<code class="sig-name descname">stopAudio</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.stopAudio" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stopAudio</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.stopAudio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop current audio playback (if available) on the robot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -507,6 +507,20 @@
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.clients.client_udp.UdpClient.timeout">
+<em class="property">property </em><code class="sig-name descname">timeout</code><a class="headerlink" href="#butter.mas.clients.client_udp.UdpClient.timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get command execution timeout</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>command execution timeout in milliseconds</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>integer</p>
 </dd>
 </dl>
 </dd></dl>

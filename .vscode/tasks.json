@@ -45,7 +45,7 @@
             "label": "Generate Docs",
             "detail": "Generates and updates the documentation in this repository (you might need to update tree.json manually).",
             "type": "shell",
-            "command": "cd sphinx && ./serve"
+            "command": "(cd sphinx) -and (.\\serve.bat)"
         },
         {
             "label": "Clean",
