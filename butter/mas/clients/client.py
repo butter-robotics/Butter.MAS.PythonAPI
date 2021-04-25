@@ -264,6 +264,16 @@ class Client:
 
         return packet.send(self._timeout)
 
+    def clearAnimation(self) -> Response:
+        """Clear animation queue (if available)
+        
+        Returns:
+            Response: response containing execution result
+        """
+        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('animate').addParameter('clear').build()
+
+        return packet.send(self._timeout)
+
     def playAudio(self, fileName) -> Response:
         """Play audio on the robot
         
