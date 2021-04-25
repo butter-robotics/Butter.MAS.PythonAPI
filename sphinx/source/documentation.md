@@ -48,8 +48,10 @@ result = butterHttpClient.playAnimation('welcome')
 ## Receiving Responses from the Robot
 
 Each command we send will return (no matter what protocol we use) an Response object.
-We can parse the response using the built in json method like that:
+We can parse the response using the ResponseParser parse method like that:
 
 ```python
-print(result.json())
+from butter.mas.api import ResponseParser
+
+print(ResponseParser.parse(result))
 ```
