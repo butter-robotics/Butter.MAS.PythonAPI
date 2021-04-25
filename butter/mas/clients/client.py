@@ -220,17 +220,19 @@ class Client:
 
     #     return packet.send(self._timeout)
 
-    def playAnimation(self, animationName) -> Response:
+    def playAnimation(self, animationName, lenient=False, relative=False) -> Response:
         """Play animation on the robot
         
         Args:
             animationName (str): animation name
+            lenient (bool, optional): wait for current playing animation (if present) to finish . Defaults to False.
+            relative (bool, optional): play animation relative to the current robot position. Defaults to False.
         
         Returns:
             Response: response containing execution result
         """
         packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('animate').addArgument(
-            animationName).build()
+            animationName).addKeyValuePair("lenient", lenient).addKeyValuePair("relative", relative).build()
 
         return packet.send(self._timeout)
 
