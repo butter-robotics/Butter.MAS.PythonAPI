@@ -98,8 +98,12 @@ class Client:
         Returns:
             Response: response containing all the available motor registers
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('dxl').addArguments('get', motorName) \
-            .addParameter('list').addKeyValuePair('readableOnly', readableOnly).build()
+        packet = PacketBuilder(self.ip, self.port, self.protocol) \
+            .addCommand('dxl') \
+            .addArguments('get', motorName) \
+            .addParameter('list') \
+            .addKeyValuePair('readableOnly', readableOnly) \
+            .build()
 
         return packet.send(self._timeout)
 
@@ -113,8 +117,10 @@ class Client:
         Returns:
             Response: response containing register value
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('dxl') \
-            .addArguments('get', motorName, registerName).build()
+        packet = PacketBuilder(self.ip, self.port, self.protocol) \
+            .addCommand('dxl') \
+            .addArguments('get', motorName, registerName) \
+            .build()
 
         return packet.send(self._timeout)
 
@@ -128,8 +134,11 @@ class Client:
         Returns:
             Response: response containing register range value
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('dxl') \
-            .addArguments('get', motorName, registerName).addParameter('range').build()
+        packet = PacketBuilder(self.ip, self.port, self.protocol) \
+            .addCommand('dxl') \
+            .addArguments('get', motorName, registerName) \
+            .addParameter('range') \
+            .build()
 
         return packet.send(self._timeout)
 
@@ -144,13 +153,15 @@ class Client:
         Returns:
             Response: response containing execution result
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('dxl') \
-            .addArguments('set', motorName, registerName, value).build()
+        packet = PacketBuilder(self.ip, self.port, self.protocol) \
+            .addCommand('dxl') \
+            .addArguments('set', motorName, registerName, value) \
+            .build()
 
         return packet.send(self._timeout)
 
     def moveMotorToPosition(self, motorName, position, velocity=None, acceleration=None) -> Response:
-        """move motor to a certian position (relative to the motor's zero position)
+        """move motor to a certain position (relative to the motor's zero position)
         
         Args:
             motorName (str): motor name (as configured on the configurator)
@@ -161,13 +172,16 @@ class Client:
         Returns:
             Response: response containing execution result
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('move').addArguments(motorName, position) \
-            .addKeyValuePair('velocity', velocity).addKeyValuePair('acceleration', acceleration).build()
+        packet = PacketBuilder(self.ip, self.port, self.protocol) \
+            .addCommand('move').addArguments(motorName, position) \
+            .addKeyValuePair('velocity', velocity) \
+            .addKeyValuePair('acceleration', acceleration) \
+            .build()
 
         return packet.send(self._timeout)
 
     def moveMotorInTime(self, motorName, position, duration) -> Response:
-        """move motor to a certian position (relative to the motor's zero position) in fixed duration
+        """move motor to a certain position (relative to the motor's zero position) in fixed duration
         
         Args:
             motorName (str): motor name (as configured on the configurator)
@@ -177,13 +191,16 @@ class Client:
         Returns:
             Response: response containing execution result
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('move').addArguments(motorName, position) \
-            .addKeyValuePair('duration', duration).build()
+        packet = PacketBuilder(self.ip, self.port, self.protocol) \
+            .addCommand('move') \
+            .addArguments(motorName, position) \
+            .addKeyValuePair('duration', str(duration)) \
+            .build()
 
         return packet.send(self._timeout)
 
     def moveMotorInDirection(self, motorName, direction, velocity=None) -> Response:
-        """move motor to a certian direction (relative to the motor's current position)
+        """move motor to a certain direction (relative to the motor's current position)
         
         Args:
             motorName (str): motor name (as configured on the configurator)
@@ -194,14 +211,17 @@ class Client:
             Response: response containing execution result
         """
         direction_code = -1 if direction.lower() == 'left' else 1 if direction.lower() == 'right' else 0
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('move').addArguments(motorName,
-                                                                                                  direction_code) \
-            .addKeyValuePair('velocity', velocity).addParameter('continuously').build()
+        packet = PacketBuilder(self.ip, self.port, self.protocol) \
+            .addCommand('move') \
+            .addArguments(motorName, direction_code) \
+            .addKeyValuePair('velocity', velocity) \
+            .addParameter('continuously') \
+            .build()
 
         return packet.send(self._timeout)
 
     # def moveMotorInSteps(self, motorName, direction, steps, velocity=None, interpolator=None) -> Response:
-    #     """move motor a certian amount of steps (relative to the motor's current position)
+    #     """move motor a certain amount of steps (relative to the motor's current position)
 
     #     Args:
     #         motorName (str): motor name (as configured on the configurator)
@@ -214,9 +234,13 @@ class Client:
     #         Response: response containing execution result
     #     """
     #     direction_code = -1 if direction.lower() == 'left' else 1 if direction.lower() == 'right' else 0
-    #     packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('move').addArguments(motorName, direction_code) \
-    #                 .addKeyValuePair('steps', steps).addKeyValuePair('velocity', velocity) \
-    #                 .addKeyValuePair('interpolator', interpolator).build()        
+    #     packet = PacketBuilder(self.ip, self.port, self.protocol) \
+    #         .addCommand('move') \
+    #         .addArguments(motorName, direction_code) \
+    #         .addKeyValuePair('steps', steps) \
+    #         .addKeyValuePair('velocity', velocity) \
+    #         .addKeyValuePair('interpolator', interpolator) \
+    #         .build()
 
     #     return packet.send(self._timeout)
 
@@ -231,8 +255,12 @@ class Client:
         Returns:
             Response: response containing execution result
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('animate').addArgument(
-            animationName).addKeyValuePair("lenient", lenient).addKeyValuePair("relative", relative).build()
+        packet = PacketBuilder(self.ip, self.port, self.protocol) \
+            .addCommand('animate') \
+            .addArgument(animationName) \
+            .addKeyValuePair("lenient", lenient) \
+            .addKeyValuePair("relative", relative) \
+            .build()
 
         return packet.send(self._timeout)
 
@@ -242,7 +270,10 @@ class Client:
         Returns:
             Response: response containing execution result
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('animate').addParameter('pause').build()
+        packet = PacketBuilder(self.ip, self.port, self.protocol) \
+            .addCommand('animate') \
+            .addParameter('pause') \
+            .build()
 
         return packet.send(self._timeout)
 
@@ -252,7 +283,10 @@ class Client:
         Returns:
             Response: response containing execution result
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('animate').addParameter('resume').build()
+        packet = PacketBuilder(self.ip, self.port, self.protocol) \
+            .addCommand('animate') \
+            .addParameter('resume') \
+            .build()
 
         return packet.send(self._timeout)
 
@@ -262,7 +296,10 @@ class Client:
         Returns:
             Response: response containing execution result
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('animate').addParameter('stop').build()
+        packet = PacketBuilder(self.ip, self.port, self.protocol) \
+            .addCommand('animate') \
+            .addParameter('stop') \
+            .build()
 
         return packet.send(self._timeout)
 
@@ -272,7 +309,10 @@ class Client:
         Returns:
             Response: response containing execution result
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('animate').addParameter('clear').build()
+        packet = PacketBuilder(self.ip, self.port, self.protocol) \
+            .addCommand('animate') \
+            .addParameter('clear') \
+            .build()
 
         return packet.send(self._timeout)
 
@@ -285,7 +325,10 @@ class Client:
         Returns:
             Response: response containing execution result
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('audio').addArgument(fileName).build()
+        packet = PacketBuilder(self.ip, self.port, self.protocol) \
+            .addCommand('audio') \
+            .addArgument(fileName) \
+            .build()
 
         return packet.send(self._timeout)
 
@@ -295,7 +338,10 @@ class Client:
         Returns:
             Response: response containing execution result
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('audio').addParameter('pause').build()
+        packet = PacketBuilder(self.ip, self.port, self.protocol) \
+            .addCommand('audio') \
+            .addParameter('pause') \
+            .build()
 
         return packet.send(self._timeout)
 
@@ -305,7 +351,10 @@ class Client:
         Returns:
             Response: response containing execution result
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('audio').addParameter('resume').build()
+        packet = PacketBuilder(self.ip, self.port, self.protocol) \
+            .addCommand('audio') \
+            .addParameter('resume') \
+            .build()
 
         return packet.send(self._timeout)
 
@@ -315,6 +364,9 @@ class Client:
         Returns:
             Response: response containing execution result
         """
-        packet = PacketBuilder(self.ip, self.port, self.protocol).addCommand('audio').addParameter('stop').build()
+        packet = PacketBuilder(self.ip, self.port, self.protocol) \
+            .addCommand('audio') \
+            .addParameter('stop') \
+            .build()
 
         return packet.send(self._timeout)
