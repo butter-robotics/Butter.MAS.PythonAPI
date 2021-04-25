@@ -1,4 +1,5 @@
 from butter.mas.packets.packet_builder import PacketBuilder
+from butter.mas.interfaces.types import RotationUnits
 from requests import Response
 
 
@@ -160,14 +161,15 @@ class Client:
 
         return packet.send(self._timeout)
 
-    def moveMotorToPosition(self, motorName, position, velocity=None, acceleration=None) -> Response:
+    def moveMotorToPosition(self, motorName, position, velocity=None, acceleration=None, units=RotationUnits.RADIANS) -> Response:
         """move motor to a certain position (relative to the motor's zero position)
         
         Args:
             motorName (str): motor name (as configured on the configurator)
-            position (float): motor final position (in radians)
-            velocity (float, optional): motor movement speed (in radians / sec). Defaults to None.
-            acceleration (float, optional): motor maximal acceleration (in radians / sec * sec). Defaults to None.
+            position (float): motor final position (in units)
+            velocity (float, optional): motor movement speed (in units / sec). Defaults to None.
+            acceleration (float, optional): motor maximal acceleration (in units / sec * sec). Defaults to None.
+            units (RotationUnits, optional): rotation units. Defaults to 'radians'.
         
         Returns:
             Response: response containing execution result
@@ -176,17 +178,19 @@ class Client:
             .addCommand('move').addArguments(motorName, position) \
             .addKeyValuePair('velocity', velocity) \
             .addKeyValuePair('acceleration', acceleration) \
+            .addKeyValuePair('units', units) \
             .build()
 
         return packet.send(self._timeout)
 
-    def moveMotorInTime(self, motorName, position, duration) -> Response:
+    def moveMotorInTime(self, motorName, position, duration, units=RotationUnits.RADIANS) -> Response:
         """move motor to a certain position (relative to the motor's zero position) in fixed duration
         
         Args:
             motorName (str): motor name (as configured on the configurator)
-            position (float): motor final position (in radians)
+            position (float): motor final position (in units)
             duration (int): motor movement duration (in milliseconds)
+            units (RotationUnits, optional): rotation units. Defaults to 'radians'.
         
         Returns:
             Response: response containing execution result
@@ -195,17 +199,19 @@ class Client:
             .addCommand('move') \
             .addArguments(motorName, position) \
             .addKeyValuePair('duration', str(duration)) \
+            .addKeyValuePair('units', units) \
             .build()
 
         return packet.send(self._timeout)
 
-    def moveMotorInDirection(self, motorName, direction, velocity=None) -> Response:
+    def moveMotorInDirection(self, motorName, direction, velocity=None, units=RotationUnits.RADIANS) -> Response:
         """move motor to a certain direction (relative to the motor's current position)
         
         Args:
             motorName (str): motor name (as configured on the configurator)
             direction (str): motor movement direction (left, right, stop)
-            velocity (float, optional): motor movement speed (in radians / sec). Defaults to None.
+            velocity (float, optional): motor movement speed (in units / sec). Defaults to None.
+            units (RotationUnits, optional): rotation units. Defaults to 'radians'.
         
         Returns:
             Response: response containing execution result
@@ -215,20 +221,22 @@ class Client:
             .addCommand('move') \
             .addArguments(motorName, direction_code) \
             .addKeyValuePair('velocity', velocity) \
+            .addKeyValuePair('units', units) \
             .addParameter('continuously') \
             .build()
 
         return packet.send(self._timeout)
 
-    # def moveMotorInSteps(self, motorName, direction, steps, velocity=None, interpolator=None) -> Response:
+    # def moveMotorInSteps(self, motorName, direction, steps, velocity=None, interpolator=None, units=RotationUnits.RADIANS) -> Response:
     #     """move motor a certain amount of steps (relative to the motor's current position)
 
     #     Args:
     #         motorName (str): motor name (as configured on the configurator)
     #         direction (str): motor movement direction (left, right, stop)
     #         steps (str): amount of steps to move
-    #         velocity (float, optional): motor movement speed (in radians / sec). Defaults to None.
+    #         velocity (float, optional): motor movement speed (in units / sec). Defaults to None.
     #         interpolator (str, optional): interpolation function. Defaults to None.
+    #         units (RotationUnits, optional): rotation units. Defaults to 'radians'.
 
     #     Returns:
     #         Response: response containing execution result
@@ -240,6 +248,7 @@ class Client:
     #         .addKeyValuePair('steps', steps) \
     #         .addKeyValuePair('velocity', velocity) \
     #         .addKeyValuePair('interpolator', interpolator) \
+    #         .addKeyValuePair('units', units) \
     #         .build()
 
     #     return packet.send(self._timeout)
