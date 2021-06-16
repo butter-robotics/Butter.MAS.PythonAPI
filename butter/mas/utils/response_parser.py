@@ -6,17 +6,28 @@ from requests import Response
 class ResponseDataPacket:
     status: str
     data: Union[List[ResponseDataPacket], str]
-    metadata: str
+    metadata: MetadataDataPacket
+
+
+class RequestDataPacket:
+    query: str
+    parameters: List[str]
+
+
+class MetadataDataPacket:
+    handler: str
     asynchronous: bool
+    exception: str
+    timestamp: int
+    duration: int
 
 
 class RobotResponse:
     """ *** This Type should be updated together with MAS#ResponseBuilder *** """
 
-    command: str
-    parameters: List[str]
-    executed: bool
+    request: RequestDataPacket
     response: ResponseDataPacket
+    executed: bool
 
 
 class RobotResponseWrapper:
