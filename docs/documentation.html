@@ -239,8 +239,10 @@ Both clients extends the Client class.</p>
 <div class="section" id="receiving-responses-from-the-robot">
 <h2>Receiving Responses from the Robot<a class="headerlink" href="#receiving-responses-from-the-robot" title="Permalink to this headline">¶</a></h2>
 <p>Each command we send will return (no matter what protocol we use) an Response object.
-We can parse the response using the built in json method like that:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+We can parse the response using the ResponseParser parse method like that:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">butter.mas.api</span> <span class="kn">import</span> <span class="n">ResponseParser</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">ResponseParser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>

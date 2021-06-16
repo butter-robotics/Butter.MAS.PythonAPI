@@ -201,6 +201,20 @@
 <em class="property">class </em><code class="sig-prename descclassname">butter.mas.clients.client_http.</code><code class="sig-name descname">HttpClient</code><span class="sig-paren">(</span><em class="sig-param">ip</em>, <em class="sig-param">port=5555</em>, <em class="sig-param">protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client_http.HttpClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Butter MAS HTTP client API</p>
 <dl class="method">
+<dt id="butter.mas.clients.client_http.HttpClient.clearAnimation">
+<code class="sig-name descname">clearAnimation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_http.HttpClient.clearAnimation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear animation queue (if available)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>response containing execution result</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Response</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="butter.mas.clients.client_http.HttpClient.getAvailableAnimations">
 <code class="sig-name descname">getAvailableAnimations</code><span class="sig-paren">(</span><em class="sig-param">reload=False</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_http.HttpClient.getAvailableAnimations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get available (loaded) robot animations</p>
@@ -310,14 +324,15 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_http.HttpClient.moveMotorInDirection">
-<code class="sig-name descname">moveMotorInDirection</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">direction</em>, <em class="sig-param">velocity=None</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_http.HttpClient.moveMotorInDirection" title="Permalink to this definition">¶</a></dt>
-<dd><p>move motor to a certian direction (relative to the motor’s current position)</p>
+<code class="sig-name descname">moveMotorInDirection</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">direction</em>, <em class="sig-param">velocity=None</em>, <em class="sig-param">units=&lt;RotationUnits.RADIANS: 'radians'&gt;</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_http.HttpClient.moveMotorInDirection" title="Permalink to this definition">¶</a></dt>
+<dd><p>move motor to a certain direction (relative to the motor’s current position)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</p></li>
 <li><p><strong>direction</strong> (<em>str</em>) – motor movement direction (left, right, stop)</p></li>
-<li><p><strong>velocity</strong> (<em>float</em><em>, </em><em>optional</em>) – motor movement speed (in radians / sec). Defaults to None.</p></li>
+<li><p><strong>velocity</strong> (<em>float</em><em>, </em><em>optional</em>) – motor movement speed (in units / sec). Defaults to None.</p></li>
+<li><p><strong>units</strong> (<em>RotationUnits</em><em>, </em><em>optional</em>) – rotation units. Defaults to ‘radians’.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -331,14 +346,15 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_http.HttpClient.moveMotorInTime">
-<code class="sig-name descname">moveMotorInTime</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">position</em>, <em class="sig-param">duration</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_http.HttpClient.moveMotorInTime" title="Permalink to this definition">¶</a></dt>
-<dd><p>move motor to a certian position (relative to the motor’s zero position) in fixed duration</p>
+<code class="sig-name descname">moveMotorInTime</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">position</em>, <em class="sig-param">duration</em>, <em class="sig-param">units=&lt;RotationUnits.RADIANS: 'radians'&gt;</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_http.HttpClient.moveMotorInTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>move motor to a certain position (relative to the motor’s zero position) in fixed duration</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</p></li>
-<li><p><strong>position</strong> (<em>float</em>) – motor final position (in radians)</p></li>
+<li><p><strong>position</strong> (<em>float</em>) – motor final position (in units)</p></li>
 <li><p><strong>duration</strong> (<em>int</em>) – motor movement duration (in milliseconds)</p></li>
+<li><p><strong>units</strong> (<em>RotationUnits</em><em>, </em><em>optional</em>) – rotation units. Defaults to ‘radians’.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -352,15 +368,16 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_http.HttpClient.moveMotorToPosition">
-<code class="sig-name descname">moveMotorToPosition</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">position</em>, <em class="sig-param">velocity=None</em>, <em class="sig-param">acceleration=None</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_http.HttpClient.moveMotorToPosition" title="Permalink to this definition">¶</a></dt>
-<dd><p>move motor to a certian position (relative to the motor’s zero position)</p>
+<code class="sig-name descname">moveMotorToPosition</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">position</em>, <em class="sig-param">velocity=None</em>, <em class="sig-param">acceleration=None</em>, <em class="sig-param">units=&lt;RotationUnits.RADIANS: 'radians'&gt;</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_http.HttpClient.moveMotorToPosition" title="Permalink to this definition">¶</a></dt>
+<dd><p>move motor to a certain position (relative to the motor’s zero position)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>motorName</strong> (<em>str</em>) – motor name (as configured on the configurator)</p></li>
-<li><p><strong>position</strong> (<em>float</em>) – motor final position (in radians)</p></li>
-<li><p><strong>velocity</strong> (<em>float</em><em>, </em><em>optional</em>) – motor movement speed (in radians / sec). Defaults to None.</p></li>
-<li><p><strong>acceleration</strong> (<em>float</em><em>, </em><em>optional</em>) – motor maximal acceleration (in radians / sec * sec). Defaults to None.</p></li>
+<li><p><strong>position</strong> (<em>float</em>) – motor final position (in units)</p></li>
+<li><p><strong>velocity</strong> (<em>float</em><em>, </em><em>optional</em>) – motor movement speed (in units / sec). Defaults to None.</p></li>
+<li><p><strong>acceleration</strong> (<em>float</em><em>, </em><em>optional</em>) – motor maximal acceleration (in units / sec * sec). Defaults to None.</p></li>
+<li><p><strong>units</strong> (<em>RotationUnits</em><em>, </em><em>optional</em>) – rotation units. Defaults to ‘radians’.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -402,11 +419,15 @@
 
 <dl class="method">
 <dt id="butter.mas.clients.client_http.HttpClient.playAnimation">
-<code class="sig-name descname">playAnimation</code><span class="sig-paren">(</span><em class="sig-param">animationName</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_http.HttpClient.playAnimation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">playAnimation</code><span class="sig-paren">(</span><em class="sig-param">animationName</em>, <em class="sig-param">lenient=False</em>, <em class="sig-param">relative=False</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client_http.HttpClient.playAnimation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Play animation on the robot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>animationName</strong> (<em>str</em>) – animation name</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>animationName</strong> (<em>str</em>) – animation name</p></li>
+<li><p><strong>lenient</strong> (<em>bool</em><em>, </em><em>optional</em>) – wait for current playing animation (if present) to finish . Defaults to False.</p></li>
+<li><p><strong>relative</strong> (<em>bool</em><em>, </em><em>optional</em>) – play animation relative to the current robot position. Defaults to False.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>response containing execution result</p>
