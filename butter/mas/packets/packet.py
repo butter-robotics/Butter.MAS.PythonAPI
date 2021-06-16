@@ -55,7 +55,24 @@ class Packet(ABC):
         """
         response = Response()
 
-        response._content = ('{ "exception": "Request resolved with an %s error" }' % errorType).encode()
+        data = '''request: {
+            query: null,
+            parameters: null
+        },
+        response: {
+            status: "Failed",
+            data: null,
+            metadata: { 
+                handler: "unknown",
+                exception: "Request resolved with an {0} error", 
+                timestamp: 0, 
+                duration: 0, 
+                asynchronous: false 
+            }
+        },
+        executed: false'''.format(errorType)
+
+        response._content = data.encode()
         response.code = "expired"
         response.error_type = "expired"
         response.status_code = 400
