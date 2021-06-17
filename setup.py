@@ -24,12 +24,17 @@ setup(
     long_description=readme,
     author='Benny Megidish',
     author_email='bennymegk@gmail.com',
-    url='https://github.com/bennymeg/Butter.MAS.PythonAPI',
+    url='https://butter-robotics.web.app',
     install_requires=['requests', 'packaging'],
     extras_requires={"dev": ['twine']},
     # license=license,
     license='Apache-2.0',
     packages=find_packages(exclude=('tests', 'docs')),
+    project_urls={
+        'Documentation': 'https://butter-robotics.web.app/#/library/documentation/mas_os_python_api',
+        'Source': 'https://github.com/bennymeg/Butter.MAS.PythonAPI',
+        'Tracker': 'https://github.com/bennymeg/Butter.MAS.PythonAPI/issues',
+    },
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
