@@ -141,7 +141,7 @@ class PacketBuilder:
             keys = list(map(lambda key: "%s=%s" % (key, self.keys[key]), self.keys))
             query = "%s%s" % (query, '&'.join(keys))
 
-        uri = '/'.join(['cmd', 'json'])
+        uri = '/'.join(['api', 'robots', 'any', 'command'])
         uri = "%s/%s" % (uri, query.strip('&'))
 
         return self.packet(self.ip, self.port, uri)
