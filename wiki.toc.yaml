@@ -7,6 +7,8 @@
   items:
   - label: Version Validations
     data: wiki/api/version_validations.md
+  - label: Response Parser
+    data: wiki/api/response_parser.md
   - label: Client Factory
     data: wiki/api/client_factory.md
   - label: HTTP Client
