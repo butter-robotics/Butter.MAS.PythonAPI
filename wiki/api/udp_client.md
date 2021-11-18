@@ -3,7 +3,7 @@
 UdpClient extends Client
 
 
-#### class butter.mas.clients.client_udp.UdpClient(ip, port=3030, protocol='udp')
+#### class butter.mas.clients.client_udp.UdpClient(ip, port=5000, protocol='udp')
 Butter MAS UDP client API
 
 

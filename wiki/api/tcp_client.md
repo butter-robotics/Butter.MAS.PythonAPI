@@ -3,7 +3,7 @@
 TcpClient extends Client
 
 
-#### class butter.mas.clients.client_tcp.TcpClient(ip, port=3003, protocol='tcp')
+#### class butter.mas.clients.client_tcp.TcpClient(ip, port=5050, protocol='tcp')
 Butter MAS TCP client API
 
 

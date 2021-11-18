@@ -24,6 +24,8 @@ contain the root `toctree` directive. -->
 
 * Version Validations
 
+* Response Parser
+
 * Client Factory
 
 * HTTP Client

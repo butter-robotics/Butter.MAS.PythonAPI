@@ -3,7 +3,7 @@
 HttpClient extends Client
 
 
-#### class butter.mas.clients.client_http.HttpClient(ip, port=3000, protocol='http')
+#### class butter.mas.clients.client_http.HttpClient(ip, port=5555, protocol='http')
 Butter MAS HTTP client API
 
 
