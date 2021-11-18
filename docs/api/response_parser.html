@@ -202,15 +202,66 @@
   <div class="section" id="module-butter.mas.utils.response_parser">
 <span id="response-parser"></span><h1>Response Parser<a class="headerlink" href="#module-butter.mas.utils.response_parser" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
+<dt id="butter.mas.utils.response_parser.MetadataDataPacket">
+<em class="property">class </em><code class="sig-prename descclassname">butter.mas.utils.response_parser.</code><code class="sig-name descname">MetadataDataPacket</code><a class="headerlink" href="#butter.mas.utils.response_parser.MetadataDataPacket" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="butter.mas.utils.response_parser.RequestDataPacket">
+<em class="property">class </em><code class="sig-prename descclassname">butter.mas.utils.response_parser.</code><code class="sig-name descname">RequestDataPacket</code><a class="headerlink" href="#butter.mas.utils.response_parser.RequestDataPacket" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="butter.mas.utils.response_parser.ResponseDataPacket">
+<em class="property">class </em><code class="sig-prename descclassname">butter.mas.utils.response_parser.</code><code class="sig-name descname">ResponseDataPacket</code><a class="headerlink" href="#butter.mas.utils.response_parser.ResponseDataPacket" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="butter.mas.utils.response_parser.ResponseParser">
 <em class="property">class </em><code class="sig-prename descclassname">butter.mas.utils.response_parser.</code><code class="sig-name descname">ResponseParser</code><a class="headerlink" href="#butter.mas.utils.response_parser.ResponseParser" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parses API response data into a typed aware dictionary object</p>
+<dl class="method">
+<dt id="butter.mas.utils.response_parser.ResponseParser.parse">
+<em class="property">static </em><code class="sig-name descname">parse</code><span class="sig-paren">(</span><em class="sig-param">response: requests.models.Response</em><span class="sig-paren">)</span> &#x2192; butter.mas.utils.response_parser.RobotResponse<a class="headerlink" href="#butter.mas.utils.response_parser.ResponseParser.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses API response data</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
 <dt id="butter.mas.utils.response_parser.RobotResponse">
 <em class="property">class </em><code class="sig-prename descclassname">butter.mas.utils.response_parser.</code><code class="sig-name descname">RobotResponse</code><a class="headerlink" href="#butter.mas.utils.response_parser.RobotResponse" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>* This Type should be updated together with MAS#ResponseBuilder *</strong></p>
+<dd><p>Robots response content
+<strong>Note:</strong> This Type should be updated together with MAS#ResponseBuilder</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="butter.mas.utils.response_parser.RobotResponseWrapper">
+<em class="property">class </em><code class="sig-prename descclassname">butter.mas.utils.response_parser.</code><code class="sig-name descname">RobotResponseWrapper</code><span class="sig-paren">(</span><em class="sig-param">response: requests.models.Response</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.response_parser.RobotResponseWrapper" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="butter.mas.utils.response_parser.RobotResponseWrapper.content">
+<code class="sig-name descname">content</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.response_parser.RobotResponseWrapper.content" title="Permalink to this definition">¶</a></dt>
+<dd><p>Robot response as bytes</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.utils.response_parser.RobotResponseWrapper.json">
+<code class="sig-name descname">json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.response_parser.RobotResponseWrapper.json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Robot response as json object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.utils.response_parser.RobotResponseWrapper.raw">
+<code class="sig-name descname">raw</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.response_parser.RobotResponseWrapper.raw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Raw robot response</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="butter.mas.utils.response_parser.RobotResponseWrapper.text">
+<code class="sig-name descname">text</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.utils.response_parser.RobotResponseWrapper.text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Robot response as text</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>

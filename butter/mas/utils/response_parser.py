@@ -23,7 +23,10 @@ class MetadataDataPacket:
 
 
 class RobotResponse:
-    """ *** This Type should be updated together with MAS#ResponseBuilder *** """
+    """ 
+    Robots response content
+    **Note:** This Type should be updated together with MAS#ResponseBuilder 
+    """
 
     request: RequestDataPacket
     response: ResponseDataPacket
@@ -56,8 +59,10 @@ class ResponseParser:
 
     @staticmethod
     def _compose(response: Response) -> RobotResponseWrapper:
+        """ Composes API response data """
         return RobotResponseWrapper(response)
 
     @staticmethod
     def parse(response: Response) -> RobotResponse:
+        """ Parses API response data """
         return response.json()
