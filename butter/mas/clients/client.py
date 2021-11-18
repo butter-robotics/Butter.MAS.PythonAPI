@@ -144,7 +144,7 @@ class Client:
         return packet.send(self._timeout)
 
     def setMotorRegister(self, motorName, registerName, value) -> Response:
-        """Get motor register value (for Dynamixel motors only)
+        """Set motor register value (for Dynamixel motors only)
         
         Args:
             motorName (str): motor name (as configured on the configurator)
