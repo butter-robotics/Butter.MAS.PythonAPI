@@ -6,12 +6,12 @@ from requests import Response
 class Client:
     """ Butter MAS client API """
 
-    def __init__(self, ip, port=5555, protocol='http'):
+    def __init__(self, ip, port=3000, protocol='http'):
         """Initialize client
         
         Args:
             ip (str): robot IP
-            port (int, optional): robot port. Defaults to 5555.
+            port (int, optional): robot port. Defaults to 3000.
             protocol (str, optional): communication protocol. Defaults to "http".
         """
         self._timeout = 40

@@ -1,7 +1,7 @@
 # Client
 
 
-#### class butter.mas.clients.client.Client(ip, port=5555, protocol='http')
+#### class butter.mas.clients.client.Client(ip, port=3000, protocol='http')
 Butter MAS client API
 
 

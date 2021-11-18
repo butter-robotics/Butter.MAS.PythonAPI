@@ -10,7 +10,7 @@ class Packet(ABC):
         
         Args:
             ip (str): robot IP
-            port (int, optional): robot port. Defaults to 5555.
+            port (int, optional): robot port. Defaults to 3000.
             query (str): packet payload
         """
         self.ip = ip

@@ -6,7 +6,7 @@ class TestHttpPacketMethods(unittest.TestCase):
 
     def testSend(self):
         packetFactory = PacketFactory()
-        packet = packetFactory.getPacket('localhost', 5555, 'cmd/json/help')
+        packet = packetFactory.getPacket('localhost', 3000, 'cmd/json/help')
         self.assertIsNotNone(packet.send())
 
 

@@ -6,7 +6,7 @@ class TestUdpPacketMethods(unittest.TestCase):
 
     def testSend(self):
         packetFactory = PacketFactory()
-        packet = packetFactory.getPacket('localhost', 5000, 'cmd/json/help', protocol='udp')
+        packet = packetFactory.getPacket('localhost', 3030, 'cmd/json/help', protocol='udp')
         self.assertIsNotNone(packet.send())
 
 

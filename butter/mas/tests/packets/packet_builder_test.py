@@ -10,7 +10,7 @@ class TestPacketBuilderMethods(unittest.TestCase):
         self.builder = None
 
     def setUp(self):
-        self.builder = PacketBuilder('localhost', 5555)
+        self.builder = PacketBuilder('localhost', 3000)
 
     def testAddCommand(self):
         self.builder.addCommand('get')
@@ -41,7 +41,7 @@ class TestPacketBuilderMethods(unittest.TestCase):
     def testBuild(self):
         packet = self.builder.addCommand('get').addParameter('help').build()
         packetFactory = PacketFactory()
-        self.assertEqual(packet, packetFactory.getPacket('localhost', 5555, 'cmd/json/get?--help'))
+        self.assertEqual(packet, packetFactory.getPacket('localhost', 3000, 'cmd/json/get?--help'))
 
 
 if __name__ == '__main__':
