@@ -4,22 +4,22 @@ from requests import Response
 
 
 class ResponseDataPacket:
-    status: str
-    data: Union[List[ResponseDataPacket], str]
-    metadata: MetadataDataPacket
+    status: str                                     #: packet execution status
+    data: Union[List[ResponseDataPacket], str]      #: packet execution data
+    metadata: MetadataDataPacket                    #: packet execution metadata
 
 
 class RequestDataPacket:
-    query: str
-    parameters: List[str]
+    query: str              #: request query
+    parameters: List[str]   #: request query parameters
 
 
 class MetadataDataPacket:
-    handler: str
-    asynchronous: bool
-    exception: str
-    timestamp: int
-    duration: int
+    handler: str            #: packet handler name
+    asynchronous: bool      #: command executed asynchronously
+    exception: str          #: packet exception
+    timestamp: int          #: packet creation timestamp
+    duration: int           #: packet round trip duration
 
 
 class RobotResponse:
@@ -28,9 +28,9 @@ class RobotResponse:
     **Note:** This Type should be updated together with MAS#ResponseBuilder 
     """
 
-    request: RequestDataPacket
-    response: ResponseDataPacket
-    executed: bool
+    request: RequestDataPacket      #: robot request data packet
+    response: ResponseDataPacket    #: robot response data packet
+    executed: bool                  #: robot data packet executed
 
 
 class RobotResponseWrapper:

@@ -204,17 +204,77 @@
 <dl class="class">
 <dt id="butter.mas.utils.response_parser.MetadataDataPacket">
 <em class="property">class </em><code class="sig-prename descclassname">butter.mas.utils.response_parser.</code><code class="sig-name descname">MetadataDataPacket</code><a class="headerlink" href="#butter.mas.utils.response_parser.MetadataDataPacket" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><dl class="attribute">
+<dt id="butter.mas.utils.response_parser.MetadataDataPacket.asynchronous">
+<code class="sig-name descname">asynchronous</code><em class="property"> = None</em><a class="headerlink" href="#butter.mas.utils.response_parser.MetadataDataPacket.asynchronous" title="Permalink to this definition">¶</a></dt>
+<dd><p>command executed asynchronously</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="butter.mas.utils.response_parser.MetadataDataPacket.duration">
+<code class="sig-name descname">duration</code><em class="property"> = None</em><a class="headerlink" href="#butter.mas.utils.response_parser.MetadataDataPacket.duration" title="Permalink to this definition">¶</a></dt>
+<dd><p>packet round trip duration</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="butter.mas.utils.response_parser.MetadataDataPacket.exception">
+<code class="sig-name descname">exception</code><em class="property"> = None</em><a class="headerlink" href="#butter.mas.utils.response_parser.MetadataDataPacket.exception" title="Permalink to this definition">¶</a></dt>
+<dd><p>packet exception</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="butter.mas.utils.response_parser.MetadataDataPacket.handler">
+<code class="sig-name descname">handler</code><em class="property"> = None</em><a class="headerlink" href="#butter.mas.utils.response_parser.MetadataDataPacket.handler" title="Permalink to this definition">¶</a></dt>
+<dd><p>packet handler name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="butter.mas.utils.response_parser.MetadataDataPacket.timestamp">
+<code class="sig-name descname">timestamp</code><em class="property"> = None</em><a class="headerlink" href="#butter.mas.utils.response_parser.MetadataDataPacket.timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>packet creation timestamp</p>
+</dd></dl>
+
+</dd></dl>
 
 <dl class="class">
 <dt id="butter.mas.utils.response_parser.RequestDataPacket">
 <em class="property">class </em><code class="sig-prename descclassname">butter.mas.utils.response_parser.</code><code class="sig-name descname">RequestDataPacket</code><a class="headerlink" href="#butter.mas.utils.response_parser.RequestDataPacket" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><dl class="attribute">
+<dt id="butter.mas.utils.response_parser.RequestDataPacket.parameters">
+<code class="sig-name descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#butter.mas.utils.response_parser.RequestDataPacket.parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>request query parameters</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="butter.mas.utils.response_parser.RequestDataPacket.query">
+<code class="sig-name descname">query</code><em class="property"> = None</em><a class="headerlink" href="#butter.mas.utils.response_parser.RequestDataPacket.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>request query</p>
+</dd></dl>
+
+</dd></dl>
 
 <dl class="class">
 <dt id="butter.mas.utils.response_parser.ResponseDataPacket">
 <em class="property">class </em><code class="sig-prename descclassname">butter.mas.utils.response_parser.</code><code class="sig-name descname">ResponseDataPacket</code><a class="headerlink" href="#butter.mas.utils.response_parser.ResponseDataPacket" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><dl class="attribute">
+<dt id="butter.mas.utils.response_parser.ResponseDataPacket.data">
+<code class="sig-name descname">data</code><em class="property"> = None</em><a class="headerlink" href="#butter.mas.utils.response_parser.ResponseDataPacket.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>packet execution data</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="butter.mas.utils.response_parser.ResponseDataPacket.metadata">
+<code class="sig-name descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#butter.mas.utils.response_parser.ResponseDataPacket.metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>packet execution metadata</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="butter.mas.utils.response_parser.ResponseDataPacket.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#butter.mas.utils.response_parser.ResponseDataPacket.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>packet execution status</p>
+</dd></dl>
+
+</dd></dl>
 
 <dl class="class">
 <dt id="butter.mas.utils.response_parser.ResponseParser">
@@ -233,6 +293,24 @@
 <em class="property">class </em><code class="sig-prename descclassname">butter.mas.utils.response_parser.</code><code class="sig-name descname">RobotResponse</code><a class="headerlink" href="#butter.mas.utils.response_parser.RobotResponse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Robots response content
 <strong>Note:</strong> This Type should be updated together with MAS#ResponseBuilder</p>
+<dl class="attribute">
+<dt id="butter.mas.utils.response_parser.RobotResponse.executed">
+<code class="sig-name descname">executed</code><em class="property"> = None</em><a class="headerlink" href="#butter.mas.utils.response_parser.RobotResponse.executed" title="Permalink to this definition">¶</a></dt>
+<dd><p>robot data packet executed</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="butter.mas.utils.response_parser.RobotResponse.request">
+<code class="sig-name descname">request</code><em class="property"> = None</em><a class="headerlink" href="#butter.mas.utils.response_parser.RobotResponse.request" title="Permalink to this definition">¶</a></dt>
+<dd><p>robot request data packet</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="butter.mas.utils.response_parser.RobotResponse.response">
+<code class="sig-name descname">response</code><em class="property"> = None</em><a class="headerlink" href="#butter.mas.utils.response_parser.RobotResponse.response" title="Permalink to this definition">¶</a></dt>
+<dd><p>robot response data packet</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
