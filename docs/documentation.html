@@ -2,7 +2,8 @@
 <html >
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
       <title>Documentation</title>
     
       <link rel="stylesheet" href="_static/pygments.css">
@@ -11,10 +12,10 @@
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
 
       <!-- sphinx script_files -->
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
 
       
       <script src="_static/theme-vendors.js"></script>
@@ -97,6 +98,12 @@
 
         
           <li class="toctree-l1 "><a href="api/version_validations.html" class="reference internal ">Version Validations</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="api/response_parser.html" class="reference internal ">Response Parser</a>
 
             
           </li>
@@ -199,17 +206,17 @@
 <hr>
           <div class="content" role="main">
             
-  <div class="section" id="documentation">
+  <section class="tex2jax_ignore mathjax_ignore" id="documentation">
 <h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="importing-client-factory">
+<section id="importing-client-factory">
 <h2>Importing Client Factory<a class="headerlink" href="#importing-client-factory" title="Permalink to this headline">¶</a></h2>
 <p>Client Factory is a factory class responsible for creating new clients.
 In order to use the factory, we will need to import it first:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">butter.mas.api</span> <span class="kn">import</span> <span class="n">ClientFactory</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="creating-new-client">
+</section>
+<section id="creating-new-client">
 <h2>Creating New Client<a class="headerlink" href="#creating-new-client" title="Permalink to this headline">¶</a></h2>
 <p>In order to use communicate with the robot, we will need to create a client.
 There are to types of clients: HttpClient and UdpClient.
@@ -227,16 +234,16 @@ Both clients extends the Client class.</p>
 </pre></div>
 </div>
 <p>The IP address should be the same as the current IP address of the robot on your local network.</p>
-</div>
-<div class="section" id="interacting-with-the-robot">
+</section>
+<section id="interacting-with-the-robot">
 <h2>Interacting with the Robot<a class="headerlink" href="#interacting-with-the-robot" title="Permalink to this headline">¶</a></h2>
 <p>We can send a command through one of the available functions of the client.</p>
 <p>I.e., we can play animation with the following command:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">butterHttpClient</span><span class="o">.</span><span class="n">playAnimation</span><span class="p">(</span><span class="s1">&#39;welcome&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="receiving-responses-from-the-robot">
+</section>
+<section id="receiving-responses-from-the-robot">
 <h2>Receiving Responses from the Robot<a class="headerlink" href="#receiving-responses-from-the-robot" title="Permalink to this headline">¶</a></h2>
 <p>Each command we send will return (no matter what protocol we use) an Response object.
 We can parse the response using the ResponseParser parse method like that:</p>
@@ -245,8 +252,8 @@ We can parse the response using the ResponseParser parse method like that:</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">ResponseParser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>
@@ -261,9 +268,9 @@ We can parse the response using the ResponseParser parse method like that:</p>
        title="next chapter">Version Validations →</a>
   </li>
 </ul><div class="footer" role="contentinfo">
-      &#169; Copyright 2019, Benny Megidish.
+      &#169; Copyright 2021, Benny Megidish.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
 </div>
             </div>
           </div>

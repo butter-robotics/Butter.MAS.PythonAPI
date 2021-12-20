@@ -2,7 +2,8 @@
 <html >
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
       <title>Version Validations</title>
     
       <link rel="stylesheet" href="../_static/pygments.css">
@@ -11,10 +12,10 @@
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
 
       <!-- sphinx script_files -->
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
 
       
       <script src="../_static/theme-vendors.js"></script>
@@ -22,7 +23,7 @@
     
   <link rel="index" title="Index" href="../genindex.html" />
   <link rel="search" title="Search" href="../search.html" />
-  <link rel="next" title="Client Factory" href="client_factory.html" />
+  <link rel="next" title="Response Parser" href="response_parser.html" />
   <link rel="prev" title="Documentation" href="../documentation.html" /> 
   </head>
 
@@ -92,6 +93,12 @@
                   <li class="toctree-l2"><a href="#module-butter.mas.utils.version_utils" class="reference internal">Version Validations</a></li>
                 
               </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="response_parser.html" class="reference internal ">Response Parser</a>
+
             
           </li>
 
@@ -184,8 +191,8 @@
        title="previous chapter">← Documentation</a>
   </li>
   <li class="next">
-    <a href="client_factory.html"
-       title="next chapter">Client Factory →</a>
+    <a href="response_parser.html"
+       title="next chapter">Response Parser →</a>
   </li>
 </ul>
   
@@ -193,15 +200,15 @@
 <hr>
           <div class="content" role="main">
             
-  <div class="section" id="module-butter.mas.utils.version_utils">
+  <section id="module-butter.mas.utils.version_utils">
 <span id="version-validations"></span><h1>Version Validations<a class="headerlink" href="#module-butter.mas.utils.version_utils" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="butter.mas.utils.version_utils.VersionValidations">
-<em class="property">class </em><code class="sig-prename descclassname">butter.mas.utils.version_utils.</code><code class="sig-name descname">VersionValidations</code><a class="headerlink" href="#butter.mas.utils.version_utils.VersionValidations" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="butter.mas.utils.version_utils.VersionValidations">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">butter.mas.utils.version_utils.</span></span><span class="sig-name descname"><span class="pre">VersionValidations</span></span><a class="headerlink" href="#butter.mas.utils.version_utils.VersionValidations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Version and compatibility validations</p>
-<dl class="method">
-<dt id="butter.mas.utils.version_utils.VersionValidations.checkCompatibility">
-<em class="property">static </em><code class="sig-name descname">checkCompatibility</code><span class="sig-paren">(</span><em class="sig-param">ip</em><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#butter.mas.utils.version_utils.VersionValidations.checkCompatibility" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.utils.version_utils.VersionValidations.checkCompatibility">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">checkCompatibility</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ip</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#butter.mas.utils.version_utils.VersionValidations.checkCompatibility" title="Permalink to this definition">¶</a></dt>
 <dd><p>checks that this package is compatible with the robot that listening on the given ip</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -216,9 +223,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.utils.version_utils.VersionValidations.checkForUpdates">
-<em class="property">static </em><code class="sig-name descname">checkForUpdates</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; bool<a class="headerlink" href="#butter.mas.utils.version_utils.VersionValidations.checkForUpdates" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.utils.version_utils.VersionValidations.checkForUpdates">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">checkForUpdates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#butter.mas.utils.version_utils.VersionValidations.checkForUpdates" title="Permalink to this definition">¶</a></dt>
 <dd><p>checks if this package is up to date</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -232,7 +239,7 @@
 
 </dd></dl>
 
-</div>
+</section>
 
 
           </div>
@@ -243,13 +250,13 @@
        title="previous chapter">← Documentation</a>
   </li>
   <li class="next">
-    <a href="client_factory.html"
-       title="next chapter">Client Factory →</a>
+    <a href="response_parser.html"
+       title="next chapter">Response Parser →</a>
   </li>
 </ul><div class="footer" role="contentinfo">
-      &#169; Copyright 2019, Benny Megidish.
+      &#169; Copyright 2021, Benny Megidish.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
 </div>
             </div>
           </div>

@@ -2,7 +2,8 @@
 <html >
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
       <title>Client</title>
     
       <link rel="stylesheet" href="../_static/pygments.css">
@@ -11,10 +12,10 @@
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
 
       <!-- sphinx script_files -->
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
 
       
       <script src="../_static/theme-vendors.js"></script>
@@ -199,15 +200,15 @@
 <hr>
           <div class="content" role="main">
             
-  <div class="section" id="module-butter.mas.clients.client">
+  <section id="module-butter.mas.clients.client">
 <span id="client"></span><h1>Client<a class="headerlink" href="#module-butter.mas.clients.client" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="butter.mas.clients.client.Client">
-<em class="property">class </em><code class="sig-prename descclassname">butter.mas.clients.client.</code><code class="sig-name descname">Client</code><span class="sig-paren">(</span><em class="sig-param">ip</em>, <em class="sig-param">port=3000</em>, <em class="sig-param">protocol='http'</em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client.Client" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">butter.mas.clients.client.</span></span><span class="sig-name descname"><span class="pre">Client</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">protocol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'http'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#butter.mas.clients.client.Client" title="Permalink to this definition">¶</a></dt>
 <dd><p>Butter MAS client API</p>
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.clearAnimation">
-<code class="sig-name descname">clearAnimation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client.Client.clearAnimation" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.clearAnimation">
+<span class="sig-name descname"><span class="pre">clearAnimation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.models.Response</span></span></span><a class="headerlink" href="#butter.mas.clients.client.Client.clearAnimation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clear animation queue (if available)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -219,9 +220,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.getAvailableAnimations">
-<code class="sig-name descname">getAvailableAnimations</code><span class="sig-paren">(</span><em class="sig-param">reload=False</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client.Client.getAvailableAnimations" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.getAvailableAnimations">
+<span class="sig-name descname"><span class="pre">getAvailableAnimations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reload</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.models.Response</span></span></span><a class="headerlink" href="#butter.mas.clients.client.Client.getAvailableAnimations" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get available (loaded) robot animations</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -236,9 +237,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.getAvailableHandlers">
-<code class="sig-name descname">getAvailableHandlers</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client.Client.getAvailableHandlers" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.getAvailableHandlers">
+<span class="sig-name descname"><span class="pre">getAvailableHandlers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.models.Response</span></span></span><a class="headerlink" href="#butter.mas.clients.client.Client.getAvailableHandlers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get available robot handlers</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -250,9 +251,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.getAvailableMotorRegisters">
-<code class="sig-name descname">getAvailableMotorRegisters</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">readableOnly=False</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client.Client.getAvailableMotorRegisters" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.getAvailableMotorRegisters">
+<span class="sig-name descname"><span class="pre">getAvailableMotorRegisters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motorName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">readableOnly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.models.Response</span></span></span><a class="headerlink" href="#butter.mas.clients.client.Client.getAvailableMotorRegisters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get all available motor registers (for Dynamixel motors only)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -270,9 +271,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.getAvailableSounds">
-<code class="sig-name descname">getAvailableSounds</code><span class="sig-paren">(</span><em class="sig-param">reload=False</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client.Client.getAvailableSounds" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.getAvailableSounds">
+<span class="sig-name descname"><span class="pre">getAvailableSounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reload</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.models.Response</span></span></span><a class="headerlink" href="#butter.mas.clients.client.Client.getAvailableSounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get available (loaded) robot sound assets</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -287,9 +288,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.getMotorRegister">
-<code class="sig-name descname">getMotorRegister</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">registerName</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client.Client.getMotorRegister" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.getMotorRegister">
+<span class="sig-name descname"><span class="pre">getMotorRegister</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motorName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">registerName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.models.Response</span></span></span><a class="headerlink" href="#butter.mas.clients.client.Client.getMotorRegister" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get motor register value (for Dynamixel motors only)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -307,9 +308,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.getMotorRegisterRange">
-<code class="sig-name descname">getMotorRegisterRange</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">registerName</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client.Client.getMotorRegisterRange" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.getMotorRegisterRange">
+<span class="sig-name descname"><span class="pre">getMotorRegisterRange</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motorName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">registerName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.models.Response</span></span></span><a class="headerlink" href="#butter.mas.clients.client.Client.getMotorRegisterRange" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get motor register value range (for Dynamixel motors only)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -327,9 +328,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.moveMotorInDirection">
-<code class="sig-name descname">moveMotorInDirection</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">direction</em>, <em class="sig-param">velocity=None</em>, <em class="sig-param">units=&lt;RotationUnits.RADIANS: 'radians'&gt;</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client.Client.moveMotorInDirection" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.moveMotorInDirection">
+<span class="sig-name descname"><span class="pre">moveMotorInDirection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motorName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">RotationUnits.RADIANS</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.models.Response</span></span></span><a class="headerlink" href="#butter.mas.clients.client.Client.moveMotorInDirection" title="Permalink to this definition">¶</a></dt>
 <dd><p>move motor to a certain direction (relative to the motor’s current position)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -349,9 +350,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.moveMotorInTime">
-<code class="sig-name descname">moveMotorInTime</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">position</em>, <em class="sig-param">duration</em>, <em class="sig-param">units=&lt;RotationUnits.RADIANS: 'radians'&gt;</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client.Client.moveMotorInTime" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.moveMotorInTime">
+<span class="sig-name descname"><span class="pre">moveMotorInTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motorName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">RotationUnits.RADIANS</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.models.Response</span></span></span><a class="headerlink" href="#butter.mas.clients.client.Client.moveMotorInTime" title="Permalink to this definition">¶</a></dt>
 <dd><p>move motor to a certain position (relative to the motor’s zero position) in fixed duration</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -371,9 +372,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.moveMotorToPosition">
-<code class="sig-name descname">moveMotorToPosition</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">position</em>, <em class="sig-param">velocity=None</em>, <em class="sig-param">acceleration=None</em>, <em class="sig-param">units=&lt;RotationUnits.RADIANS: 'radians'&gt;</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client.Client.moveMotorToPosition" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.moveMotorToPosition">
+<span class="sig-name descname"><span class="pre">moveMotorToPosition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motorName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">velocity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acceleration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">RotationUnits.RADIANS</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.models.Response</span></span></span><a class="headerlink" href="#butter.mas.clients.client.Client.moveMotorToPosition" title="Permalink to this definition">¶</a></dt>
 <dd><p>move motor to a certain position (relative to the motor’s zero position)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -394,9 +395,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.pauseAnimation">
-<code class="sig-name descname">pauseAnimation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client.Client.pauseAnimation" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.pauseAnimation">
+<span class="sig-name descname"><span class="pre">pauseAnimation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.models.Response</span></span></span><a class="headerlink" href="#butter.mas.clients.client.Client.pauseAnimation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pause currently playing animation (if available) on the robot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -408,9 +409,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.pauseAudio">
-<code class="sig-name descname">pauseAudio</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client.Client.pauseAudio" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.pauseAudio">
+<span class="sig-name descname"><span class="pre">pauseAudio</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.models.Response</span></span></span><a class="headerlink" href="#butter.mas.clients.client.Client.pauseAudio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pause current audio playback (if available) on the robot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -422,9 +423,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.playAnimation">
-<code class="sig-name descname">playAnimation</code><span class="sig-paren">(</span><em class="sig-param">animationName</em>, <em class="sig-param">lenient=False</em>, <em class="sig-param">relative=False</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client.Client.playAnimation" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.playAnimation">
+<span class="sig-name descname"><span class="pre">playAnimation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">animationName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lenient</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.models.Response</span></span></span><a class="headerlink" href="#butter.mas.clients.client.Client.playAnimation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Play animation on the robot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -443,9 +444,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.playAudio">
-<code class="sig-name descname">playAudio</code><span class="sig-paren">(</span><em class="sig-param">fileName</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client.Client.playAudio" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.playAudio">
+<span class="sig-name descname"><span class="pre">playAudio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.models.Response</span></span></span><a class="headerlink" href="#butter.mas.clients.client.Client.playAudio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Play audio on the robot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -460,9 +461,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.resumeAnimation">
-<code class="sig-name descname">resumeAnimation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client.Client.resumeAnimation" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.resumeAnimation">
+<span class="sig-name descname"><span class="pre">resumeAnimation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.models.Response</span></span></span><a class="headerlink" href="#butter.mas.clients.client.Client.resumeAnimation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resume currently paused animation (if available) on the robot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -474,9 +475,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.resumeAudio">
-<code class="sig-name descname">resumeAudio</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client.Client.resumeAudio" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.resumeAudio">
+<span class="sig-name descname"><span class="pre">resumeAudio</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.models.Response</span></span></span><a class="headerlink" href="#butter.mas.clients.client.Client.resumeAudio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resume currently paused audio playback (if available) on the robot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -488,9 +489,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.setMotorRegister">
-<code class="sig-name descname">setMotorRegister</code><span class="sig-paren">(</span><em class="sig-param">motorName</em>, <em class="sig-param">registerName</em>, <em class="sig-param">value</em><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client.Client.setMotorRegister" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.setMotorRegister">
+<span class="sig-name descname"><span class="pre">setMotorRegister</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motorName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">registerName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.models.Response</span></span></span><a class="headerlink" href="#butter.mas.clients.client.Client.setMotorRegister" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set motor register value (for Dynamixel motors only)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -509,9 +510,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.stopAnimation">
-<code class="sig-name descname">stopAnimation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client.Client.stopAnimation" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.stopAnimation">
+<span class="sig-name descname"><span class="pre">stopAnimation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.models.Response</span></span></span><a class="headerlink" href="#butter.mas.clients.client.Client.stopAnimation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop currently playing animation (if available) on the robot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -523,9 +524,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.stopAudio">
-<code class="sig-name descname">stopAudio</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; requests.models.Response<a class="headerlink" href="#butter.mas.clients.client.Client.stopAudio" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.stopAudio">
+<span class="sig-name descname"><span class="pre">stopAudio</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">requests.models.Response</span></span></span><a class="headerlink" href="#butter.mas.clients.client.Client.stopAudio" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop current audio playback (if available) on the robot</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -537,9 +538,9 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="butter.mas.clients.client.Client.timeout">
-<em class="property">property </em><code class="sig-name descname">timeout</code><a class="headerlink" href="#butter.mas.clients.client.Client.timeout" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="butter.mas.clients.client.Client.timeout">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">timeout</span></span><a class="headerlink" href="#butter.mas.clients.client.Client.timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get command execution timeout</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -553,7 +554,7 @@
 
 </dd></dl>
 
-</div>
+</section>
 
 
           </div>
@@ -568,9 +569,9 @@
        title="next chapter">Packet Factory →</a>
   </li>
 </ul><div class="footer" role="contentinfo">
-      &#169; Copyright 2019, Benny Megidish.
+      &#169; Copyright 2021, Benny Megidish.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a>.
 </div>
             </div>
           </div>
