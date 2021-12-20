@@ -21,13 +21,13 @@ sys.path.insert(0, os.path.abspath('../../butter/mas'))
 # -- Project information -----------------------------------------------------
 
 project = 'Butter MAS Python API'
-copyright = '2019, Benny Megidish'
+copyright = '2021, Benny Megidish'
 author = 'Benny Megidish'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.12.4'
+release = '2.0.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -43,7 +43,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
     'sphinx.ext.githubpages',
-    'recommonmark'
+    'myst_parser'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

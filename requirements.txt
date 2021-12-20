@@ -1,5 +1,5 @@
 Sphinx>=2.1.2
-recommonmark
+myst-parser
 sphinx-markdown-builder
 sphinx_press_theme
 requests~=2.22.0
