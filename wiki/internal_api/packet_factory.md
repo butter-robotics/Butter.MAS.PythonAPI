@@ -1,7 +1,7 @@
 # Packet Factory
 
 
-#### class butter.mas.packets.packet_factory.PacketFactory()
+### class butter.mas.packets.packet_factory.PacketFactory()
 Packet factory for different types of protocols
 
 
@@ -11,11 +11,15 @@ Creates new packet
 
 * **Parameters**
 
+    
     * **ip** (*str*) – robot IP
+
 
     * **port** (*int*) – robot port
 
+
     * **query** (*str*) – packet payload
+
 
     * **protocol** (*str**, **optional*) – communication protocol. defaults to “http”.
 

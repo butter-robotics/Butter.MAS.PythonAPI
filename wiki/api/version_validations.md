@@ -1,7 +1,7 @@
 # Version Validations
 
 
-#### class butter.mas.utils.version_utils.VersionValidations()
+### class butter.mas.utils.version_utils.VersionValidations()
 Version and compatibility validations
 
 

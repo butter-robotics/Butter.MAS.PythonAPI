@@ -3,7 +3,7 @@
 HttpPacket extends Packet
 
 
-#### class butter.mas.packets.packet_http.HttpPacket(ip, port, query)
+### class butter.mas.packets.packet_http.HttpPacket(ip, port, query)
 Represents a http data packet
 
 

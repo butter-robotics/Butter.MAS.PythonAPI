@@ -3,8 +3,24 @@
 HttpClient extends Client
 
 
-#### class butter.mas.clients.client_http.HttpClient(ip, port=5555, protocol='http')
+### class butter.mas.clients.client_http.HttpClient(ip, port=3000, protocol='http')
 Butter MAS HTTP client API
+
+
+#### clearAnimation()
+Clear animation queue (if available)
+
+
+* **Returns**
+
+    response containing execution result
+
+
+
+* **Return type**
+
+    Response
+
 
 
 #### getAvailableAnimations(reload=False)
@@ -51,7 +67,9 @@ Get all available motor registers (for Dynamixel motors only)
 
 * **Parameters**
 
+    
     * **motorName** (*str*) – motor name (as configured on the configurator)
+
 
     * **readableOnly** (*bool**, **optional*) – get readable registers only. Defaults to False.
 
@@ -97,7 +115,9 @@ Get motor register value (for Dynamixel motors only)
 
 * **Parameters**
 
+    
     * **motorName** (*str*) – motor name (as configured on the configurator)
+
 
     * **registerName** (*str*) – motor register name
 
@@ -121,7 +141,9 @@ Get motor register value range (for Dynamixel motors only)
 
 * **Parameters**
 
+    
     * **motorName** (*str*) – motor name (as configured on the configurator)
+
 
     * **registerName** (*str*) – motor register name
 
@@ -139,17 +161,23 @@ Get motor register value range (for Dynamixel motors only)
 
 
 
-#### moveMotorInDirection(motorName, direction, velocity=None)
-move motor to a certian direction (relative to the motor’s current position)
+#### moveMotorInDirection(motorName, direction, velocity=None, units=RotationUnits.RADIANS)
+move motor to a certain direction (relative to the motor’s current position)
 
 
 * **Parameters**
 
+    
     * **motorName** (*str*) – motor name (as configured on the configurator)
+
 
     * **direction** (*str*) – motor movement direction (left, right, stop)
 
-    * **velocity** (*float**, **optional*) – motor movement speed (in radians / sec). Defaults to None.
+
+    * **velocity** (*float**, **optional*) – motor movement speed (in units / sec). Defaults to None.
+
+
+    * **units** (*RotationUnits**, **optional*) – rotation units. Defaults to ‘radians’.
 
 
 
@@ -165,19 +193,25 @@ move motor to a certian direction (relative to the motor’s current position)
 
 
 
-#### moveMotorInTime(motorName, position, duration)
-move motor to a certian position (relative to the motor’s zero position) in fixed duration
+#### moveMotorInTime(motorName, position, duration, units=RotationUnits.RADIANS)
+move motor to a certain position (relative to the motor’s zero position) in fixed duration
 
 
 * **Parameters**
 
+    
     * **motorName** (*str*) – motor name (as configured on the configurator)
 
-    * **position** (*float*) – motor final position (in radians)
+
+    * **position** (*float*) – motor final position (in units)
+
 
     * **duration** (*int*) – motor movement duration (in milliseconds)
 
 
+    * **units** (*RotationUnits**, **optional*) – rotation units. Defaults to ‘radians’.
+
+
 
 * **Returns**
 
@@ -191,19 +225,26 @@ move motor to a certian position (relative to the motor’s zero position) in fi
 
 
 
-#### moveMotorToPosition(motorName, position, velocity=None, acceleration=None)
-move motor to a certian position (relative to the motor’s zero position)
+#### moveMotorToPosition(motorName, position, velocity=None, acceleration=None, units=RotationUnits.RADIANS)
+move motor to a certain position (relative to the motor’s zero position)
 
 
 * **Parameters**
 
+    
     * **motorName** (*str*) – motor name (as configured on the configurator)
 
-    * **position** (*float*) – motor final position (in radians)
 
-    * **velocity** (*float**, **optional*) – motor movement speed (in radians / sec). Defaults to None.
+    * **position** (*float*) – motor final position (in units)
 
-    * **acceleration** (*float**, **optional*) – motor maximal acceleration (in radians / sec \* sec). Defaults to None.
+
+    * **velocity** (*float**, **optional*) – motor movement speed (in units / sec). Defaults to None.
+
+
+    * **acceleration** (*float**, **optional*) – motor maximal acceleration (in units / sec \* sec). Defaults to None.
+
+
+    * **units** (*RotationUnits**, **optional*) – rotation units. Defaults to ‘radians’.
 
 
 
@@ -251,13 +292,20 @@ Pause current audio playback (if available) on the robot
 
 
 
-#### playAnimation(animationName)
+#### playAnimation(animationName, lenient=False, relative=False)
 Play animation on the robot
 
 
 * **Parameters**
 
-    **animationName** (*str*) – animation name
+    
+    * **animationName** (*str*) – animation name
+
+
+    * **lenient** (*bool**, **optional*) – wait for current playing animation (if present) to finish . Defaults to False.
+
+
+    * **relative** (*bool**, **optional*) – play animation relative to the current robot position. Defaults to False.
 
 
 
@@ -328,14 +376,17 @@ Resume currently paused audio playback (if available) on the robot
 
 
 #### setMotorRegister(motorName, registerName, value)
-Get motor register value (for Dynamixel motors only)
+Set motor register value (for Dynamixel motors only)
 
 
 * **Parameters**
 
+    
     * **motorName** (*str*) – motor name (as configured on the configurator)
 
+
     * **registerName** (*str*) – motor register name
+
 
     * **value** (*str*) – register value
 
@@ -382,3 +433,19 @@ Stop current audio playback (if available) on the robot
 * **Return type**
 
     Response
+
+
+
+#### property timeout()
+Get command execution timeout
+
+
+* **Returns**
+
+    command execution timeout in milliseconds
+
+
+
+* **Return type**
+
+    integer

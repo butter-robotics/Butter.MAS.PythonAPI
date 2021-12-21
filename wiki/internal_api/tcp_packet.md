@@ -3,7 +3,7 @@
 TcpPacket extends Packet
 
 
-#### class butter.mas.packets.packet_tcp.TcpPacket(ip, port, query)
+### class butter.mas.packets.packet_tcp.TcpPacket(ip, port, query)
 Represents a tcp data packet
 
 

@@ -1,7 +1,7 @@
 # Packet
 
 
-#### class butter.mas.packets.packet.Packet(ip, port, query)
+### class butter.mas.packets.packet.Packet(ip, port, query)
 Represents an abstract data packet
 
 

@@ -1,7 +1,7 @@
 # Packet Builder
 
 
-#### class butter.mas.packets.packet_builder.PacketBuilder(ip, port, protocol='http')
+### class butter.mas.packets.packet_builder.PacketBuilder(ip, port, protocol='http')
 Builds a command packet using the builder design pattern
 
 
@@ -71,7 +71,9 @@ Add key value pair
 
 * **Parameters**
 
+    
     * **key** (*str*) – attribute key
+
 
     * **value** (*str*) – attribute value
 

@@ -3,7 +3,7 @@
 UdpPacket extends Packet
 
 
-#### class butter.mas.packets.packet_udp.UdpPacket(ip, port, query)
+### class butter.mas.packets.packet_udp.UdpPacket(ip, port, query)
 Represents a udp data packet
 
 
