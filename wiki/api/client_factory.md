@@ -11,12 +11,9 @@ Creates new client
 
 * **Parameters**
 
-    
     * **ip** (*str*) – robot IP
 
-
     * **port** (*int**, **optional*) – robot port. Defaults to None.
-
 
     * **protocol** (*str**, **optional*) – communication protocol. Defaults to “http”.
 

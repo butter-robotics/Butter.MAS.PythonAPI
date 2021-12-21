@@ -71,9 +71,7 @@ Add key value pair
 
 * **Parameters**
 
-    
     * **key** (*str*) – attribute key
-
 
     * **value** (*str*) – attribute value
 

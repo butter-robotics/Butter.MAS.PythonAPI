@@ -11,15 +11,11 @@ Creates new packet
 
 * **Parameters**
 
-    
     * **ip** (*str*) – robot IP
-
 
     * **port** (*int*) – robot port
 
-
     * **query** (*str*) – packet payload
-
 
     * **protocol** (*str**, **optional*) – communication protocol. defaults to “http”.
 

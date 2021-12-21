@@ -6,27 +6,20 @@
 
 * Installation
 
-
     * Prerequisites
 
-
     * Installing
-
 
     * Usage
 
 
 * Documentation
 
-
     * Importing Client Factory
-
 
     * Creating New Client
 
-
     * Interacting with the Robot
-
 
     * Receiving Responses from the Robot
 

@@ -65,9 +65,7 @@ Get all available motor registers (for Dynamixel motors only)
 
 * **Parameters**
 
-    
     * **motorName** (*str*) – motor name (as configured on the configurator)
-
 
     * **readableOnly** (*bool**, **optional*) – get readable registers only. Defaults to False.
 
@@ -113,9 +111,7 @@ Get motor register value (for Dynamixel motors only)
 
 * **Parameters**
 
-    
     * **motorName** (*str*) – motor name (as configured on the configurator)
-
 
     * **registerName** (*str*) – motor register name
 
@@ -139,9 +135,7 @@ Get motor register value range (for Dynamixel motors only)
 
 * **Parameters**
 
-    
     * **motorName** (*str*) – motor name (as configured on the configurator)
-
 
     * **registerName** (*str*) – motor register name
 
@@ -165,15 +159,11 @@ move motor to a certain direction (relative to the motor’s current position)
 
 * **Parameters**
 
-    
     * **motorName** (*str*) – motor name (as configured on the configurator)
-
 
     * **direction** (*str*) – motor movement direction (left, right, stop)
 
-
     * **velocity** (*float**, **optional*) – motor movement speed (in units / sec). Defaults to None.
-
 
     * **units** (*RotationUnits**, **optional*) – rotation units. Defaults to ‘radians’.
 
@@ -197,15 +187,11 @@ move motor to a certain position (relative to the motor’s zero position) in fi
 
 * **Parameters**
 
-    
     * **motorName** (*str*) – motor name (as configured on the configurator)
-
 
     * **position** (*float*) – motor final position (in units)
 
-
     * **duration** (*int*) – motor movement duration (in milliseconds)
-
 
     * **units** (*RotationUnits**, **optional*) – rotation units. Defaults to ‘radians’.
 
@@ -229,18 +215,13 @@ move motor to a certain position (relative to the motor’s zero position)
 
 * **Parameters**
 
-    
     * **motorName** (*str*) – motor name (as configured on the configurator)
-
 
     * **position** (*float*) – motor final position (in units)
 
-
     * **velocity** (*float**, **optional*) – motor movement speed (in units / sec). Defaults to None.
 
-
     * **acceleration** (*float**, **optional*) – motor maximal acceleration (in units / sec \* sec). Defaults to None.
-
 
     * **units** (*RotationUnits**, **optional*) – rotation units. Defaults to ‘radians’.
 
@@ -296,12 +277,9 @@ Play animation on the robot
 
 * **Parameters**
 
-    
     * **animationName** (*str*) – animation name
 
-
     * **lenient** (*bool**, **optional*) – wait for current playing animation (if present) to finish . Defaults to False.
-
 
     * **relative** (*bool**, **optional*) – play animation relative to the current robot position. Defaults to False.
 
@@ -379,12 +357,9 @@ Set motor register value (for Dynamixel motors only)
 
 * **Parameters**
 
-    
     * **motorName** (*str*) – motor name (as configured on the configurator)
 
-
     * **registerName** (*str*) – motor register name
-
 
     * **value** (*str*) – register value
 
