@@ -7,9 +7,9 @@ import json
 def init_parser():
     parser = argparse.ArgumentParser(description='Documentation tree generator.')
 
-    parser.add_argument('-e', '--ext', default='.md', choices=['.md', '.markdown'], help='documentation file extention.')
+    parser.add_argument('-e', '--ext', default='.md', choices=['.md', '.markdown'], help='documentation file extension.')
     parser.add_argument('-s', '--source', default='.', help='Relative path to the source files.')
-    parser.add_argument('-n', '--name', default='tree', help='output file files.')
+    parser.add_argument('-n', '--name', default='revision.tree', help='output file files.')
 
     return parser
 
@@ -27,7 +27,7 @@ def generate_tree(args, documentation_path):
     return [strip_path(f, documentation_path, args.ext) for f in glob.glob(glob_path, recursive=True) if not any(substring in f for substring in ['404', 'index'])]
 
 def save_tree(args, documentation_tree, documentation_path):
-    with open(os.path.join(documentation_path, args.name.split('.')[0] + '.json'), 'w') as f:
+    with open(os.path.join(documentation_path, args.name + '.json'), 'w') as f:
         json.dump(documentation_tree, f, indent=4)
 
 if __name__ == "__main__":

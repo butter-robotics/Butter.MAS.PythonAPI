@@ -1,35 +1,23 @@
 ---
-- label: Installation
-  data: wiki/installation.md
-- label: Documentation
-  data: wiki/documentation.md
-- label: API
-  items:
-  - label: Version Validations
-    data: wiki/api/version_validations.md
-  - label: Response Parser
-    data: wiki/api/response_parser.md
-  - label: Client Factory
-    data: wiki/api/client_factory.md
-  - label: HTTP Client
-    data: wiki/api/http_client.md
-  - label: TCP Client
-    data: wiki/api/tcp_client.md
-  - label: UDP Client
-    data: wiki/api/udp_client.md
-  - label: Client
-    data: wiki/api/client.md
-- label: Internal API
-  items:
-  - label: Packet Builder
-    data: wiki/internal_api/packet_builder.md
-  - label: Packet Factory
-    data: wiki/internal_api/packet_factory.md
-  - label: HTTP Packet
-    data: wiki/internal_api/http_packet.md
-  - label: TCP Packet
-    data: wiki/internal_api/tcp_packet.md
-  - label: UDP Packet
-    data: wiki/internal_api/udp_packet.md
-  - label: Packet
-    data: wiki/internal_api/packet.md
+# Release Types: stable | rc | beta | alpha
+multipart: false
+projects:
+  default:
+    label: MAS Python API
+    path: wiki
+    versions:
+      latest:
+        symlink: v2
+        toc: v2/revision.toc.yaml
+        release: stable
+        supported: true
+      v2:
+        toc: v2/revision.toc.yaml
+        release: stable
+        supported: true
+      v1:
+        toc: v1/revision.toc.yaml
+        release: stable
+        supported: false
+        disabled: true
+...

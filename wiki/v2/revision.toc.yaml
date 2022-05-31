@@ -1,0 +1,36 @@
+---
+- label: Installation
+  data: installation.md
+- label: Documentation
+  data: documentation.md
+- label: API
+  items:
+  - label: Version Validations
+    data: api/version_validations.md
+  - label: Response Parser
+    data: api/response_parser.md
+  - label: Client Factory
+    data: api/client_factory.md
+  - label: HTTP Client
+    data: api/http_client.md
+  - label: TCP Client
+    data: api/tcp_client.md
+  - label: UDP Client
+    data: api/udp_client.md
+  - label: Client
+    data: api/client.md
+- label: Internal API
+  items:
+  - label: Packet Builder
+    data: internal_api/packet_builder.md
+  - label: Packet Factory
+    data: internal_api/packet_factory.md
+  - label: HTTP Packet
+    data: internal_api/http_packet.md
+  - label: TCP Packet
+    data: internal_api/tcp_packet.md
+  - label: UDP Packet
+    data: internal_api/udp_packet.md
+  - label: Packet
+    data: internal_api/packet.md
+...
