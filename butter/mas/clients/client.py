@@ -161,7 +161,7 @@ class Client:
 
         return packet.send(self._timeout)
 
-    def moveMotorToPosition(self, motorName, position, velocity=None, acceleration=None, units=RotationUnits.RADIANS) -> Response:
+    def moveMotorToPosition(self, motorName, position, velocity=None, acceleration=None, units=RotationUnits.RADIANS.value) -> Response:
         """move motor to a certain position (relative to the motor's zero position)
         
         Args:
@@ -183,7 +183,7 @@ class Client:
 
         return packet.send(self._timeout)
 
-    def moveMotorInTime(self, motorName, position, duration, units=RotationUnits.RADIANS) -> Response:
+    def moveMotorInTime(self, motorName, position, duration, units=RotationUnits.RADIANS.value) -> Response:
         """move motor to a certain position (relative to the motor's zero position) in fixed duration
         
         Args:
@@ -204,7 +204,7 @@ class Client:
 
         return packet.send(self._timeout)
 
-    def moveMotorInDirection(self, motorName, direction, velocity=None, units=RotationUnits.RADIANS) -> Response:
+    def moveMotorInDirection(self, motorName, direction, velocity=None, units=RotationUnits.RADIANS.value) -> Response:
         """move motor to a certain direction (relative to the motor's current position)
         
         Args:
@@ -227,7 +227,7 @@ class Client:
 
         return packet.send(self._timeout)
 
-    # def moveMotorInSteps(self, motorName, direction, steps, velocity=None, interpolator=None, units=RotationUnits.RADIANS) -> Response:
+    # def moveMotorInSteps(self, motorName, direction, steps, velocity=None, interpolator=None, units=RotationUnits.RADIANS.value) -> Response:
     #     """move motor a certain amount of steps (relative to the motor's current position)
 
     #     Args:

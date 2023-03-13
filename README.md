@@ -4,9 +4,6 @@ HTTP client python API for Butter MAS platform.
 [![licence](https://img.shields.io/github/license/butter-robotics/Butter.MAS.PythonAPI.svg)](https://github.com/butter-robotics/Butter.MAS.PythonAPI/blob/master/LICENSE)
 [![](https://img.shields.io/pypi/v/butter.mas-api.svg)](https://pypi.org/project/butter.mas-api/)
 
-___
-🚧**NOTE:** this repository is still a work in progress.
-___
 
 ## Getting Started
 
