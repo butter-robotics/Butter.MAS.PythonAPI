@@ -36,10 +36,10 @@ class Client:
             timeout (integer): command execution timeout in milliseconds
 
         Raises:
-            ValueError: if timeout is not in the range [20, 240]
+            ValueError: if timeout is not in the range [20, 500]
         """
-        if (timeout < 20 or timeout > 240): 
-           raise ValueError("Timeout most be an integer number in the range [20, 240]")
+        if (timeout < 20 or timeout > 500): 
+           raise ValueError("Timeout most be an integer number in the range [20, 500]")
 
         self._timeout = timeout 
 
