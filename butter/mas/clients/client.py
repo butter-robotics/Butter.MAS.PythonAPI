@@ -287,7 +287,7 @@ class Client:
         return packet.send(self._timeout)
 
     def observeAnimation(self, animationName=None) -> Response:
-        """Observe animation status
+        """Observe animation status ['ANIMATING', 'QUEUED', 'STOPPED', 'PAUSED', 'IDLE']
         
         Args:
             animationName (str): animation name (if none provided, will check global status)
