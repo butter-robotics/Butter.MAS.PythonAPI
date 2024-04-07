@@ -253,6 +253,19 @@ class Client:
 
     #     return packet.send(self._timeout)
 
+    def playSequence(self, animationSequence, lenient=False, relative=False) -> Response:
+        """Play animation sequence on the robot
+        
+        Args:
+            animationSequence (List[str]): animation sequence
+            lenient (bool, optional): wait for current playing animation (if present) to finish . Defaults to False.
+            relative (bool, optional): play animation relative to the current robot position. Defaults to False.
+        
+        Returns:
+            Response: response containing execution result
+        """
+        return self.playAnimation(",".join(animationSequence).replace(" ", ""), lenient, relative)
+
     def playAnimation(self, animationName, lenient=False, relative=False) -> Response:
         """Play animation on the robot
         
