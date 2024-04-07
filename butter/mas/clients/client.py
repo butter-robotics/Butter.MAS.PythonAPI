@@ -273,6 +273,28 @@ class Client:
 
         return packet.send(self._timeout)
 
+    def observeAnimation(self, animationName=None) -> Response:
+        """Observe animation status
+        
+        Args:
+            animationName (str): animation name (if none provided, will check global status)
+        
+        Returns:
+            Response: response containing execution result
+        """
+        packet = PacketBuilder(self.ip, self.port, self.protocol) \
+                    .addCommand('animate') \
+                    .addArgument(animationName) \
+                    .addParameter('status') \
+                    .build() \
+                if animationName is not None else \
+                PacketBuilder(self.ip, self.port, self.protocol) \
+                    .addCommand('animate') \
+                    .addParameter('status') \
+                    .build()
+
+        return packet.send(self._timeout)
+
     def pauseAnimation(self) -> Response:
         """Pause currently playing animation (if available) on the robot
         
