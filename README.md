@@ -45,7 +45,7 @@ python -m unittest tests/api_test.py
 ```
 
 ## Documentation
-- 👨🏼‍💻 [API](https://butterrobotics.com/#/library/documentation/mas_python_api),
+- 👨🏼‍💻 [API](https://butterrobotics.com/#/library/documentation/mas_python_api)
 <!-- (https://github.com/butter-robotics/Butter.MAS.PythonAPI/blob/master/docs/API.md), -->
 - 🖋  [Licence](https://github.com/butter-robotics/Butter.MAS.PythonAPI/blob/master/LICENSE)
 <!-- - 👩🏼‍🏫 [Examples](https://github.com/butter-robotics/Butter.MAS.PythonAPI/blob/master/docs/examples),   -->
