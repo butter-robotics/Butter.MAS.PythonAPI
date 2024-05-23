@@ -4,15 +4,14 @@ from .client import Client
 class TcpClient(Client):
     """ Butter MAS TCP client API """
 
-    def __init__(self, ip, port=3003, protocol='tcp'):
+    def __init__(self, ip, port=3003):
         """Initialize Butter MAS TCP client
                 
         Args:
             ip (str): robot IP
             port (int, optional): robot port. Defaults to 3003.
-            protocol (str, optional): communication protocol. Defaults to "tcp".
         """
-        super().__init__(ip, port, protocol)
+        super().__init__(ip, port, 'tcp')
 
 
 if __name__ == "__main__":
