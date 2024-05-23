@@ -4,17 +4,20 @@ from .packet import Packet
 
 class PacketBuilder:
     """ Builds a command packet using the builder design pattern """
+    ANY_TARGET = '*'
 
-    def __init__(self, ip, port, protocol="http"):
+    def __init__(self, ip, port, target, protocol="http"):
         """Initialize builder
         
         Args:
             ip (str): robot IP
             port (int): robot port
+            target (string): robot character target
             protocol (str, optional): communication protocol. defaults to "http".
         """
         self.ip = ip
         self.port = port
+        self.target = target
 
         packetFactory = PacketFactory()
         self.packet = packetFactory.getPacketClass(protocol)
@@ -141,7 +144,7 @@ class PacketBuilder:
             keys = list(map(lambda key: "%s=%s" % (key, self.keys[key]), self.keys))
             query = "%s%s" % (query, '&'.join(keys))
 
-        uri = '/'.join(['api', 'robots', 'any', 'command'])
+        uri = '/'.join(['api', 'robots', self.target, 'command'])
         uri = "%s/%s" % (uri, query.strip('&'))
 
         return self.packet(self.ip, self.port, uri)
