@@ -1,90 +1,90 @@
 # Response Parser
 
+### *class* butter.mas.utils.response_parser.MetadataDataPacket
 
-### class butter.mas.utils.response_parser.MetadataDataPacket()
+#### asynchronous *: bool*
 
-#### asynchronous(: bool)
 command executed asynchronously
 
+#### duration *: int*
 
-#### duration(: int)
 packet round trip duration
 
+#### exception *: str*
 
-#### exception(: str)
 packet exception
 
+#### handler *: str*
 
-#### handler(: str)
 packet handler name
 
+#### timestamp *: int*
 
-#### timestamp(: int)
 packet creation timestamp
 
+### *class* butter.mas.utils.response_parser.RequestDataPacket
 
-### class butter.mas.utils.response_parser.RequestDataPacket()
+#### parameters *: List[str]*
 
-#### parameters(: List[str])
 request query parameters
 
+#### query *: str*
 
-#### query(: str)
 request query
 
+### *class* butter.mas.utils.response_parser.ResponseDataPacket
 
-### class butter.mas.utils.response_parser.ResponseDataPacket()
+#### data *: Union[List[[ResponseDataPacket](#butter.mas.utils.response_parser.ResponseDataPacket)], str]*
 
-#### data(: Union[List[butter.mas.utils.response_parser.ResponseDataPacket], str])
 packet execution data
 
+#### metadata *: [MetadataDataPacket](#butter.mas.utils.response_parser.MetadataDataPacket)*
 
-#### metadata(: butter.mas.utils.response_parser.MetadataDataPacket)
 packet execution metadata
 
+#### status *: str*
 
-#### status(: str)
 packet execution status
 
+### *class* butter.mas.utils.response_parser.ResponseParser
 
-### class butter.mas.utils.response_parser.ResponseParser()
 Parses API response data into a typed aware dictionary object
 
+#### *static* parse(response: Response)
 
-#### static parse(response: requests.models.Response)
 Parses API response data
 
+### *class* butter.mas.utils.response_parser.RobotResponse
 
-### class butter.mas.utils.response_parser.RobotResponse()
 Robots response content
 **Note:** This Type should be updated together with MAS#ResponseBuilder
 
+#### executed *: bool*
 
-#### executed(: bool)
 robot data packet executed
 
+#### request *: [RequestDataPacket](#butter.mas.utils.response_parser.RequestDataPacket)*
 
-#### request(: butter.mas.utils.response_parser.RequestDataPacket)
 robot request data packet
 
+#### response *: [ResponseDataPacket](#butter.mas.utils.response_parser.ResponseDataPacket)*
 
-#### response(: butter.mas.utils.response_parser.ResponseDataPacket)
 robot response data packet
 
-
-### class butter.mas.utils.response_parser.RobotResponseWrapper(response: requests.models.Response)
+### *class* butter.mas.utils.response_parser.RobotResponseWrapper(response: Response)
 
 #### content()
+
 Robot response as bytes
 
-
 #### json()
+
 Robot response as json object
 
-
 #### raw()
+
 Raw robot response
 
-
 #### text()
+
 Robot response as text
