@@ -3,5 +3,6 @@
     "cSpell.words": [
         "Dynamixel",
         "configurator"
-    ]
+    ],
+    "cmake.configureOnOpen": false
 }

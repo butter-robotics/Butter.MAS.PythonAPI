@@ -1,9 +1,9 @@
 @ECHO OFF
 
-echo.
-echo.+++ Making HTML files...
-echo.
-CALL make.bat html
+Rem echo.
+Rem echo.+++ Making HTML files...
+Rem echo.
+Rem CALL make.bat html
 
 echo.
 echo.+++ Making markdown files...

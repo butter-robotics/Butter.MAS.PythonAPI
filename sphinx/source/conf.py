@@ -14,20 +14,19 @@
 #
 import os
 import sys
-from sphinx_markdown_builder.markdown_builder import MarkdownBuilder
 sys.path.insert(0, os.path.abspath('../../'))
 sys.path.insert(0, os.path.abspath('../../butter/mas'))
 
 # -- Project information -----------------------------------------------------
 
 project = 'Butter MAS Python API'
-copyright = '2021, Benny Megidish'
+copyright = '2024, Benny Megidish'
 author = 'Benny Megidish'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '2.0.0'
+release = '2.5.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -43,6 +42,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
     'sphinx.ext.githubpages',
+    "sphinx_markdown_builder",
     'myst_parser'
 ]
 
