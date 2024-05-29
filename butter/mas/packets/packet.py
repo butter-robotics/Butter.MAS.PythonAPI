@@ -19,7 +19,7 @@ class Packet(ABC):
 
     @abstractmethod
     def send(self, timeout=None) -> Response:
-        """Send packet abstract methud
+        """Send packet abstract method
         
         Args:
             timeout (int, optional): packet timeout. defaults to None.
