@@ -4,6 +4,7 @@ from requests import Response
 
 
 class ResponseDataPacket:
+    id: str                                         #: packet id
     status: str                                     #: packet execution status
     data: Union[List[ResponseDataPacket], str]      #: packet execution data
     metadata: MetadataDataPacket                    #: packet execution metadata

@@ -60,6 +60,7 @@ class Packet(ABC):
             parameters: null
         },
         response: {
+            id: "-1",
             status: "Failed",
             data: null,
             metadata: { 
