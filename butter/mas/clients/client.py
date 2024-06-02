@@ -82,7 +82,7 @@ class Client:
         """
         packet = PacketBuilder(self.ip, self.port, self.target, self.protocol) \
                 .addCommand('network') \
-                .addParameter('ping') \
+                .addArgument('ping') \
                 .addKeyValuePair('ip', clientIp) \
                 .addKeyValuePair('timeout', self._timeout) \
                 .build()
